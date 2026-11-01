@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+sitemap: https://satyanarayana.xyz/sitemap169.xml
+sitemap: https://satyanarayana.xyz/sitemap303.xml
+sitemap: https://satyanarayana.xyz/sitemap468.xml
+sitemap: https://satyanarayana.xyz/sitemap206.xml
+sitemap: https://satyanarayana.xyz/sitemap222.xml

@@ -209,213 +209,2095 @@ gtag("config", "GT-K46PPZHS", {"googlesitekit_post_type":"page"});
 
 
 
-<p class="wp-block-paragraph"><strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-vivid-red-color">Books I read in 2025</mark></strong></p>
+<div class="post2022-wrapper" id="post2022-reading-archive">
+<style id="post2022-custom-styles">
+/* ==========================================================
+   Books Read After 2022 - Custom Modern Responsive Layout
+   ========================================================== */
+.post2022-wrapper {
+  margin: 2rem 0 2.8rem 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #1e293b;
+  line-height: 1.5;
+}
+
+/* Header Section */
+.post2022-header {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 24px 28px;
+  margin-bottom: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.post2022-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, #dc2626 0%, #ea580c 100%);
+}
+
+.post2022-badge-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #dc2626;
+  background: #fef2f2;
+  border: 1px solid #fee2e2;
+  border-radius: 9999px;
+  padding: 3px 10px;
+  margin-bottom: 10px;
+}
+
+.post2022-title {
+  font-family: "Crimson Text", Georgia, serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 8px 0;
+  line-height: 1.25;
+}
+
+.post2022-desc {
+  font-size: 0.96rem;
+  color: #475569;
+  margin: 0 0 18px 0;
+  max-width: 780px;
+}
+
+/* Key Metrics Strip */
+.post2022-stats-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 14px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.post2022-stat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 0.82rem;
+  color: #334155;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+}
+
+.post2022-stat-pill strong {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+/* Controls Toolbar */
+.post2022-controls {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 22px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.post2022-control-group {
+  margin-bottom: 14px;
+}
+
+.post2022-control-group:last-child {
+  margin-bottom: 0;
+}
+
+.post2022-group-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.post2022-btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.post2022-tab-btn {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 7px 14px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  line-height: 1.2;
+}
+
+.post2022-tab-btn:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.post2022-tab-btn.active {
+  background: #0f172a;
+  border-color: #0f172a;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(15,23,42,0.25);
+}
+
+/* Category Filter Pills */
+.post2022-cat-btn {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 9999px;
+  padding: 6px 13px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.post2022-cat-btn:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+  color: #0f172a;
+}
+
+.post2022-cat-btn.active {
+  background: #dc2626;
+  border-color: #dc2626;
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(220,38,38,0.25);
+}
+
+/* Search and View Row */
+.post2022-search-view-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.post2022-search-box {
+  position: relative;
+  flex: 1 1 260px;
+  max-width: 440px;
+}
+
+.post2022-search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  color: #94a3b8;
+  pointer-events: none;
+}
+
+.post2022-search-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 34px 8px 36px;
+  font-size: 0.86rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #1e293b;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.post2022-search-input:focus {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220,38,38,0.12);
+}
+
+.post2022-clear-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  padding: 4px;
+  display: none;
+}
+
+.post2022-clear-btn:hover {
+  color: #475569;
+}
+
+.post2022-view-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.post2022-count-badge {
+  font-size: 0.82rem;
+  color: #64748b;
+  white-space: nowrap;
+}
+
+.post2022-count-badge strong {
+  color: #0f172a;
+}
+
+.post2022-view-btn-group {
+  display: inline-flex;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.post2022-view-btn {
+  background: #ffffff;
+  border: none;
+  padding: 6px 10px;
+  font-size: 0.8rem;
+  color: #64748b;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.15s ease;
+}
+
+.post2022-view-btn:hover {
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+.post2022-view-btn.active {
+  background: #0f172a;
+  color: #ffffff;
+}
+
+/* Year Section Dividers */
+.post2022-year-divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 28px 0 16px 0;
+  grid-column: 1 / -1;
+}
+
+.post2022-year-divider-tag {
+  font-family: "Crimson Text", Georgia, serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #0f172a;
+  white-space: nowrap;
+}
+
+.post2022-year-divider-pill {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #64748b;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 9999px;
+  padding: 2px 9px;
+}
+
+.post2022-year-divider-line {
+  flex: 1;
+  height: 1px;
+  background: #e2e8f0;
+}
+
+/* Book Grid Layout */
+.post2022-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 18px;
+}
+
+/* Book Card */
+.post2022-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px 20px 18px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.post2022-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(15,23,42,0.07);
+  border-color: #cbd5e1;
+}
+
+/* Accent strip on left of card */
+.post2022-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: #cbd5e1;
+  transition: background 0.18s ease;
+}
+
+.post2022-card[data-cat="health"]::before { background: #059669; }
+.post2022-card[data-cat="spirituality"]::before { background: #7c3aed; }
+.post2022-card[data-cat="civilisation"]::before { background: #e11d48; }
+.post2022-card[data-cat="philosophy"]::before { background: #d97706; }
+.post2022-card[data-cat="science"]::before { background: #2563eb; }
+
+.post2022-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.post2022-meta-left {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.post2022-year-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #334155;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 5px;
+  padding: 2px 7px;
+  letter-spacing: 0.02em;
+}
+
+.post2022-cat-tag {
+  font-size: 0.71rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  padding: 2px 9px;
+}
+
+/* Category Badge Colors */
+.cat-badge-health {
+  background: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+.cat-badge-spirituality {
+  background: #f5f3ff;
+  color: #5b21b6;
+  border: 1px solid #ddd6fe;
+}
+.cat-badge-civilisation {
+  background: #fff1f2;
+  color: #9f1239;
+  border: 1px solid #fecdd3;
+}
+.cat-badge-philosophy {
+  background: #fffbeb;
+  color: #92400e;
+  border: 1px solid #fde68a;
+}
+.cat-badge-science {
+  background: #eff6ff;
+  color: #1e40af;
+  border: 1px solid #bfdbfe;
+}
+
+.post2022-index-badge {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.post2022-card-body {
+  margin-bottom: 16px;
+  flex: 1 1 auto;
+}
+
+.post2022-book-title {
+  font-family: "Crimson Text", Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.35;
+  margin: 0 0 6px 0;
+}
+
+.post2022-book-title a {
+  color: #0f172a;
+  text-decoration: none !important;
+  transition: color 0.15s ease;
+}
+
+.post2022-book-title a:hover {
+  color: #dc2626 !important;
+  text-decoration: underline !important;
+}
+
+.post2022-book-author {
+  font-size: 0.88rem;
+  color: #64748b;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.post2022-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 12px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.post2022-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #475569;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 5px 11px;
+  text-decoration: none !important;
+  transition: all 0.15s ease;
+}
+
+.post2022-link-btn:hover {
+  background: #0f172a !important;
+  color: #ffffff !important;
+  border-color: #0f172a !important;
+  text-decoration: none !important;
+}
+
+/* List / Table Mode */
+.post2022-table-wrapper {
+  display: none;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.post2022-wrapper.view-mode-list .post2022-grid {
+  display: none;
+}
+
+.post2022-wrapper.view-mode-list .post2022-table-wrapper {
+  display: block;
+}
+
+.post2022-list {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.post2022-list th {
+  background: #f8fafc;
+  color: #475569;
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 10px 14px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+  white-space: nowrap;
+}
+
+.post2022-list td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.88rem;
+  color: #334155;
+  vertical-align: middle;
+}
+
+.post2022-list tr:last-child td {
+  border-bottom: none;
+}
+
+.post2022-list tr:hover td {
+  background: #f8fafc;
+}
+
+.post2022-list .col-title {
+  font-family: "Crimson Text", Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.post2022-list .col-title a {
+  color: #0f172a;
+  text-decoration: none !important;
+}
+
+.post2022-list .col-title a:hover {
+  color: #dc2626 !important;
+  text-decoration: underline !important;
+}
+
+.post2022-list .col-author {
+  color: #64748b;
+  font-style: italic;
+  white-space: nowrap;
+}
+
+/* Empty State */
+.post2022-empty {
+  display: none;
+  text-align: center;
+  padding: 40px 20px;
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 12px;
+  margin: 20px 0;
+}
+
+.post2022-empty p {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin: 0 0 12px 0;
+}
+
+.post2022-reset-btn {
+  background: #dc2626;
+  color: #ffffff;
+  border: none;
+  border-radius: 7px;
+  padding: 8px 16px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.post2022-reset-btn:hover {
+  background: #b91c1c;
+}
+
+/* ==========================================================
+   Books Read Previously (years <= 2022) Clean Section
+   ========================================================== */
+.prev2022-section {
+  margin-top: 48px;
+  padding: 24px 26px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+}
+
+.prev2022-header {
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+}
+
+.prev2022-title {
+  font-family: "Crimson Text", Georgia, serif;
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 4px 0;
+}
+
+.prev2022-title mark {
+  background: transparent;
+  color: #dc2626;
+}
+
+.prev2022-desc {
+  font-size: 0.88rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.prev2022-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px 18px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: prev-book-counter;
+}
+
+.prev2022-item {
+  counter-increment: prev-book-counter;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.92rem;
+  color: #334155;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #f1f5f9;
+  background: #fafafa;
+  transition: all 0.15s ease;
+}
+
+.prev2022-item:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.prev2022-item::before {
+  content: counter(prev-book-counter);
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #dc2626;
+  background: #fef2f2;
+  border: 1px solid #fee2e2;
+  border-radius: 4px;
+  padding: 2px 6px;
+  min-width: 18px;
+  text-align: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.prev2022-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.prev2022-book-name {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.prev2022-book-by {
+  font-size: 0.82rem;
+  color: #64748b;
+  font-style: italic;
+}
+
+@media (max-width: 680px) {
+  .post2022-header { padding: 18px 18px; }
+  .post2022-title { font-size: 1.6rem; }
+  .post2022-grid { grid-template-columns: 1fr; }
+  .prev2022-grid { grid-template-columns: 1fr; }
+  .post2022-search-view-row { flex-direction: column; align-items: stretch; }
+  .post2022-search-box { max-width: 100%; }
+}
+</style>
+
+  <header class="post2022-header">
+    <span class="post2022-badge-tag">Reading Archive &bull; 2023 &ndash; Present</span>
+    <h2 class="post2022-title">Books I Read After 2022</h2>
+    <p class="post2022-desc">A curated and organized catalogue of books read from 2023 onwards &mdash; spanning science &amp; complexity, metabolic health &amp; nutrition, Indian civilisation, philosophy, and spirituality.</p>
+    
+    <div class="post2022-stats-row">
+      <div class="post2022-stat-pill">&#128218; <strong>34</strong> Books Read</div>
+      <div class="post2022-stat-pill">&#128197; <strong>11</strong> in 2025</div>
+      <div class="post2022-stat-pill">&#128197; <strong>8</strong> in 2024</div>
+      <div class="post2022-stat-pill">&#128197; <strong>15</strong> in 2023</div>
+      <div class="post2022-stat-pill">&#127991;&#65039; <strong>5</strong> Themes</div>
+    </div>
+  </header>
+
+  <!-- Interactive Controls -->
+  <div class="post2022-controls">
+    <!-- Year Filter Tabs -->
+    <div class="post2022-control-group">
+      <span class="post2022-group-label">Filter By Year:</span>
+      <div class="post2022-btn-group" id="post2022-year-filter">
+        <button type="button" class="post2022-tab-btn active" data-year="all">All Post-2022 (34)</button>
+        <button type="button" class="post2022-tab-btn" data-year="2025">2025 (11)</button>
+        <button type="button" class="post2022-tab-btn" data-year="2024">2024 (8)</button>
+        <button type="button" class="post2022-tab-btn" data-year="2023">2023 (15)</button>
+      </div>
+    </div>
+
+    <!-- Category Filter Pills -->
+    <div class="post2022-control-group">
+      <span class="post2022-group-label">Filter By Topic:</span>
+      <div class="post2022-btn-group" id="post2022-cat-filter">
+        <button type="button" class="post2022-cat-btn active" data-cat="all">All Topics (34)</button>
+        <button type="button" class="post2022-cat-btn" data-cat="health">Health, Nutrition &amp; Wellness (14)</button>
+        <button type="button" class="post2022-cat-btn" data-cat="spirituality">Spirituality &amp; Yoga (8)</button>
+        <button type="button" class="post2022-cat-btn" data-cat="civilisation">Indian Civilisation &amp; History (5)</button>
+        <button type="button" class="post2022-cat-btn" data-cat="philosophy">Philosophy &amp; Society (5)</button>
+        <button type="button" class="post2022-cat-btn" data-cat="science">Science &amp; Complexity (2)</button>
+      </div>
+    </div>
+
+    <!-- Search & View Bar -->
+    <div class="post2022-search-view-row">
+      <div class="post2022-search-box">
+        <svg class="post2022-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="post2022-search" class="post2022-search-input" placeholder="Search by title, author, or keyword..." aria-label="Search books">
+        <button type="button" id="post2022-clear-search" class="post2022-clear-btn" aria-label="Clear search">&times;</button>
+      </div>
+
+      <div class="post2022-view-controls">
+        <span class="post2022-count-badge" id="post2022-count-display">Showing <strong>34</strong> of 34 books</span>
+        <div class="post2022-view-btn-group">
+          <button type="button" class="post2022-view-btn active" id="post2022-view-grid" title="Grid View">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+            Cards
+          </button>
+          <button type="button" class="post2022-view-btn" id="post2022-view-list" title="List View">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+            List
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cards Grid View -->
+  <div class="post2022-grid" id="post2022-cards-container">
+
+    <div class="post2022-year-divider" data-divider-year="2025">
+      <span class="post2022-year-divider-tag">Books Read in 2025</span>
+      <span class="post2022-year-divider-pill">11 Books</span>
+      <div class="post2022-year-divider-line"></div>
+    </div>
+    <article class="post2022-card" data-year="2025" data-cat="science" data-search="the quark and the jaguar: adventures in the simple and the complex murray gell-mann 2025 science &amp; complexity">
+      <div class="post2022-card-meta">
+        <div class="post2022-meta-left">
+          <span class="post2022-year-tag">2025</span>
+          <span class="post2022-cat-tag cat-badge-science">Science &amp; Complexity</span>
+        </div>
+        <span class="post2022-index-badge">#01</span>
+      </div>
+      <div class="post2022-card-body">
+        <h3 class="post2022-book-title">
+          <a href="https://www.goodreads.com/book/show/270881.The_Quark_and_the_Jaguar" target="_blank" rel="noopener noreferrer">The Quark and the Jaguar: Adventures in the Simple and the Complex</a>
+        </h3>
+        <div class="post2022-book-author">
+          <span>by Murray Gell-Mann</span>
+        </div>
+      </div>
+      <div class="post2022-card-footer">
+        <a href="https://www.goodreads.com/book/show/270881.The_Quark_and_the_Jaguar" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">
+          Goodreads &nearr;
+        </a>
+      </div>
+    </article>
+    <article class="post2022-card" data-year="2025" data-cat="science" data-search="the statistical mechanics of financial markets joseph l. mccauley 2025 science &amp; complexity">
+      <div class="post2022-card-meta">
+        <div class="post2022-meta-left">
+          <span class="post2022-year-tag">2025</span>
+          <span class="post2022-cat-tag cat-badge-science">Science &amp; Complexity</span>
+        </div>
+        <span class="post2022-index-badge">#02</span>
+      </div>
+      <div class="post2022-card-body">
+        <h3 class="post2022-book-title">
+          <a href="https://www.goodreads.com/book/show/980410.The_Statistical_Mechanics_of_Financial_Markets" target="_blank" rel="noopener noreferrer">The Statistical Mechanics of Financial Markets</a>
+        </h3>
+        <div class="post2022-book-author">
+          <span>by Joseph L. McCauley</span>
+        </div>
+      </div>
+      <div class="post2022-card-footer">
+        <a href="https://www.goodreads.com/book/show/980410.The_Statistical_Mechanics_of_Financial_Markets" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">
+          Goodreads &nearr;
+        </a>
+      </div>
+    </article>
+    <article class="post2022-card" data-year="2025" data-cat="philosophy" data-search="oneness vs the 1%: shattering illusions, seeding freedom vandana shiva 2025 philosophy &amp; society">
+      <div class="post2022-card-meta">
+        <div class="post2022-meta-left">
+          <span class="post2022-year-tag">2025</span>
+          <span class="post2022-cat-tag cat-badge-philosophy">Philosophy &amp; Society</span>
+        </div>
+        <span class="post2022-index-badge">#03</span>
+      </div>
+      <div class="post2022-card-body">
+        <h3 class="post2022-book-title">
+          <a href="https://www.goodreads.com/book/show/48662579-oneness-vs-the-1" target="_blank" rel="noopener noreferrer">Oneness vs The 1%: Shattering Illusions, Seeding Freedom</a>
+        </h3>
+        <div class="post2022-book-author">
+          <span>by Vandana Shiva</span>
+        </div>
+      </div>
+      <div class="post2022-card-footer">
+        <a href="https://www.goodreads.com/book/show/48662579-oneness-vs-the-1" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">
+          Goodreads &nearr;
+        </a>
+      </div>
+    </article>
+    <article class="post2022-card" data-year="2025" data-cat="philosophy" data-search="straw dogs: thoughts on humans and other animals john gray 2025 philosophy &amp; society">
+      <div class="post2022-card-meta">
+        <div class="post2022-meta-left">
+          <span class="post2022-year-tag">2025</span>
+          <span class="post2022-cat-tag cat-badge-philosophy">Philosophy &amp; Society</span>
+        </div>
+        <span class="post2022-index-badge">#04</span>
+      </div>
+      <div class="post2022-card-body">
+        <h3 class="post2022-book-title">
+          <a href="https://www.goodreads.com/book/show/230733.Straw_Dogs" target="_blank" rel="noopener noreferrer">Straw Dogs: Thoughts on Humans and Other Animals</a>
+        </h3>
+        <div class="post2022-book-author">
+          <span>by John Gray</span>
+        </div>
+      </div>
+      <div class="post2022-card-footer">
+        <a href="https://www.goodreads.com/book/show/230733.Straw_Dogs" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">
+          Goodreads &nearr;
+        </a>
+      </div>
+    </article>
+    <article class="post2022-card" data-year="2025" data-cat="philosophy" data-search="the soul of the marionette: a short inquiry into human freedom john gray 2025 philosophy &amp; society">
+      <div class="post2022-card-meta">
+        <div class="post2022-meta-left">
+          <span class="post2022-year-tag">2025</span>
+          <span class="post2022-cat-tag cat-badge-philosophy">Philosophy &amp; Society</span>
+        </div>
+        <span class="post2022-index-badge">#05</span>
+      </div>
+      <div class="post2022-card-body">
+        <h3 class="post2022-book-title">
+          <a href="https://www.goodreads.com/book/show/22929481-the-soul-of-the-marionette" target="_blank" rel="noopener noreferrer">The Soul of the Marionette: A Short Inquiry into Human Freedom</a>
+        </h3>
+        <div class="post2022-book-author">
+          <span>by John Gray</span>
+        </div>
+      </div>
+      <div class="post2022-card-footer">
+        <a href="https://www.goodreads.com/book/show/22929481-the-soul-of-the-marionette" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">
+          Goodreads &nearr;
+        </a>
+      </div>
+    </article>
+    <article class="post2022-card" data-year="2025" data-cat="philosophy" data-search="seven types of atheism john gray 2025 philosophy &amp; society">
+      <div class="post2022-card-meta">
+        <div class="post2022-meta-left">
+          <span class="post2022-year-tag">2025</span>
+          <span class="post2022-cat-tag cat-badge-philosophy">Philosophy &amp; Society</span>
+        </div>
+        <span class="post2022-index-badge">#06</span>
+      </div>
+      <div class="post2022-card-body">
+        <h3 class="post2022-book-title">
+          <a href="https://www.goodreads.com/book/show/36482672-seven-types-of-atheism" target="_blank" rel="noopener noreferrer">Seven Types of Atheism</a>
+        </h3>
+        <div class="post2022-book-author">
+          <span>by John Gray</span>
+        </div>
+      </div>
+      <div class="post2022-card-footer">
+        <a href="https://www.goodreads.com/book/show/36482672-seven-types-of-atheism" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">
+          Goodreads &nearr;
+        </a>
+      </div>
+    </article>
+    <article class="post2022-card" data-year="2025" data-cat="health" data-search="how to sleep like a caveman: ancient wisdom for a better night’s rest merijn van de laar 2025 health, nutrition &amp; wellness">
+      <div class="post2022-card-meta">
+        <div class="post2022-meta-left">
+          <span class="post2022-year-tag">2025</span>
+          <span class="post2022-cat-tag cat-badge-health">Health, Nutrition &amp; Wellness</span>
+        </div>
+        <span class="post2022-index-badge">#07</span>
+      </div>
+      <div class="post2022-card-body">
+        <h3 class="post2022-book-title">
+          <a href="https://www.goodreads.com/book/show/215060745-how-to-sleep-like-a-caveman" target="_blank" rel="noopener noreferrer">How to Sleep Like a Caveman: Ancient Wisdom for a Better Night’s Rest</a>
+        </h3>
+        <div class="post2022-book-author">
+          <span>by Merijn van de Laar</span>
+        </div>
+      </div>
+      <div class="post2022-card-footer">
+        <a href="https://www.goodreads.com/book/show/215060745-how-to-sleep-like-a-caveman" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">
+          Goodreads &nearr;
+        </a>
+      </div>
+    </article>
+    <article class="post2022-card" data-year="2025" data-cat="philosophy" data-search="false dawn: the delusions of global capitalism john gray 2025 philosophy &amp; society">
+      <div class="post2022-card-meta">
+        <div class="post2022-meta-left">
+          <span class="post2022-year-tag">2025</span>
+          <span class="post2022-cat-tag cat-badge-philosophy">Philosophy &amp; Society</span>
+        </div>
+        <span class="post2022-index-badge">#08</span>
+      </div>
+      <div class="post2022-card-body">
+        <h3 class="post2022-book-title">
+          <a href="https://www.goodreads.com/book/show/722231.False_Dawn" target="_blank" rel="noopener noreferrer">False Dawn: The Delusions of Global Capitalism</a>
+        </h3>
+        <div class="post2022-book-author">
+          <span>by John Gray</span>
+        </div>
+      </div>
+      <div class="post2022-card-footer">
+        <a href="https://www.goodreads.com/book/show/722231.False_Dawn" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">
+          Goodreads &nearr;
+        </a>
+      </div>
+    </article>
+    <article class="post2022-card" data-year="2025" data-cat="health" data-search="the hundred-year lie: how food and medicine are destroying your health randall fitzgerald 2025 health, nutrition &amp; wellness">
+      <div class="post2022-card-meta">
+        <div class="post2022-meta-left">
+          <span class="post2022-year-tag">2025</span>
+          <span class="post2022-cat-tag cat-badge-health">Health, Nutrition &amp; Wellness</span>
+        </div>
+        <span class="post2022-index-badge">#09</span>
+      </div>
+      <div class="post2022-card-body">
+        <h3 class="post2022-book-title">
+          <a href="https://www.goodreads.com/book/show/151817.The_Hundred_Year_Lie" target="_blank" rel="noopener noreferrer">The Hundred-Year Lie: How Food and Medicine Are Destroying Your Health</a>
+        </h3>
+        <div class="post2022-book-author">
+          <span>by Randall Fitzgerald</span>
+        </div>
+      </div>
+      <div class="post2022-card-footer">
+        <a href="https://www.goodreads.com/book/show/151817.The_Hundred_Year_Lie" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">
+          Goodreads &nearr;
+        </a>
+      </div>
+    </article>
+    <article class="post2022-card" data-year="2025" data-cat="health" data-search="sweet poison, why sugar makes us fat david gillespie 2025 health, nutrition &amp; wellness">
+      <div class="post2022-card-meta">
+        <div class="post2022-meta-left">
+          <span class="post2022-year-tag">2025</span>
+          <span class="post2022-cat-tag cat-badge-health">Health, Nutrition &amp; Wellness</span>
+        </div>
+        <span class="post2022-index-badge">#10</span>
+      </div>
+      <div class="post2022-card-body">
+        <h3 class="post2022-book-title">
+          <a href="https://www.goodreads.com/book/show/4596235-sweet-poison-why-sugar-makes-us-fat" target="_blank" rel="noopener noreferrer">Sweet Poison, Why Sugar Makes Us Fat</a>
+        </h3>
+        <div class="post2022-book-author">
+          <span>by David Gillespie</span>
+        </div>
+      </div>
+      <div class="post2022-card-footer">
+        <a href="https://www.goodreads.com/book/show/4596235-sweet-poison-why-sugar-makes-us-fat" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">
+          Goodreads &nearr;
+        </a>
+      </div>
+    </article>
+    <article class="post2022-card" data-year="2025" data-cat="civilisation" data-search="chanakya neeti chanakya 2025 indian civilisation &amp; history">
+      <div class="post2022-card-meta">
+        <div class="post2022-meta-left">
+          <span class="post2022-year-tag">2025</span>
+          <span class="post2022-cat-tag cat-badge-civilisation">Indian Civilisation &amp; History</span>
+        </div>
+        <span class="post2022-index-badge">#11</span>
+      </div>
+      <div class="post2022-card-body">
+        <h3 class="post2022-book-title">
+          <a href="https://www.goodreads.com/book/show/19194143-chanakya-neeti" target="_blank" rel="noopener noreferrer">Chanakya Neeti</a>
+        </h3>
+        <div class="post2022-book-author">
+          <span>by Chanakya</span>
+        </div>
+      </div>
+      <div class="post2022-card-footer">
+        <a href="https://www.goodreads.com/book/show/19194143-chanakya-neeti" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">
+          Goodreads &nearr;
+        </a>
+      </div>
+    </article>
+
+    <div class="post2022-year-divider" data-divider-year="2024">
+      <span class="post2022-year-divider-tag">Books Read in 2024</span>
+      <span class="post2022-year-divider-pill">8 Books</span>
+      <div class="post2022-year-divider-line"></div>
+    </div>
+    <article class="post2022-card" data-year="2024" data-cat="health" data-search="dark calories: how vegetable oils destroy our health and how we can get it back catherine shanahan, m.d. 2024 health, nutrition &amp; wellness">
+      <div class="post2022-card-meta">
+        <div class="post2022-meta-left">
+          <span class="post2022-year-tag">2024</span>
+          <span class="post2022-cat-tag cat-badge-health">Health, Nutrition &amp; Wellness</span>
+        </div>
+        <span class="post2022-index-badge">#12</span>
+      </div>
+      <div class="post2022-card-body">
+        <h3 class="post2022-book-title">
+          <a href="https://www.goodreads.com/book/show/200276285-dark-calories" target="_blank" rel="noopener noreferrer">Dark Calories: How Vegetable Oils Destroy Our Health and How We Can Get It Back</a>
+        </h3>
+        <div class="post2022-book-author">
+          <span>by Catherine Shanahan, M.D.</span>
+        </div>
+      </div>
+      <div class="post2022-card-footer">
+        <a href="https://www.goodreads.com/book/show/200276285-dark-calories" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">
+          Goodreads &nearr;
+        </a>
+      </div>
+    </article>
+    <article class="post2022-card" data-year="2024" data-cat="health" data-search="the fatburn fix: boost energy, end hunger, and lose weight by using body fat for fuel catherine shanahan, m.d. 2024 health, nutrition &amp; wellness">
+      <div class="post2022-card-meta">
+        <div class="post2022-meta-left">
+          <span class="post2022-year-tag">2024</span>
+          <span class="post2022-cat-tag cat-badge-health">Health, Nutrition &amp; Wellness</span>
+        </div>
+        <span class="post2022-index-badge">#13</span>
+      </div>
+      <div class="post2022-card-body">
+        <h3 class="post2022-book-title">
+          <a href="https://www.goodreads.com/book/show/41722106-the-fatburn-fix" target="_blank" rel="noopener noreferrer">The Fatburn Fix: Boost Energy, End Hunger, and Lose Weight by Using Body Fat for Fuel</a>
+        </h3>
+        <div class="post2022-book-author">
+          <span>by Catherine Shanahan, M.D.</span>
+        </div>
+      </div>
+      <div class="post2022-card-footer">
+        <a href="https://www.goodreads.com/book/show/41722106-the-fatburn-fix" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">
+          Goodreads &nearr;
+        </a>
+      </div>
+    </article>
+    <article class="post2022-card" data-year="2024" data-cat="health" data-search="the cancer code: a revolutionary new understanding of a medical mystery dr. jason fung 2024 health, nutrition &amp; wellness">
+      <div class="post2022-card-meta">
+        <div class="post2022-meta-left">
+          <span class="post2022-year-tag">2024</span>
+          <span class="post2022-cat-tag cat-badge-health">Health, Nutrition &amp; Wellness</span>
+        </div>
+        <span class="post2022-index-badge">#14</span>
+      </div>
+      <div class="post2022-card-body">
+        <h3 class="post2022-book-title">
+          <a href="https://www.goodreads.com/book/show/52163526-the-cancer-code" target="_blank" rel="noopener noreferrer">The Cancer Code: A Revolutionary New Understanding of a Medical Mystery</a>
+        </h3>
+        <div class="post2022-book-author">
+          <span>by Dr. Jason Fung</span>
+        </div>
+      </div>
+      <div class="post2022-card-footer">
+        <a href="https://www.goodreads.com/book/show/52163526-the-cancer-code" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">
+          Goodreads &nearr;
+        </a>
+      </div>
+    </article>
+    <article class="post2022-card" data-year="2024" data-cat="health" data-search="fast, feast, repeat: the comprehensive guide to delay, don’t deny® intermittent fasting gin stephens 2024 health, nutrition &amp; wellness">
+      <div class="post2022-card-meta">
+        <div class="post2022-meta-left">
+          <span class="post2022-year-tag">2024</span>
+          <span class="post2022-cat-tag cat-badge-health">Health, Nutrition &amp; Wellness</span>
+        </div>
+        <span class="post2022-index-badge">#15</span>
+      </div>
+      <div class="post2022-card-body">
+        <h3 class="post2022-book-title">
+          <a href="https://www.goodreads.com/book/show/51168294-fast-feast-repeat" target="_blank" rel="noopener noreferrer">Fast, Feast, Repeat: The Comprehensive Guide to Delay, Don’t Deny® Intermittent Fasting</a>
+        </h3>
+        <div class="post2022-book-author">
+          <span>by Gin Stephens</span>
+        </div>
+      </div>
+      <div class="post2022-card-footer">
+        <a href="https://www.goodreads.com/book/show/51168294-fast-feast-repeat" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">
+          Goodreads &nearr;
+        </a>
+      </div>
+    </article>
+    <article class="post2022-card" data-year="2024" data-cat="health" data-search="the positive birth book: a new approach to pregnancy, birth and the early weeks milli hill 2024 health, nutrition &amp; wellness">
+      <div class="post2022-card-meta">
+        <div class="post2022-meta-left">
+          <span class="post2022-year-tag">2024</span>
+          <span class="post2022-cat-tag cat-badge-health">Health, Nutrition &amp; Wellness</span>
+        </div>
+        <span class="post2022-index-badge">#16</span>
+      </div>
+      <div class="post2022-card-body">
+        <h3 class="post2022-book-title">
+          <a href="https://www.goodreads.com/book/show/33870922-the-positive-birth-book" target="_blank" rel="noopener noreferrer">The Positive Birth Book: A New Approach to Pregnancy, Birth and the Early Weeks</a>
+        </h3>
+        <div class="post2022-book-author">
+          <span>by Milli Hill</span>
+        </div>
+      </div>
+      <div class="post2022-card-footer">
+        <a href="https://www.goodreads.com/book/show/33870922-the-positive-birth-book" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">
+          Goodreads &nearr;
+        </a>
+      </div>
+    </article>
+    <article class="post2022-card" data-year="2024" data-cat="health" data-search="ayurvedic garbha sanskar dr. balaji tambe 2024 health, nutrition &amp; wellness">
+      <div class="post2022-card-meta">
+        <div class="post2022-meta-left">
+          <span class="post2022-year-tag">2024</span>
+          <span class="post2022-cat-tag cat-badge-health">Health, Nutrition &amp; Wellness</span>
+        </div>
+        <span class="post2022-index-badge">#17</span>
+      </div>
+      <div class="post2022-card-body">
+        <h3 class="post2022-book-title">
+          <a href="https://www.goodreads.com/book/show/25552798-ayurvedic-garbha-sanskar" target="_blank" rel="noopener noreferrer">Ayurvedic Garbha Sanskar</a>
+        </h3>
+        <div class="post2022-book-author">
+          <span>by Dr. Balaji Tambe</span>
+        </div>
+      </div>
+      <div class="post2022-card-footer">
+        <a href="https://www.goodreads.com/book/show/25552798-ayurvedic-garbha-sanskar" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">
+          Goodreads &nearr;
+        </a>
+      </div>
+    </article>
+    <article class="post2022-card" data-year="2024" data-cat="health" data-search="the diabetes code: prevent and reverse type 2 diabetes naturally dr. jason fung 2024 health, nutrition &amp; wellness">
+      <div class="post2022-card-meta">
+        <div class="post2022-meta-left">
+          <span class="post2022-year-tag">2024</span>
+          <span class="post2022-cat-tag cat-badge-health">Health, Nutrition &amp; Wellness</span>
+        </div>
+        <span class="post2022-index-badge">#18</span>
+      </div>
+      <div class="post2022-card-body">
+        <h3 class="post2022-book-title">
+          <a href="https://www.goodreads.com/book/show/38227753-the-diabetes-code" target="_blank" rel="noopener noreferrer">The Diabetes Code: Prevent and Reverse Type 2 Diabetes Naturally</a>
+        </h3>
+        <div class="post2022-book-author">
+          <span>by Dr. Jason Fung</span>
+        </div>
+      </div>
+      <div class="post2022-card-footer">
+        <a href="https://www.goodreads.com/book/show/38227753-the-diabetes-code" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">
+          Goodreads &nearr;
+        </a>
+      </div>
+    </article>
+    <article class="post2022-card" data-year="2024" data-cat="health" data-search="rich food poor food: your grocery purchasing system mira calton &amp; jayson calton 2024 health, nutrition &amp; wellness">
+      <div class="post2022-card-meta">
+        <div class="post2022-meta-left">
+          <span class="post2022-year-tag">2024</span>
+          <span class="post2022-cat-tag cat-badge-health">Health, Nutrition &amp; Wellness</span>
+        </div>
+        <span class="post2022-index-badge">#19</span>
+      </div>
+      <div class="post2022-card-body">
+        <h3 class="post2022-book-title">
+          <a href="https://www.goodreads.com/book/show/17374134-rich-food-poor-food" target="_blank" rel="noopener noreferrer">Rich Food Poor Food: Your Grocery Purchasing System</a>
+        </h3>
+        <div class="post2022-book-author">
+          <span>by Mira Calton &amp; Jayson Calton</span>
+        </div>
+      </div>
+      <div class="post2022-card-footer">
+        <a href="https://www.goodreads.com/book/show/17374134-rich-food-poor-food" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">
+          Goodreads &nearr;
+        </a>
+      </div>
+    </article>
+
+    <div class="post2022-year-divider" data-divider-year="2023">
+      <span class="post2022-year-divider-tag">Books Read in 2023</span>
+      <span class="post2022-year-divider-pill">15 Books</span>
+      <div class="post2022-year-divider-line"></div>
+    </div>
+    <article class="post2022-card" data-year="2023" data-cat="civilisation" data-search="india that is bharat: coloniality, civilisation, constitution j. sai deepak 2023 indian civilisation &amp; history">
+      <div class="post2022-card-meta">
+        <div class="post2022-meta-left">
+          <span class="post2022-year-tag">2023</span>
+          <span class="post2022-cat-tag cat-badge-civilisation">Indian Civilisation &amp; History</span>
+        </div>
+        <span class="post2022-index-badge">#20</span>
+      </div>
+      <div class="post2022-card-body">
+        <h3 class="post2022-book-title">
+          <a href="https://www.goodreads.com/book/show/58508534-india-that-is-bharat" target="_blank" rel="noopener noreferrer">India that is Bharat: Coloniality, Civilisation, Constitution</a>
+        </h3>
+        <div class="post2022-book-author">
+          <span>by J. Sai Deepak</span>
+        </div>
+      </div>
+      <div class="post2022-card-footer">
+        <a href="https://www.goodreads.com/book/show/58508534-india-that-is-bharat" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">
+          Goodreads &nearr;
+        </a>
+      </div>
+    </article>
+    <article class="post2022-card" data-year="2023" data-cat="health" data-search="free the animal: lose weight &amp; fat with the paleo diet richard nikoley 2023 health, nutrition &amp; wellness">
+      <div class="post2022-card-meta">
+        <div class="post2022-meta-left">
+          <span class="post2022-year-tag">2023</span>
+          <span class="post2022-cat-tag cat-badge-health">Health, Nutrition &amp; Wellness</span>
+        </div>
+        <span class="post2022-index-badge">#21</span>
+      </div>
+      <div class="post2022-card-body">
+        <h3 class="post2022-book-title">
+          <a href="https://www.goodreads.com/book/show/13454583-free-the-animal" target="_blank" rel="noopener noreferrer">Free The Animal: Lose Weight &amp; Fat With The Paleo Diet</a>
+        </h3>
+        <div class="post2022-book-author">
+          <span>by Richard Nikoley</span>
+        </div>
+      </div>
+      <div class="post2022-card-footer">
+        <a href="https://www.goodreads.com/book/show/13454583-free-the-animal" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">
+          Goodreads &nearr;
+        </a>
+      </div>
+    </article>
+    <article class="post2022-card" data-year="2023" data-cat="health" data-search="eat stop eat: intermittent fasting for health and weight loss brad pilon 2023 health, nutrition &amp; wellness">
+      <div class="post2022-card-meta">
+        <div class="post2022-meta-left">
+          <span class="post2022-year-tag">2023</span>
+          <span class="post2022-cat-tag cat-badge-health">Health, Nutrition &amp; Wellness</span>
+        </div>
+        <span class="post2022-index-badge">#22</span>
+      </div>
+      <div class="post2022-card-body">
+        <h3 class="post2022-book-title">
+          <a href="https://www.goodreads.com/book/show/36325908-eat-stop-eat" target="_blank" rel="noopener noreferrer">Eat Stop Eat: Intermittent Fasting for Health and Weight Loss</a>
+        </h3>
+        <div class="post2022-book-author">
+          <span>by Brad Pilon</span>
+        </div>
+      </div>
+      <div class="post2022-card-footer">
+        <a href="https://www.goodreads.com/book/show/36325908-eat-stop-eat" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">
+          Goodreads &nearr;
+        </a>
+      </div>
+    </article>
+    <article class="post2022-card" data-year="2023" data-cat="health" data-search="the complete guide to fasting: heal your body through intermittent, alternate-day, and extended fasting dr. jason fung &amp; jimmy moore 2023 health, nutrition &amp; wellness">
+      <div class="post2022-card-meta">
+        <div class="post2022-meta-left">
+          <span class="post2022-year-tag">2023</span>
+          <span class="post2022-cat-tag cat-badge-health">Health, Nutrition &amp; Wellness</span>
+        </div>
+        <span class="post2022-index-badge">#23</span>
+      </div>
+      <div class="post2022-card-body">
+        <h3 class="post2022-book-title">
+          <a href="https://www.goodreads.com/book/show/32670670-the-complete-guide-to-fasting" target="_blank" rel="noopener noreferrer">The Complete Guide to Fasting: Heal Your Body Through Intermittent, Alternate-Day, and Extended Fasting</a>
+        </h3>
+        <div class="post2022-book-author">
+          <span>by Dr. Jason Fung &amp; Jimmy Moore</span>
+        </div>
+      </div>
+      <div class="post2022-card-footer">
+        <a href="https://www.goodreads.com/book/show/32670670-the-complete-guide-to-fasting" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">
+          Goodreads &nearr;
+        </a>
+      </div>
+    </article>
+    <article class="post2022-card" data-year="2023" data-cat="spirituality" data-search="aghora iii: the law of karma robert e. svoboda 2023 spirituality &amp; yoga">
+      <div class="post2022-card-meta">
+        <div class="post2022-meta-left">
+          <span class="post2022-year-tag">2023</span>
+          <span class="post2022-cat-tag cat-badge-spirituality">Spirituality &amp; Yoga</span>
+        </div>
+        <span class="post2022-index-badge">#24</span>
+      </div>
+      <div class="post2022-card-body">
+        <h3 class="post2022-book-title">
+          <a href="https://www.goodreads.com/book/show/677453.Aghora_III" target="_blank" rel="noopener noreferrer">Aghora III: The Law of Karma</a>
+        </h3>
+        <div class="post2022-book-author">
+          <span>by Robert E. Svoboda</span>
+        </div>
+      </div>
+      <div class="post2022-card-footer">
+        <a href="https://www.goodreads.com/book/show/677453.Aghora_III" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">
+          Goodreads &nearr;
+        </a>
+      </div>
+    </article>
+    <article class="post2022-card" data-year="2023" data-cat="spirituality" data-search="shunya sri m 2023 spirituality &amp; yoga">
+      <div class="post2022-card-meta">
+        <div class="post2022-meta-left">
+          <span class="post2022-year-tag">2023</span>
+          <span class="post2022-cat-tag cat-badge-spirituality">Spirituality &amp; Yoga</span>
+        </div>
+        <span class="post2022-index-badge">#25</span>
+      </div>
+      <div class="post2022-card-body">
+        <h3 class="post2022-book-title">
+          <a href="https://www.goodreads.com/book/show/39990329-shunya" target="_blank" rel="noopener noreferrer">Shunya</a>
+        </h3>
+        <div class="post2022-book-author">
+          <span>by Sri M</span>
+        </div>
+      </div>
+      <div class="post2022-card-footer">
+        <a href="https://www.goodreads.com/book/show/39990329-shunya" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">
+          Goodreads &nearr;
+        </a>
+      </div>
+    </article>
+    <article class="post2022-card" data-year="2023" data-cat="spirituality" data-search="if truth be told: a monk’s memoir om swami 2023 spirituality &amp; yoga">
+      <div class="post2022-card-meta">
+        <div class="post2022-meta-left">
+          <span class="post2022-year-tag">2023</span>
+          <span class="post2022-cat-tag cat-badge-spirituality">Spirituality &amp; Yoga</span>
+        </div>
+        <span class="post2022-index-badge">#26</span>
+      </div>
+      <div class="post2022-card-body">
+        <h3 class="post2022-book-title">
+          <a href="https://www.goodreads.com/book/show/23905586-if-truth-be-told" target="_blank" rel="noopener noreferrer">If Truth Be Told: A Monk’s Memoir</a>
+        </h3>
+        <div class="post2022-book-author">
+          <span>by Om Swami</span>
+        </div>
+      </div>
+      <div class="post2022-card-footer">
+        <a href="https://www.goodreads.com/book/show/23905586-if-truth-be-told" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">
+          Goodreads &nearr;
+        </a>
+      </div>
+    </article>
+    <article class="post2022-card" data-year="2023" data-cat="spirituality" data-search="aghora ii: kundalini robert e. svoboda 2023 spirituality &amp; yoga">
+      <div class="post2022-card-meta">
+        <div class="post2022-meta-left">
+          <span class="post2022-year-tag">2023</span>
+          <span class="post2022-cat-tag cat-badge-spirituality">Spirituality &amp; Yoga</span>
+        </div>
+        <span class="post2022-index-badge">#27</span>
+      </div>
+      <div class="post2022-card-body">
+        <h3 class="post2022-book-title">
+          <a href="https://www.goodreads.com/book/show/217492.Aghora_II" target="_blank" rel="noopener noreferrer">Aghora II: Kundalini</a>
+        </h3>
+        <div class="post2022-book-author">
+          <span>by Robert E. Svoboda</span>
+        </div>
+      </div>
+      <div class="post2022-card-footer">
+        <a href="https://www.goodreads.com/book/show/217492.Aghora_II" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">
+          Goodreads &nearr;
+        </a>
+      </div>
+    </article>
+    <article class="post2022-card" data-year="2023" data-cat="spirituality" data-search="on meditation: finding infinite bliss and power within om swami 2023 spirituality &amp; yoga">
+      <div class="post2022-card-meta">
+        <div class="post2022-meta-left">
+          <span class="post2022-year-tag">2023</span>
+          <span class="post2022-cat-tag cat-badge-spirituality">Spirituality &amp; Yoga</span>
+        </div>
+        <span class="post2022-index-badge">#28</span>
+      </div>
+      <div class="post2022-card-body">
+        <h3 class="post2022-book-title">
+          <a href="https://www.goodreads.com/book/show/51604014-on-meditation" target="_blank" rel="noopener noreferrer">On Meditation: Finding Infinite Bliss and Power Within</a>
+        </h3>
+        <div class="post2022-book-author">
+          <span>by Om Swami</span>
+        </div>
+      </div>
+      <div class="post2022-card-footer">
+        <a href="https://www.goodreads.com/book/show/51604014-on-meditation" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">
+          Goodreads &nearr;
+        </a>
+      </div>
+    </article>
+    <article class="post2022-card" data-year="2023" data-cat="civilisation" data-search="varna, jati, caste: a primer on indian social structures rajiv malhotra &amp; vijaya viswanathan 2023 indian civilisation &amp; history">
+      <div class="post2022-card-meta">
+        <div class="post2022-meta-left">
+          <span class="post2022-year-tag">2023</span>
+          <span class="post2022-cat-tag cat-badge-civilisation">Indian Civilisation &amp; History</span>
+        </div>
+        <span class="post2022-index-badge">#29</span>
+      </div>
+      <div class="post2022-card-body">
+        <h3 class="post2022-book-title">
+          <a href="https://www.goodreads.com/book/show/107631057-varna-jati-caste" target="_blank" rel="noopener noreferrer">Varna, Jati, Caste: A Primer on Indian Social Structures</a>
+        </h3>
+        <div class="post2022-book-author">
+          <span>by Rajiv Malhotra &amp; Vijaya Viswanathan</span>
+        </div>
+      </div>
+      <div class="post2022-card-footer">
+        <a href="https://www.goodreads.com/book/show/107631057-varna-jati-caste" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">
+          Goodreads &nearr;
+        </a>
+      </div>
+    </article>
+    <article class="post2022-card" data-year="2023" data-cat="spirituality" data-search="apprenticed to a himalayan master: a yogi’s autobiography sri m 2023 spirituality &amp; yoga">
+      <div class="post2022-card-meta">
+        <div class="post2022-meta-left">
+          <span class="post2022-year-tag">2023</span>
+          <span class="post2022-cat-tag cat-badge-spirituality">Spirituality &amp; Yoga</span>
+        </div>
+        <span class="post2022-index-badge">#30</span>
+      </div>
+      <div class="post2022-card-body">
+        <h3 class="post2022-book-title">
+          <a href="https://www.goodreads.com/book/show/10125596-apprenticed-to-a-himalayan-master" target="_blank" rel="noopener noreferrer">Apprenticed to a Himalayan Master: A Yogi’s Autobiography</a>
+        </h3>
+        <div class="post2022-book-author">
+          <span>by Sri M</span>
+        </div>
+      </div>
+      <div class="post2022-card-footer">
+        <a href="https://www.goodreads.com/book/show/10125596-apprenticed-to-a-himalayan-master" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">
+          Goodreads &nearr;
+        </a>
+      </div>
+    </article>
+    <article class="post2022-card" data-year="2023" data-cat="spirituality" data-search="aghora: at the left hand of god robert e. svoboda 2023 spirituality &amp; yoga">
+      <div class="post2022-card-meta">
+        <div class="post2022-meta-left">
+          <span class="post2022-year-tag">2023</span>
+          <span class="post2022-cat-tag cat-badge-spirituality">Spirituality &amp; Yoga</span>
+        </div>
+        <span class="post2022-index-badge">#31</span>
+      </div>
+      <div class="post2022-card-body">
+        <h3 class="post2022-book-title">
+          <a href="https://www.goodreads.com/book/show/217493.Aghora" target="_blank" rel="noopener noreferrer">Aghora: At the Left Hand of God</a>
+        </h3>
+        <div class="post2022-book-author">
+          <span>by Robert E. Svoboda</span>
+        </div>
+      </div>
+      <div class="post2022-card-footer">
+        <a href="https://www.goodreads.com/book/show/217493.Aghora" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">
+          Goodreads &nearr;
+        </a>
+      </div>
+    </article>
+    <article class="post2022-card" data-year="2023" data-cat="civilisation" data-search="the palace of illusions chitra banerjee divakaruni 2023 indian civilisation &amp; history">
+      <div class="post2022-card-meta">
+        <div class="post2022-meta-left">
+          <span class="post2022-year-tag">2023</span>
+          <span class="post2022-cat-tag cat-badge-civilisation">Indian Civilisation &amp; History</span>
+        </div>
+        <span class="post2022-index-badge">#32</span>
+      </div>
+      <div class="post2022-card-body">
+        <h3 class="post2022-book-title">
+          <a href="https://www.goodreads.com/book/show/1774836.The_Palace_of_Illusions" target="_blank" rel="noopener noreferrer">The Palace of Illusions</a>
+        </h3>
+        <div class="post2022-book-author">
+          <span>by Chitra Banerjee Divakaruni</span>
+        </div>
+      </div>
+      <div class="post2022-card-footer">
+        <a href="https://www.goodreads.com/book/show/1774836.The_Palace_of_Illusions" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">
+          Goodreads &nearr;
+        </a>
+      </div>
+    </article>
+    <article class="post2022-card" data-year="2023" data-cat="civilisation" data-search="savarkar: echoes from a forgotten past, 1883–1924 vikram sampath 2023 indian civilisation &amp; history">
+      <div class="post2022-card-meta">
+        <div class="post2022-meta-left">
+          <span class="post2022-year-tag">2023</span>
+          <span class="post2022-cat-tag cat-badge-civilisation">Indian Civilisation &amp; History</span>
+        </div>
+        <span class="post2022-index-badge">#33</span>
+      </div>
+      <div class="post2022-card-body">
+        <h3 class="post2022-book-title">
+          <a href="https://www.goodreads.com/book/show/50767759-savarkar" target="_blank" rel="noopener noreferrer">Savarkar: Echoes from a Forgotten Past, 1883–1924</a>
+        </h3>
+        <div class="post2022-book-author">
+          <span>by Vikram Sampath</span>
+        </div>
+      </div>
+      <div class="post2022-card-footer">
+        <a href="https://www.goodreads.com/book/show/50767759-savarkar" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">
+          Goodreads &nearr;
+        </a>
+      </div>
+    </article>
+    <article class="post2022-card" data-year="2023" data-cat="spirituality" data-search="jewel in the lotus: deeper aspects of hinduism sri m 2023 spirituality &amp; yoga">
+      <div class="post2022-card-meta">
+        <div class="post2022-meta-left">
+          <span class="post2022-year-tag">2023</span>
+          <span class="post2022-cat-tag cat-badge-spirituality">Spirituality &amp; Yoga</span>
+        </div>
+        <span class="post2022-index-badge">#34</span>
+      </div>
+      <div class="post2022-card-body">
+        <h3 class="post2022-book-title">
+          <a href="https://www.goodreads.com/book/show/20415558-jewel-in-the-lotus" target="_blank" rel="noopener noreferrer">Jewel in the Lotus: Deeper Aspects of Hinduism</a>
+        </h3>
+        <div class="post2022-book-author">
+          <span>by Sri M</span>
+        </div>
+      </div>
+      <div class="post2022-card-footer">
+        <a href="https://www.goodreads.com/book/show/20415558-jewel-in-the-lotus" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">
+          Goodreads &nearr;
+        </a>
+      </div>
+    </article>
+  </div><!-- /.post2022-grid -->
+
+  <!-- Compact List / Table View -->
+  <div class="post2022-table-wrapper" id="post2022-table-wrapper">
+    <table class="post2022-list" id="post2022-list-container">
+      <thead>
+        <tr>
+          <th style="width: 45px;">#</th>
+          <th style="width: 70px;">Year</th>
+          <th>Book Title</th>
+          <th>Author</th>
+          <th>Topic</th>
+          <th style="width: 100px; text-align: right;">Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="post2022-row" data-year="2025" data-cat="science" data-search="the quark and the jaguar: adventures in the simple and the complex murray gell-mann 2025 science &amp; complexity">
+          <td style="color: #94a3b8; font-weight: 600; font-size: 0.8rem;">01</td>
+          <td><span class="post2022-year-tag">2025</span></td>
+          <td class="col-title"><a href="https://www.goodreads.com/book/show/270881.The_Quark_and_the_Jaguar" target="_blank" rel="noopener noreferrer">The Quark and the Jaguar: Adventures in the Simple and the Complex</a></td>
+          <td class="col-author">Murray Gell-Mann</td>
+          <td><span class="post2022-cat-tag cat-badge-science">Science &amp; Complexity</span></td>
+          <td style="text-align: right;"><a href="https://www.goodreads.com/book/show/270881.The_Quark_and_the_Jaguar" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">Goodreads &nearr;</a></td>
+        </tr>
+        <tr class="post2022-row" data-year="2025" data-cat="science" data-search="the statistical mechanics of financial markets joseph l. mccauley 2025 science &amp; complexity">
+          <td style="color: #94a3b8; font-weight: 600; font-size: 0.8rem;">02</td>
+          <td><span class="post2022-year-tag">2025</span></td>
+          <td class="col-title"><a href="https://www.goodreads.com/book/show/980410.The_Statistical_Mechanics_of_Financial_Markets" target="_blank" rel="noopener noreferrer">The Statistical Mechanics of Financial Markets</a></td>
+          <td class="col-author">Joseph L. McCauley</td>
+          <td><span class="post2022-cat-tag cat-badge-science">Science &amp; Complexity</span></td>
+          <td style="text-align: right;"><a href="https://www.goodreads.com/book/show/980410.The_Statistical_Mechanics_of_Financial_Markets" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">Goodreads &nearr;</a></td>
+        </tr>
+        <tr class="post2022-row" data-year="2025" data-cat="philosophy" data-search="oneness vs the 1%: shattering illusions, seeding freedom vandana shiva 2025 philosophy &amp; society">
+          <td style="color: #94a3b8; font-weight: 600; font-size: 0.8rem;">03</td>
+          <td><span class="post2022-year-tag">2025</span></td>
+          <td class="col-title"><a href="https://www.goodreads.com/book/show/48662579-oneness-vs-the-1" target="_blank" rel="noopener noreferrer">Oneness vs The 1%: Shattering Illusions, Seeding Freedom</a></td>
+          <td class="col-author">Vandana Shiva</td>
+          <td><span class="post2022-cat-tag cat-badge-philosophy">Philosophy &amp; Society</span></td>
+          <td style="text-align: right;"><a href="https://www.goodreads.com/book/show/48662579-oneness-vs-the-1" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">Goodreads &nearr;</a></td>
+        </tr>
+        <tr class="post2022-row" data-year="2025" data-cat="philosophy" data-search="straw dogs: thoughts on humans and other animals john gray 2025 philosophy &amp; society">
+          <td style="color: #94a3b8; font-weight: 600; font-size: 0.8rem;">04</td>
+          <td><span class="post2022-year-tag">2025</span></td>
+          <td class="col-title"><a href="https://www.goodreads.com/book/show/230733.Straw_Dogs" target="_blank" rel="noopener noreferrer">Straw Dogs: Thoughts on Humans and Other Animals</a></td>
+          <td class="col-author">John Gray</td>
+          <td><span class="post2022-cat-tag cat-badge-philosophy">Philosophy &amp; Society</span></td>
+          <td style="text-align: right;"><a href="https://www.goodreads.com/book/show/230733.Straw_Dogs" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">Goodreads &nearr;</a></td>
+        </tr>
+        <tr class="post2022-row" data-year="2025" data-cat="philosophy" data-search="the soul of the marionette: a short inquiry into human freedom john gray 2025 philosophy &amp; society">
+          <td style="color: #94a3b8; font-weight: 600; font-size: 0.8rem;">05</td>
+          <td><span class="post2022-year-tag">2025</span></td>
+          <td class="col-title"><a href="https://www.goodreads.com/book/show/22929481-the-soul-of-the-marionette" target="_blank" rel="noopener noreferrer">The Soul of the Marionette: A Short Inquiry into Human Freedom</a></td>
+          <td class="col-author">John Gray</td>
+          <td><span class="post2022-cat-tag cat-badge-philosophy">Philosophy &amp; Society</span></td>
+          <td style="text-align: right;"><a href="https://www.goodreads.com/book/show/22929481-the-soul-of-the-marionette" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">Goodreads &nearr;</a></td>
+        </tr>
+        <tr class="post2022-row" data-year="2025" data-cat="philosophy" data-search="seven types of atheism john gray 2025 philosophy &amp; society">
+          <td style="color: #94a3b8; font-weight: 600; font-size: 0.8rem;">06</td>
+          <td><span class="post2022-year-tag">2025</span></td>
+          <td class="col-title"><a href="https://www.goodreads.com/book/show/36482672-seven-types-of-atheism" target="_blank" rel="noopener noreferrer">Seven Types of Atheism</a></td>
+          <td class="col-author">John Gray</td>
+          <td><span class="post2022-cat-tag cat-badge-philosophy">Philosophy &amp; Society</span></td>
+          <td style="text-align: right;"><a href="https://www.goodreads.com/book/show/36482672-seven-types-of-atheism" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">Goodreads &nearr;</a></td>
+        </tr>
+        <tr class="post2022-row" data-year="2025" data-cat="health" data-search="how to sleep like a caveman: ancient wisdom for a better night’s rest merijn van de laar 2025 health, nutrition &amp; wellness">
+          <td style="color: #94a3b8; font-weight: 600; font-size: 0.8rem;">07</td>
+          <td><span class="post2022-year-tag">2025</span></td>
+          <td class="col-title"><a href="https://www.goodreads.com/book/show/215060745-how-to-sleep-like-a-caveman" target="_blank" rel="noopener noreferrer">How to Sleep Like a Caveman: Ancient Wisdom for a Better Night’s Rest</a></td>
+          <td class="col-author">Merijn van de Laar</td>
+          <td><span class="post2022-cat-tag cat-badge-health">Health, Nutrition &amp; Wellness</span></td>
+          <td style="text-align: right;"><a href="https://www.goodreads.com/book/show/215060745-how-to-sleep-like-a-caveman" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">Goodreads &nearr;</a></td>
+        </tr>
+        <tr class="post2022-row" data-year="2025" data-cat="philosophy" data-search="false dawn: the delusions of global capitalism john gray 2025 philosophy &amp; society">
+          <td style="color: #94a3b8; font-weight: 600; font-size: 0.8rem;">08</td>
+          <td><span class="post2022-year-tag">2025</span></td>
+          <td class="col-title"><a href="https://www.goodreads.com/book/show/722231.False_Dawn" target="_blank" rel="noopener noreferrer">False Dawn: The Delusions of Global Capitalism</a></td>
+          <td class="col-author">John Gray</td>
+          <td><span class="post2022-cat-tag cat-badge-philosophy">Philosophy &amp; Society</span></td>
+          <td style="text-align: right;"><a href="https://www.goodreads.com/book/show/722231.False_Dawn" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">Goodreads &nearr;</a></td>
+        </tr>
+        <tr class="post2022-row" data-year="2025" data-cat="health" data-search="the hundred-year lie: how food and medicine are destroying your health randall fitzgerald 2025 health, nutrition &amp; wellness">
+          <td style="color: #94a3b8; font-weight: 600; font-size: 0.8rem;">09</td>
+          <td><span class="post2022-year-tag">2025</span></td>
+          <td class="col-title"><a href="https://www.goodreads.com/book/show/151817.The_Hundred_Year_Lie" target="_blank" rel="noopener noreferrer">The Hundred-Year Lie: How Food and Medicine Are Destroying Your Health</a></td>
+          <td class="col-author">Randall Fitzgerald</td>
+          <td><span class="post2022-cat-tag cat-badge-health">Health, Nutrition &amp; Wellness</span></td>
+          <td style="text-align: right;"><a href="https://www.goodreads.com/book/show/151817.The_Hundred_Year_Lie" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">Goodreads &nearr;</a></td>
+        </tr>
+        <tr class="post2022-row" data-year="2025" data-cat="health" data-search="sweet poison, why sugar makes us fat david gillespie 2025 health, nutrition &amp; wellness">
+          <td style="color: #94a3b8; font-weight: 600; font-size: 0.8rem;">10</td>
+          <td><span class="post2022-year-tag">2025</span></td>
+          <td class="col-title"><a href="https://www.goodreads.com/book/show/4596235-sweet-poison-why-sugar-makes-us-fat" target="_blank" rel="noopener noreferrer">Sweet Poison, Why Sugar Makes Us Fat</a></td>
+          <td class="col-author">David Gillespie</td>
+          <td><span class="post2022-cat-tag cat-badge-health">Health, Nutrition &amp; Wellness</span></td>
+          <td style="text-align: right;"><a href="https://www.goodreads.com/book/show/4596235-sweet-poison-why-sugar-makes-us-fat" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">Goodreads &nearr;</a></td>
+        </tr>
+        <tr class="post2022-row" data-year="2025" data-cat="civilisation" data-search="chanakya neeti chanakya 2025 indian civilisation &amp; history">
+          <td style="color: #94a3b8; font-weight: 600; font-size: 0.8rem;">11</td>
+          <td><span class="post2022-year-tag">2025</span></td>
+          <td class="col-title"><a href="https://www.goodreads.com/book/show/19194143-chanakya-neeti" target="_blank" rel="noopener noreferrer">Chanakya Neeti</a></td>
+          <td class="col-author">Chanakya</td>
+          <td><span class="post2022-cat-tag cat-badge-civilisation">Indian Civilisation &amp; History</span></td>
+          <td style="text-align: right;"><a href="https://www.goodreads.com/book/show/19194143-chanakya-neeti" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">Goodreads &nearr;</a></td>
+        </tr>
+        <tr class="post2022-row" data-year="2024" data-cat="health" data-search="dark calories: how vegetable oils destroy our health and how we can get it back catherine shanahan, m.d. 2024 health, nutrition &amp; wellness">
+          <td style="color: #94a3b8; font-weight: 600; font-size: 0.8rem;">12</td>
+          <td><span class="post2022-year-tag">2024</span></td>
+          <td class="col-title"><a href="https://www.goodreads.com/book/show/200276285-dark-calories" target="_blank" rel="noopener noreferrer">Dark Calories: How Vegetable Oils Destroy Our Health and How We Can Get It Back</a></td>
+          <td class="col-author">Catherine Shanahan, M.D.</td>
+          <td><span class="post2022-cat-tag cat-badge-health">Health, Nutrition &amp; Wellness</span></td>
+          <td style="text-align: right;"><a href="https://www.goodreads.com/book/show/200276285-dark-calories" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">Goodreads &nearr;</a></td>
+        </tr>
+        <tr class="post2022-row" data-year="2024" data-cat="health" data-search="the fatburn fix: boost energy, end hunger, and lose weight by using body fat for fuel catherine shanahan, m.d. 2024 health, nutrition &amp; wellness">
+          <td style="color: #94a3b8; font-weight: 600; font-size: 0.8rem;">13</td>
+          <td><span class="post2022-year-tag">2024</span></td>
+          <td class="col-title"><a href="https://www.goodreads.com/book/show/41722106-the-fatburn-fix" target="_blank" rel="noopener noreferrer">The Fatburn Fix: Boost Energy, End Hunger, and Lose Weight by Using Body Fat for Fuel</a></td>
+          <td class="col-author">Catherine Shanahan, M.D.</td>
+          <td><span class="post2022-cat-tag cat-badge-health">Health, Nutrition &amp; Wellness</span></td>
+          <td style="text-align: right;"><a href="https://www.goodreads.com/book/show/41722106-the-fatburn-fix" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">Goodreads &nearr;</a></td>
+        </tr>
+        <tr class="post2022-row" data-year="2024" data-cat="health" data-search="the cancer code: a revolutionary new understanding of a medical mystery dr. jason fung 2024 health, nutrition &amp; wellness">
+          <td style="color: #94a3b8; font-weight: 600; font-size: 0.8rem;">14</td>
+          <td><span class="post2022-year-tag">2024</span></td>
+          <td class="col-title"><a href="https://www.goodreads.com/book/show/52163526-the-cancer-code" target="_blank" rel="noopener noreferrer">The Cancer Code: A Revolutionary New Understanding of a Medical Mystery</a></td>
+          <td class="col-author">Dr. Jason Fung</td>
+          <td><span class="post2022-cat-tag cat-badge-health">Health, Nutrition &amp; Wellness</span></td>
+          <td style="text-align: right;"><a href="https://www.goodreads.com/book/show/52163526-the-cancer-code" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">Goodreads &nearr;</a></td>
+        </tr>
+        <tr class="post2022-row" data-year="2024" data-cat="health" data-search="fast, feast, repeat: the comprehensive guide to delay, don’t deny® intermittent fasting gin stephens 2024 health, nutrition &amp; wellness">
+          <td style="color: #94a3b8; font-weight: 600; font-size: 0.8rem;">15</td>
+          <td><span class="post2022-year-tag">2024</span></td>
+          <td class="col-title"><a href="https://www.goodreads.com/book/show/51168294-fast-feast-repeat" target="_blank" rel="noopener noreferrer">Fast, Feast, Repeat: The Comprehensive Guide to Delay, Don’t Deny® Intermittent Fasting</a></td>
+          <td class="col-author">Gin Stephens</td>
+          <td><span class="post2022-cat-tag cat-badge-health">Health, Nutrition &amp; Wellness</span></td>
+          <td style="text-align: right;"><a href="https://www.goodreads.com/book/show/51168294-fast-feast-repeat" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">Goodreads &nearr;</a></td>
+        </tr>
+        <tr class="post2022-row" data-year="2024" data-cat="health" data-search="the positive birth book: a new approach to pregnancy, birth and the early weeks milli hill 2024 health, nutrition &amp; wellness">
+          <td style="color: #94a3b8; font-weight: 600; font-size: 0.8rem;">16</td>
+          <td><span class="post2022-year-tag">2024</span></td>
+          <td class="col-title"><a href="https://www.goodreads.com/book/show/33870922-the-positive-birth-book" target="_blank" rel="noopener noreferrer">The Positive Birth Book: A New Approach to Pregnancy, Birth and the Early Weeks</a></td>
+          <td class="col-author">Milli Hill</td>
+          <td><span class="post2022-cat-tag cat-badge-health">Health, Nutrition &amp; Wellness</span></td>
+          <td style="text-align: right;"><a href="https://www.goodreads.com/book/show/33870922-the-positive-birth-book" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">Goodreads &nearr;</a></td>
+        </tr>
+        <tr class="post2022-row" data-year="2024" data-cat="health" data-search="ayurvedic garbha sanskar dr. balaji tambe 2024 health, nutrition &amp; wellness">
+          <td style="color: #94a3b8; font-weight: 600; font-size: 0.8rem;">17</td>
+          <td><span class="post2022-year-tag">2024</span></td>
+          <td class="col-title"><a href="https://www.goodreads.com/book/show/25552798-ayurvedic-garbha-sanskar" target="_blank" rel="noopener noreferrer">Ayurvedic Garbha Sanskar</a></td>
+          <td class="col-author">Dr. Balaji Tambe</td>
+          <td><span class="post2022-cat-tag cat-badge-health">Health, Nutrition &amp; Wellness</span></td>
+          <td style="text-align: right;"><a href="https://www.goodreads.com/book/show/25552798-ayurvedic-garbha-sanskar" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">Goodreads &nearr;</a></td>
+        </tr>
+        <tr class="post2022-row" data-year="2024" data-cat="health" data-search="the diabetes code: prevent and reverse type 2 diabetes naturally dr. jason fung 2024 health, nutrition &amp; wellness">
+          <td style="color: #94a3b8; font-weight: 600; font-size: 0.8rem;">18</td>
+          <td><span class="post2022-year-tag">2024</span></td>
+          <td class="col-title"><a href="https://www.goodreads.com/book/show/38227753-the-diabetes-code" target="_blank" rel="noopener noreferrer">The Diabetes Code: Prevent and Reverse Type 2 Diabetes Naturally</a></td>
+          <td class="col-author">Dr. Jason Fung</td>
+          <td><span class="post2022-cat-tag cat-badge-health">Health, Nutrition &amp; Wellness</span></td>
+          <td style="text-align: right;"><a href="https://www.goodreads.com/book/show/38227753-the-diabetes-code" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">Goodreads &nearr;</a></td>
+        </tr>
+        <tr class="post2022-row" data-year="2024" data-cat="health" data-search="rich food poor food: your grocery purchasing system mira calton &amp; jayson calton 2024 health, nutrition &amp; wellness">
+          <td style="color: #94a3b8; font-weight: 600; font-size: 0.8rem;">19</td>
+          <td><span class="post2022-year-tag">2024</span></td>
+          <td class="col-title"><a href="https://www.goodreads.com/book/show/17374134-rich-food-poor-food" target="_blank" rel="noopener noreferrer">Rich Food Poor Food: Your Grocery Purchasing System</a></td>
+          <td class="col-author">Mira Calton &amp; Jayson Calton</td>
+          <td><span class="post2022-cat-tag cat-badge-health">Health, Nutrition &amp; Wellness</span></td>
+          <td style="text-align: right;"><a href="https://www.goodreads.com/book/show/17374134-rich-food-poor-food" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">Goodreads &nearr;</a></td>
+        </tr>
+        <tr class="post2022-row" data-year="2023" data-cat="civilisation" data-search="india that is bharat: coloniality, civilisation, constitution j. sai deepak 2023 indian civilisation &amp; history">
+          <td style="color: #94a3b8; font-weight: 600; font-size: 0.8rem;">20</td>
+          <td><span class="post2022-year-tag">2023</span></td>
+          <td class="col-title"><a href="https://www.goodreads.com/book/show/58508534-india-that-is-bharat" target="_blank" rel="noopener noreferrer">India that is Bharat: Coloniality, Civilisation, Constitution</a></td>
+          <td class="col-author">J. Sai Deepak</td>
+          <td><span class="post2022-cat-tag cat-badge-civilisation">Indian Civilisation &amp; History</span></td>
+          <td style="text-align: right;"><a href="https://www.goodreads.com/book/show/58508534-india-that-is-bharat" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">Goodreads &nearr;</a></td>
+        </tr>
+        <tr class="post2022-row" data-year="2023" data-cat="health" data-search="free the animal: lose weight &amp; fat with the paleo diet richard nikoley 2023 health, nutrition &amp; wellness">
+          <td style="color: #94a3b8; font-weight: 600; font-size: 0.8rem;">21</td>
+          <td><span class="post2022-year-tag">2023</span></td>
+          <td class="col-title"><a href="https://www.goodreads.com/book/show/13454583-free-the-animal" target="_blank" rel="noopener noreferrer">Free The Animal: Lose Weight &amp; Fat With The Paleo Diet</a></td>
+          <td class="col-author">Richard Nikoley</td>
+          <td><span class="post2022-cat-tag cat-badge-health">Health, Nutrition &amp; Wellness</span></td>
+          <td style="text-align: right;"><a href="https://www.goodreads.com/book/show/13454583-free-the-animal" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">Goodreads &nearr;</a></td>
+        </tr>
+        <tr class="post2022-row" data-year="2023" data-cat="health" data-search="eat stop eat: intermittent fasting for health and weight loss brad pilon 2023 health, nutrition &amp; wellness">
+          <td style="color: #94a3b8; font-weight: 600; font-size: 0.8rem;">22</td>
+          <td><span class="post2022-year-tag">2023</span></td>
+          <td class="col-title"><a href="https://www.goodreads.com/book/show/36325908-eat-stop-eat" target="_blank" rel="noopener noreferrer">Eat Stop Eat: Intermittent Fasting for Health and Weight Loss</a></td>
+          <td class="col-author">Brad Pilon</td>
+          <td><span class="post2022-cat-tag cat-badge-health">Health, Nutrition &amp; Wellness</span></td>
+          <td style="text-align: right;"><a href="https://www.goodreads.com/book/show/36325908-eat-stop-eat" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">Goodreads &nearr;</a></td>
+        </tr>
+        <tr class="post2022-row" data-year="2023" data-cat="health" data-search="the complete guide to fasting: heal your body through intermittent, alternate-day, and extended fasting dr. jason fung &amp; jimmy moore 2023 health, nutrition &amp; wellness">
+          <td style="color: #94a3b8; font-weight: 600; font-size: 0.8rem;">23</td>
+          <td><span class="post2022-year-tag">2023</span></td>
+          <td class="col-title"><a href="https://www.goodreads.com/book/show/32670670-the-complete-guide-to-fasting" target="_blank" rel="noopener noreferrer">The Complete Guide to Fasting: Heal Your Body Through Intermittent, Alternate-Day, and Extended Fasting</a></td>
+          <td class="col-author">Dr. Jason Fung &amp; Jimmy Moore</td>
+          <td><span class="post2022-cat-tag cat-badge-health">Health, Nutrition &amp; Wellness</span></td>
+          <td style="text-align: right;"><a href="https://www.goodreads.com/book/show/32670670-the-complete-guide-to-fasting" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">Goodreads &nearr;</a></td>
+        </tr>
+        <tr class="post2022-row" data-year="2023" data-cat="spirituality" data-search="aghora iii: the law of karma robert e. svoboda 2023 spirituality &amp; yoga">
+          <td style="color: #94a3b8; font-weight: 600; font-size: 0.8rem;">24</td>
+          <td><span class="post2022-year-tag">2023</span></td>
+          <td class="col-title"><a href="https://www.goodreads.com/book/show/677453.Aghora_III" target="_blank" rel="noopener noreferrer">Aghora III: The Law of Karma</a></td>
+          <td class="col-author">Robert E. Svoboda</td>
+          <td><span class="post2022-cat-tag cat-badge-spirituality">Spirituality &amp; Yoga</span></td>
+          <td style="text-align: right;"><a href="https://www.goodreads.com/book/show/677453.Aghora_III" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">Goodreads &nearr;</a></td>
+        </tr>
+        <tr class="post2022-row" data-year="2023" data-cat="spirituality" data-search="shunya sri m 2023 spirituality &amp; yoga">
+          <td style="color: #94a3b8; font-weight: 600; font-size: 0.8rem;">25</td>
+          <td><span class="post2022-year-tag">2023</span></td>
+          <td class="col-title"><a href="https://www.goodreads.com/book/show/39990329-shunya" target="_blank" rel="noopener noreferrer">Shunya</a></td>
+          <td class="col-author">Sri M</td>
+          <td><span class="post2022-cat-tag cat-badge-spirituality">Spirituality &amp; Yoga</span></td>
+          <td style="text-align: right;"><a href="https://www.goodreads.com/book/show/39990329-shunya" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">Goodreads &nearr;</a></td>
+        </tr>
+        <tr class="post2022-row" data-year="2023" data-cat="spirituality" data-search="if truth be told: a monk’s memoir om swami 2023 spirituality &amp; yoga">
+          <td style="color: #94a3b8; font-weight: 600; font-size: 0.8rem;">26</td>
+          <td><span class="post2022-year-tag">2023</span></td>
+          <td class="col-title"><a href="https://www.goodreads.com/book/show/23905586-if-truth-be-told" target="_blank" rel="noopener noreferrer">If Truth Be Told: A Monk’s Memoir</a></td>
+          <td class="col-author">Om Swami</td>
+          <td><span class="post2022-cat-tag cat-badge-spirituality">Spirituality &amp; Yoga</span></td>
+          <td style="text-align: right;"><a href="https://www.goodreads.com/book/show/23905586-if-truth-be-told" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">Goodreads &nearr;</a></td>
+        </tr>
+        <tr class="post2022-row" data-year="2023" data-cat="spirituality" data-search="aghora ii: kundalini robert e. svoboda 2023 spirituality &amp; yoga">
+          <td style="color: #94a3b8; font-weight: 600; font-size: 0.8rem;">27</td>
+          <td><span class="post2022-year-tag">2023</span></td>
+          <td class="col-title"><a href="https://www.goodreads.com/book/show/217492.Aghora_II" target="_blank" rel="noopener noreferrer">Aghora II: Kundalini</a></td>
+          <td class="col-author">Robert E. Svoboda</td>
+          <td><span class="post2022-cat-tag cat-badge-spirituality">Spirituality &amp; Yoga</span></td>
+          <td style="text-align: right;"><a href="https://www.goodreads.com/book/show/217492.Aghora_II" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">Goodreads &nearr;</a></td>
+        </tr>
+        <tr class="post2022-row" data-year="2023" data-cat="spirituality" data-search="on meditation: finding infinite bliss and power within om swami 2023 spirituality &amp; yoga">
+          <td style="color: #94a3b8; font-weight: 600; font-size: 0.8rem;">28</td>
+          <td><span class="post2022-year-tag">2023</span></td>
+          <td class="col-title"><a href="https://www.goodreads.com/book/show/51604014-on-meditation" target="_blank" rel="noopener noreferrer">On Meditation: Finding Infinite Bliss and Power Within</a></td>
+          <td class="col-author">Om Swami</td>
+          <td><span class="post2022-cat-tag cat-badge-spirituality">Spirituality &amp; Yoga</span></td>
+          <td style="text-align: right;"><a href="https://www.goodreads.com/book/show/51604014-on-meditation" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">Goodreads &nearr;</a></td>
+        </tr>
+        <tr class="post2022-row" data-year="2023" data-cat="civilisation" data-search="varna, jati, caste: a primer on indian social structures rajiv malhotra &amp; vijaya viswanathan 2023 indian civilisation &amp; history">
+          <td style="color: #94a3b8; font-weight: 600; font-size: 0.8rem;">29</td>
+          <td><span class="post2022-year-tag">2023</span></td>
+          <td class="col-title"><a href="https://www.goodreads.com/book/show/107631057-varna-jati-caste" target="_blank" rel="noopener noreferrer">Varna, Jati, Caste: A Primer on Indian Social Structures</a></td>
+          <td class="col-author">Rajiv Malhotra &amp; Vijaya Viswanathan</td>
+          <td><span class="post2022-cat-tag cat-badge-civilisation">Indian Civilisation &amp; History</span></td>
+          <td style="text-align: right;"><a href="https://www.goodreads.com/book/show/107631057-varna-jati-caste" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">Goodreads &nearr;</a></td>
+        </tr>
+        <tr class="post2022-row" data-year="2023" data-cat="spirituality" data-search="apprenticed to a himalayan master: a yogi’s autobiography sri m 2023 spirituality &amp; yoga">
+          <td style="color: #94a3b8; font-weight: 600; font-size: 0.8rem;">30</td>
+          <td><span class="post2022-year-tag">2023</span></td>
+          <td class="col-title"><a href="https://www.goodreads.com/book/show/10125596-apprenticed-to-a-himalayan-master" target="_blank" rel="noopener noreferrer">Apprenticed to a Himalayan Master: A Yogi’s Autobiography</a></td>
+          <td class="col-author">Sri M</td>
+          <td><span class="post2022-cat-tag cat-badge-spirituality">Spirituality &amp; Yoga</span></td>
+          <td style="text-align: right;"><a href="https://www.goodreads.com/book/show/10125596-apprenticed-to-a-himalayan-master" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">Goodreads &nearr;</a></td>
+        </tr>
+        <tr class="post2022-row" data-year="2023" data-cat="spirituality" data-search="aghora: at the left hand of god robert e. svoboda 2023 spirituality &amp; yoga">
+          <td style="color: #94a3b8; font-weight: 600; font-size: 0.8rem;">31</td>
+          <td><span class="post2022-year-tag">2023</span></td>
+          <td class="col-title"><a href="https://www.goodreads.com/book/show/217493.Aghora" target="_blank" rel="noopener noreferrer">Aghora: At the Left Hand of God</a></td>
+          <td class="col-author">Robert E. Svoboda</td>
+          <td><span class="post2022-cat-tag cat-badge-spirituality">Spirituality &amp; Yoga</span></td>
+          <td style="text-align: right;"><a href="https://www.goodreads.com/book/show/217493.Aghora" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">Goodreads &nearr;</a></td>
+        </tr>
+        <tr class="post2022-row" data-year="2023" data-cat="civilisation" data-search="the palace of illusions chitra banerjee divakaruni 2023 indian civilisation &amp; history">
+          <td style="color: #94a3b8; font-weight: 600; font-size: 0.8rem;">32</td>
+          <td><span class="post2022-year-tag">2023</span></td>
+          <td class="col-title"><a href="https://www.goodreads.com/book/show/1774836.The_Palace_of_Illusions" target="_blank" rel="noopener noreferrer">The Palace of Illusions</a></td>
+          <td class="col-author">Chitra Banerjee Divakaruni</td>
+          <td><span class="post2022-cat-tag cat-badge-civilisation">Indian Civilisation &amp; History</span></td>
+          <td style="text-align: right;"><a href="https://www.goodreads.com/book/show/1774836.The_Palace_of_Illusions" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">Goodreads &nearr;</a></td>
+        </tr>
+        <tr class="post2022-row" data-year="2023" data-cat="civilisation" data-search="savarkar: echoes from a forgotten past, 1883–1924 vikram sampath 2023 indian civilisation &amp; history">
+          <td style="color: #94a3b8; font-weight: 600; font-size: 0.8rem;">33</td>
+          <td><span class="post2022-year-tag">2023</span></td>
+          <td class="col-title"><a href="https://www.goodreads.com/book/show/50767759-savarkar" target="_blank" rel="noopener noreferrer">Savarkar: Echoes from a Forgotten Past, 1883–1924</a></td>
+          <td class="col-author">Vikram Sampath</td>
+          <td><span class="post2022-cat-tag cat-badge-civilisation">Indian Civilisation &amp; History</span></td>
+          <td style="text-align: right;"><a href="https://www.goodreads.com/book/show/50767759-savarkar" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">Goodreads &nearr;</a></td>
+        </tr>
+        <tr class="post2022-row" data-year="2023" data-cat="spirituality" data-search="jewel in the lotus: deeper aspects of hinduism sri m 2023 spirituality &amp; yoga">
+          <td style="color: #94a3b8; font-weight: 600; font-size: 0.8rem;">34</td>
+          <td><span class="post2022-year-tag">2023</span></td>
+          <td class="col-title"><a href="https://www.goodreads.com/book/show/20415558-jewel-in-the-lotus" target="_blank" rel="noopener noreferrer">Jewel in the Lotus: Deeper Aspects of Hinduism</a></td>
+          <td class="col-author">Sri M</td>
+          <td><span class="post2022-cat-tag cat-badge-spirituality">Spirituality &amp; Yoga</span></td>
+          <td style="text-align: right;"><a href="https://www.goodreads.com/book/show/20415558-jewel-in-the-lotus" target="_blank" rel="noopener noreferrer" class="post2022-link-btn">Goodreads &nearr;</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Empty State -->
+  <div class="post2022-empty" id="post2022-empty-state">
+    <p>No books match your current filter or search query.</p>
+    <button type="button" class="post2022-reset-btn" id="post2022-reset-btn">Reset Filters</button>
+  </div>
+
+  <script>
+  (function() {
+    var currentYear = 'all';
+    var currentCat = 'all';
+    var searchQuery = '';
+    
+    var wrapper = document.getElementById('post2022-reading-archive');
+    var yearButtons = document.querySelectorAll('#post2022-year-filter .post2022-tab-btn');
+    var catButtons = document.querySelectorAll('#post2022-cat-filter .post2022-cat-btn');
+    var searchInput = document.getElementById('post2022-search');
+    var clearSearchBtn = document.getElementById('post2022-clear-search');
+    var countDisplay = document.getElementById('post2022-count-display');
+    var emptyState = document.getElementById('post2022-empty-state');
+    var resetBtn = document.getElementById('post2022-reset-btn');
+    var viewGridBtn = document.getElementById('post2022-view-grid');
+    var viewListBtn = document.getElementById('post2022-view-list');
+    
+    var cards = document.querySelectorAll('.post2022-card');
+    var rows = document.querySelectorAll('.post2022-row');
+    var dividers = document.querySelectorAll('.post2022-year-divider');
+
+    function applyFilters() {
+      var visibleCount = 0;
+      var cleanQuery = searchQuery.trim().toLowerCase();
+      var hasFilter = (currentYear !== 'all') || (currentCat !== 'all') || (cleanQuery.length > 0);
+
+      // Filter Cards
+      for (var i = 0; i < cards.length; i++) {
+        var card = cards[i];
+        var itemYear = card.getAttribute('data-year');
+        var itemCat = card.getAttribute('data-cat');
+        var itemSearch = card.getAttribute('data-search');
+
+        var matchYear = (currentYear === 'all' || currentYear === itemYear);
+        var matchCat = (currentCat === 'all' || currentCat === itemCat);
+        var matchSearch = (!cleanQuery || itemSearch.indexOf(cleanQuery) !== -1);
+
+        if (matchYear && matchCat && matchSearch) {
+          card.style.display = 'flex';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      }
+
+      // Filter Rows
+      for (var j = 0; j < rows.length; j++) {
+        var row = rows[j];
+        var rYear = row.getAttribute('data-year');
+        var rCat = row.getAttribute('data-cat');
+        var rSearch = row.getAttribute('data-search');
+
+        var rMatchYear = (currentYear === 'all' || currentYear === rYear);
+        var rMatchCat = (currentCat === 'all' || currentCat === rCat);
+        var rMatchSearch = (!cleanQuery || rSearch.indexOf(cleanQuery) !== -1);
+
+        if (rMatchYear && rMatchCat && rMatchSearch) {
+          row.style.display = 'table-row';
+        } else {
+          row.style.display = 'none';
+        }
+      }
+
+      // Manage Dividers: only show when All years + All categories + no search
+      for (var k = 0; k < dividers.length; k++) {
+        if (!hasFilter) {
+          dividers[k].style.display = 'flex';
+        } else {
+          dividers[k].style.display = 'none';
+        }
+      }
+
+      // Update count & empty state
+      countDisplay.innerHTML = 'Showing <strong>' + visibleCount + '</strong> of 34 books';
+      if (visibleCount === 0) {
+        emptyState.style.display = 'block';
+      } else {
+        emptyState.style.display = 'none';
+      }
+    }
+
+    // Year Tabs
+    for (var i = 0; i < yearButtons.length; i++) {
+      yearButtons[i].addEventListener('click', function() {
+        for (var b = 0; b < yearButtons.length; b++) yearButtons[b].classList.remove('active');
+        this.classList.add('active');
+        currentYear = this.getAttribute('data-year');
+        applyFilters();
+      });
+    }
+
+    // Category Buttons
+    for (var c = 0; c < catButtons.length; c++) {
+      catButtons[c].addEventListener('click', function() {
+        for (var b = 0; b < catButtons.length; b++) catButtons[b].classList.remove('active');
+        this.classList.add('active');
+        currentCat = this.getAttribute('data-cat');
+        applyFilters();
+      });
+    }
+
+    // Search Input
+    searchInput.addEventListener('input', function() {
+      searchQuery = this.value;
+      clearSearchBtn.style.display = searchQuery ? 'block' : 'none';
+      applyFilters();
+    });
+
+    clearSearchBtn.addEventListener('click', function() {
+      searchInput.value = '';
+      searchQuery = '';
+      this.style.display = 'none';
+      searchInput.focus();
+      applyFilters();
+    });
+
+    // Reset Button
+    resetBtn.addEventListener('click', function() {
+      currentYear = 'all';
+      currentCat = 'all';
+      searchQuery = '';
+      searchInput.value = '';
+      clearSearchBtn.style.display = 'none';
+
+      for (var y = 0; y < yearButtons.length; y++) {
+        yearButtons[y].classList.toggle('active', yearButtons[y].getAttribute('data-year') === 'all');
+      }
+      for (var k = 0; k < catButtons.length; k++) {
+        catButtons[k].classList.toggle('active', catButtons[k].getAttribute('data-cat') === 'all');
+      }
+      applyFilters();
+    });
+
+    // View Toggle
+    viewGridBtn.addEventListener('click', function() {
+      this.classList.add('active');
+      viewListBtn.classList.remove('active');
+      wrapper.classList.remove('view-mode-list');
+    });
+
+    viewListBtn.addEventListener('click', function() {
+      this.classList.add('active');
+      viewGridBtn.classList.remove('active');
+      wrapper.classList.add('view-mode-list');
+    });
+
+    // Initial run
+    applyFilters();
+  })();
+  </script>
+</div><!-- /.post2022-wrapper -->
+
+<!-- Clean Dedicated Section: Books Read Previously (years <= 2022) -->
+<section class="prev2022-section">
+  <div class="prev2022-header">
+    <h3 class="prev2022-title"><mark class="has-inline-color has-vivid-red-color">Books I read previously</mark> <strong>(years &le; 2022)</strong></h3>
+    <p class="prev2022-desc">Earlier reads prior to 2023.</p>
+  </div>
+  <ol class="prev2022-grid">
+    <li class="prev2022-item">
+      <div class="prev2022-content">
+        <span class="prev2022-book-name">Good Calories, Bad Calories: Fats, Carbs, and the Controversial Science of Diet and Health</span>
+        <span class="prev2022-book-by">by Gary Taubes</span>
+      </div>
+    </li>
+    <li class="prev2022-item">
+      <div class="prev2022-content">
+        <span class="prev2022-book-name">The case against sugar</span>
+        <span class="prev2022-book-by">by Gary Taubes</span>
+      </div>
+    </li>
+    <li class="prev2022-item">
+      <div class="prev2022-content">
+        <span class="prev2022-book-name">Misbehavior of markets</span>
+        <span class="prev2022-book-by">by Benoît Mandelbrot &amp; Richard L. Hudson</span>
+      </div>
+    </li>
+    <li class="prev2022-item">
+      <div class="prev2022-content">
+        <span class="prev2022-book-name">GMO myths and truths</span>
+        <span class="prev2022-book-by">by Claire Robinson, Michael Antoniou &amp; John Fagan</span>
+      </div>
+    </li>
+    <li class="prev2022-item">
+      <div class="prev2022-content">
+        <span class="prev2022-book-name">On bullshit</span>
+        <span class="prev2022-book-by">by Harry G. Frankfurt</span>
+      </div>
+    </li>
+    <li class="prev2022-item">
+      <div class="prev2022-content">
+        <span class="prev2022-book-name">Who Really Feeds the World?: The Failures of Agribusiness and the Promise of Agroecology</span>
+        <span class="prev2022-book-by">by Vandana Shiva</span>
+      </div>
+    </li>
+    <li class="prev2022-item">
+      <div class="prev2022-content">
+        <span class="prev2022-book-name">The Parasitic Mind: How Infectious Ideas Are Killing Common Sense</span>
+        <span class="prev2022-book-by">by Gad Saad</span>
+      </div>
+    </li>
+    <li class="prev2022-item">
+      <div class="prev2022-content">
+        <span class="prev2022-book-name">The economic laws of scientific research</span>
+        <span class="prev2022-book-by">by Terence Kealey</span>
+      </div>
+    </li>
+    <li class="prev2022-item">
+      <div class="prev2022-content">
+        <span class="prev2022-book-name">Death: for this who shall die</span>
+        <span class="prev2022-book-by">by Sadhguru</span>
+      </div>
+    </li>
+    <li class="prev2022-item">
+      <div class="prev2022-content">
+        <span class="prev2022-book-name">Sanskrit non translatables</span>
+        <span class="prev2022-book-by">by Rajiv Malhotra &amp; Satyanarayana Dasa Babaji</span>
+      </div>
+    </li>
+    <li class="prev2022-item">
+      <div class="prev2022-content">
+        <span class="prev2022-book-name">Terminology of Veda</span>
+        <span class="prev2022-book-by">by Vedic Literature</span>
+      </div>
+    </li>
+    <li class="prev2022-item">
+      <div class="prev2022-content">
+        <span class="prev2022-book-name">Complexity: a guide tour, how nature works: the science of self-organizing criticality</span>
+        <span class="prev2022-book-by">by Melanie Mitchell / Per Bak</span>
+      </div>
+    </li>
+    <li class="prev2022-item">
+      <div class="prev2022-content">
+        <span class="prev2022-book-name">Happy Accidents: Serendipity in Modern Medical Breakthroughs</span>
+        <span class="prev2022-book-by">by Morton A. Meyers</span>
+      </div>
+    </li>
+    <li class="prev2022-item">
+      <div class="prev2022-content">
+        <span class="prev2022-book-name">Alchemy</span>
+        <span class="prev2022-book-by">by Rory Sutherland</span>
+      </div>
+    </li>
+  </ol>
+</section>
 
 
 
-<ol class="wp-block-list">
-<li><a href="https://www.goodreads.com/book/show/270881.The_Quark_and_the_Jaguar">The Quark and the Jaguar: Adventures in the Simple and the Complex</a></li>
-
-
-
-<li><a href="https://www.goodreads.com/book/show/980410.The_Statistical_Mechanics_of_Financial_Markets">The Statistical Mechanics of Financial Markets</a></li>
-
-
-
-<li><a href="https://www.goodreads.com/book/show/48662579-oneness-vs-the-1">Oneness vs The 1%: Shattering Illusions, Seeding Freedom</a></li>
-
-
-
-<li><a href="https://www.goodreads.com/book/show/230733.Straw_Dogs">Straw Dogs: Thoughts on Humans and Other Animals</a></li>
-
-
-
-<li><a href="https://www.goodreads.com/book/show/22929481-the-soul-of-the-marionette">The Soul of the Marionette: A Short Inquiry into Human Freedom</a></li>
-
-
-
-<li><a href="https://www.goodreads.com/book/show/36482672-seven-types-of-atheism">Seven Types of Atheism</a></li>
-
-
-
-<li><a href="https://www.goodreads.com/book/show/215060745-how-to-sleep-like-a-caveman">How to Sleep Like a Caveman: Ancient Wisdom for a Better Night’s Rest</a></li>
-
-
-
-<li><a href="https://www.goodreads.com/book/show/722231.False_Dawn">False Dawn: The Delusions of Global Capitalism</a></li>
-
-
-
-<li><a href="https://www.goodreads.com/book/show/151817.The_Hundred_Year_Lie">The Hundred-Year Lie: How Food and Medicine Are Destroying Your Health</a></li>
-
-
-
-<li><a href="https://www.goodreads.com/book/show/4596235-sweet-poison-why-sugar-makes-us-fat">Sweet Poison, Why Sugar Makes Us Fat</a></li>
-
-
-
-<li><a href="https://www.goodreads.com/book/show/19194143-chanakya-neeti">Chanakya Neeti</a></li>
-</ol>
-
-
-
-<p class="wp-block-paragraph"><strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-vivid-red-color">Books I read in 2024</mark></strong></p>
-
-
-
-<ol class="wp-block-list">
-<li><a href="https://www.goodreads.com/book/show/200276285-dark-calories">Dark Calories: How Vegetable Oils Destroy Our Health and How We Can Get It Back</a></li>
-
-
-
-<li><a href="https://www.goodreads.com/book/show/41722106-the-fatburn-fix">The Fatburn Fix: Boost Energy, End Hunger, and Lose Weight by Using Body Fat for Fuel</a></li>
-
-
-
-<li><a href="https://www.goodreads.com/book/show/52163526-the-cancer-code">The Cancer Code: A Revolutionary New Understanding of a Medical Mystery</a></li>
-
-
-
-<li><a href="https://www.goodreads.com/book/show/51168294-fast-feast-repeat">Fast, Feast, Repeat: The Comprehensive Guide to Delay, Don’t Deny® Intermittent Fasting</a></li>
-
-
-
-<li><a href="https://www.goodreads.com/book/show/33870922-the-positive-birth-book">The Positive Birth Book: A New Approach to Pregnancy, Birth and the Early Weeks</a></li>
-
-
-
-<li><a href="https://www.goodreads.com/book/show/25552798-ayurvedic-garbha-sanskar">Ayurvedic Garbha Sanskar</a></li>
-
-
-
-<li><a href="https://www.goodreads.com/book/show/38227753-the-diabetes-code">The Diabetes Code: Prevent and Reverse Type 2 Diabetes Naturally</a></li>
-
-
-
-<li><a href="https://www.goodreads.com/book/show/17374134-rich-food-poor-food">Rich Food Poor Food: Your Grocery Purchasing System</a></li>
-</ol>
-
-
-
-<p class="wp-block-paragraph"><strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-vivid-red-color">Books I read in 2023</mark></strong></p>
-
-
-
-<ol class="wp-block-list">
-<li><a href="https://www.goodreads.com/book/show/58508534-india-that-is-bharat">India that is Bharat: Coloniality, Civilisation, Constitution</a></li>
-
-
-
-<li><a href="https://www.goodreads.com/book/show/13454583-free-the-animal">Free The Animal: Lose Weight &amp; Fat With The Paleo Diet</a><a href="https://www.goodreads.com/book/show/36325908-eat-stop-eat"></a></li>
-
-
-
-<li><a href="https://www.goodreads.com/book/show/36325908-eat-stop-eat">Eat Stop Eat: Intermittent Fasting for Health and Weight Loss</a></li>
-
-
-
-<li><a href="https://www.goodreads.com/book/show/32670670-the-complete-guide-to-fasting?ac=1&amp;from_search=true&amp;qid=5gSFQk4OVc&amp;rank=1">The Complete Guide to Fasting: Heal Your Body Through Intermittent, Alternate-Day, and Extended Fasting</a></li>
-
-
-
-<li><a href="https://www.goodreads.com/book/show/677453.Aghora_III">Aghora III: The Law of Karma</a></li>
-
-
-
-<li><a href="https://www.goodreads.com/book/show/39990329-shunya">Shunya</a></li>
-
-
-
-<li><a href="https://www.goodreads.com/book/show/23905586-if-truth-be-told">If Truth Be Told: A Monk’s Memoir</a></li>
-
-
-
-<li><a href="https://www.goodreads.com/book/show/217492.Aghora_II">Aghora II: Kundalini</a></li>
-
-
-
-<li><a href="https://www.goodreads.com/book/show/51604014-on-meditation">On Meditation: Finding Infinite Bliss and Power Within</a></li>
-
-
-
-<li><a href="https://www.goodreads.com/book/show/107631057-varna-jati-caste?from_search=true&amp;from_srp=true&amp;qid=3Ld93YhZlW&amp;rank=1">Varna, Jati, Caste: A Primer on Indian Social Structures</a></li>
-
-
-
-<li><a href="https://www.goodreads.com/book/show/10125596-apprenticed-to-a-himalayan-master?from_search=true&amp;from_srp=true&amp;qid=8MbyfDwRob&amp;rank=1">Apprenticed to a Himalayan Master: A Yogi’s Autobiography</a></li>
-
-
-
-<li><a href="Aghora:%20At%20the%20Left%20Hand%20of%20God">Aghora: At the Left Hand of God</a></li>
-
-
-
-<li><a href="https://www.goodreads.com/book/show/1774836.The_Palace_of_Illusions?from_search=true&amp;from_srp=true&amp;qid=ZVKEpLfl7u&amp;rank=1">The Palace of Illusions</a></li>
-
-
-
-<li><a href="Savarkar:%20Echoes%20from%20a%20Forgotten%20Past,%201883%E2%80%931924">Savarkar: Echoes from a Forgotten Past, 1883–1924</a> </li>
-
-
-
-<li><a href="https://www.goodreads.com/book/show/20415558-jewel-in-the-lotus?from_search=true&amp;from_srp=true&amp;qid=czhrgEkxy1&amp;rank=1">Jewel in the Lotus: Deeper Aspects of Hinduism</a><br><br><strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-vivid-red-color">Books I read previously</mark></strong> <strong>(years &lt;= 2022)</strong><br></li>
-
-
-
-<li>Good Calories, Bad Calories: Fats, Carbs, and the Controversial Science of Diet and Health</li>
-
-
-
-<li>The case against sugar</li>
-
-
-
-<li>Misbehavior of markets</li>
-
-
-
-<li>GMO myths and truths</li>
-
-
-
-<li>On bullshit</li>
-
-
-
-<li>Who Really Feeds the World?: The Failures of Agribusiness and the Promise of Agroecology</li>
-
-
-
-<li>The Parasitic Mind: How Infectious Ideas Are Killing Common Sense</li>
-
-
-
-<li>The economic laws of scientific research</li>
-
-
-
-<li>Death: for this who shall die</li>
-
-
-
-<li>Sanskrit non translatables</li>
-
-
-
-<li>Terminology of Veda</li>
-
-
-
-<li>Complexity: a guide tour, how nature works: the science of self-organizing criticality</li>
-
-
-
-<li>Happy Accidents: Serendipity in Modern Medical Breakthroughs</li>
-
-
-
-<li>Alchemy</li>
-</ol>
 
 
 

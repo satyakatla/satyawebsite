@@ -163,24 +163,856 @@ gtag("config", "GT-K46PPZHS", {"googlesitekit_post_type":"page"});
 			
 				
 <article id="post-31" class="post-31 page type-page status-publish hentry no-post-thumbnail no-sticky entry" itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
-
-			<header class="entry-header">
-			<h1 class="page-title" itemprop="headline">Bio-sketch</h1>		</header><!-- .entry-header -->
-	
 	<div class="entry-content" itemprop="text">
-		<figure id="attachment_2509" aria-describedby="caption-attachment-2509" style="width: 224px" class="wp-caption aligncenter"><img fetchpriority="high" decoding="async" class="wp-image-2509" src="author.jpg" alt="Katla Satyanarayana" width="224" height="224"><figcaption id="caption-attachment-2509" class="wp-caption-text"><strong>             Katla Satyanarayana</strong></figcaption></figure>
-<p style="text-align: center;">
-</p><p style="text-align: left;"> Satyanarayana, who goes by the moniker, Satya, was born on May 4 1992 in Karimnagar district, Telangana (then AP), India. Satya spent most of his life before college in Hyderabad, popularly known as ‘city of pearls’, Telangana,  India. He did his schooling at Neo Royal High School, then later moved to Chennai, for undergraduation at the Indian Institute of Technology, Madras<span class="TrackChangeTextInsertion TrackedChange SCXW118752116 BCX0"><span class="TextRun SCXW118752116 BCX0" lang="EN-US" xml:lang="EN-US" data-contrast="auto"><span class="NormalTextRun SCXW118752116 BCX0">. </span></span></span> His interests have varied over the years. Through his high school, he was into computer science, but later his interests drifted towards wireless communication<span class="TrackChangeTextInsertion TrackedChange SCXW118752116 BCX0"><span class="TextRun SCXW118752116 BCX0" lang="EN-US" xml:lang="EN-US" data-contrast="auto"><span class="NormalTextRun SCXW118752116 BCX0">. </span></span></span></p>
-<p>Satya received the Bachelor’s degree in electrical engineering from the Indian Institute of Technology Madras, Chennai, India, in 2014, and the Ph.D . degree in wireless communications from the University of Southampton, UK, in liaison with InterDigital, Europe, London, in 2019. During July 2014–August 2015, he worked as a Research Assistant with the Indian Institute of Science, Bangalore. From Nov. 2019- Jul. 2022, Satya was at InterDigital, where he led several inventions and publications hinged on 3GPP Release 18/18+ and IEEE 802.11bf. Satya had co-authored a little over a 20 papers and is also the co-inventor of about 20 patent applications pivoted on 5G NR.</p>
-<p>Satya was at ALL.SPACE between Jul. 2022 – May 2025 as a Senior Staff Engineer, where he is occupied with channel modelling and real time signal processing in DSP for satellite ground terminal operating in Ku and Ka bands.</p>
-<p>Currently, Satya is spending his time at MDA Space, where is leading the SDR design, more particularly, the O-RU of the on-board processor for 5G-NTN.</p>
-<p>His research interests include millimeter wave/terahertz communications, hybrid beamforming, machine learning with an emphasis on transceiver algorithms for wireless communication systems, and multi-functional MIMO.</p>
-<p style="text-align: left;">
-</p><p>e-mail id: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="681b091c11094603091c0409280f05090104460b0705">[email protected]</a></p>
-<p style="text-align: left;">
-			</p></div><!-- .entry-content -->
 
-	
+<style id="home-profile-styles">
+/* ==========================================================
+   Home Page / Bio-sketch - Custom Modern Responsive Template
+   ========================================================== */
+.home-profile-wrapper {
+  margin: 0.5rem 0 2.5rem 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+/* 1. HERO PROFILE CARD */
+.home-hero-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 32px 36px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.home-hero-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #dc2626 0%, #ea580c 50%, #f59e0b 100%);
+}
+
+.home-hero-layout {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.home-avatar-wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.home-avatar-img {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  display: block;
+}
+
+.home-avatar-badge {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  background: #0f172a;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 9999px;
+  padding: 3px 9px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.home-hero-content {
+  flex: 1 1 auto;
+}
+
+.home-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #dc2626;
+  background: #fef2f2;
+  border: 1px solid #fee2e2;
+  border-radius: 9999px;
+  padding: 4px 12px;
+  margin-bottom: 10px;
+}
+
+.home-name {
+  font-family: "Crimson Text", Georgia, serif;
+  font-size: 2.35rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 4px 0;
+  line-height: 1.15;
+}
+
+.home-name-sub {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #64748b;
+  margin-left: 6px;
+}
+
+.home-headline {
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: #0284c7;
+  margin: 0 0 12px 0;
+}
+
+.home-bio-snippet {
+  font-size: 0.96rem;
+  color: #475569;
+  margin: 0 0 18px 0;
+  line-height: 1.55;
+  max-width: 620px;
+}
+
+.home-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.home-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none !important;
+  transition: all 0.18s ease;
+  line-height: 1.2;
+}
+
+.home-btn-primary {
+  background: #0f172a;
+  color: #ffffff !important;
+  border: 1px solid #0f172a;
+}
+
+.home-btn-primary:hover {
+  background: #1e293b;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.2);
+}
+
+.home-btn-secondary {
+  background: #ffffff;
+  color: #334155 !important;
+  border: 1px solid #cbd5e1;
+}
+
+.home-btn-secondary:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+  color: #0f172a !important;
+}
+
+.home-btn-social {
+  padding: 8px 12px;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  color: #475569 !important;
+}
+
+.home-btn-social:hover {
+  background: #e2e8f0;
+  color: #0f172a !important;
+}
+
+/* 2. STATS & IMPACT ROW */
+.home-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 30px;
+}
+
+.home-stat-box {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px 18px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.home-stat-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  border-color: #cbd5e1;
+}
+
+.home-stat-num {
+  font-family: "Crimson Text", Georgia, serif;
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #dc2626;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.home-stat-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #0f172a;
+  margin-bottom: 2px;
+}
+
+.home-stat-sub {
+  font-size: 0.72rem;
+  color: #64748b;
+}
+
+/* SECTION TITLES */
+.home-section-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 32px 0 16px 0;
+}
+
+.home-section-title {
+  font-family: "Crimson Text", Georgia, serif;
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.home-section-line {
+  flex: 1;
+  height: 1px;
+  background: #e2e8f0;
+}
+
+/* 3. BIOGRAPHY NARRATIVE */
+.home-bio-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 28px 32px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  margin-bottom: 28px;
+}
+
+.home-bio-text p {
+  font-size: 1.02rem;
+  color: #334155;
+  line-height: 1.7;
+  margin: 0 0 16px 0;
+}
+
+.home-bio-text p:last-child {
+  margin-bottom: 0;
+}
+
+.home-bio-text strong {
+  color: #0f172a;
+}
+
+/* 4. TECHNICAL EXPERTISE GRID */
+.home-expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.home-exp-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px 22px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-exp-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  border-color: #cbd5e1;
+}
+
+.home-exp-icon {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.home-exp-title {
+  font-family: "Crimson Text", Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 6px 0;
+}
+
+.home-exp-desc {
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* 5. CAREER & ACADEMIC TIMELINE */
+.home-timeline-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 28px 32px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  margin-bottom: 30px;
+}
+
+.home-timeline-list {
+  position: relative;
+  padding-left: 24px;
+  margin: 0;
+  list-style: none;
+}
+
+.home-timeline-list::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  left: 6px;
+  width: 2px;
+  background: #e2e8f0;
+}
+
+.home-timeline-item {
+  position: relative;
+  padding-bottom: 22px;
+}
+
+.home-timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.home-timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -24px;
+  top: 5px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3px solid #0284c7;
+  box-shadow: 0 0 0 3px #e0f2fe;
+}
+
+.home-timeline-item.active-now::before {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px #fee2e2;
+}
+
+.home-timeline-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 6px;
+  margin-bottom: 3px;
+}
+
+.home-timeline-role {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.home-timeline-period {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #64748b;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 9999px;
+  padding: 2px 9px;
+}
+
+.home-timeline-org {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #0284c7;
+  margin-bottom: 4px;
+}
+
+.home-timeline-desc {
+  font-size: 0.88rem;
+  color: #475569;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* 6. EXPLORE THE SITE HUB */
+.home-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.home-hub-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px 22px;
+  text-decoration: none !important;
+  color: inherit !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  transition: all 0.18s ease;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.home-hub-card:hover {
+  transform: translateY(-2px);
+  border-color: #0f172a;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.home-hub-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.home-hub-content {
+  flex: 1;
+}
+
+.home-hub-title {
+  font-family: "Crimson Text", Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 4px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.home-hub-desc {
+  font-size: 0.86rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* 7. CONTACT & GET IN TOUCH */
+.home-contact-box {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #ffffff;
+  border-radius: 14px;
+  padding: 28px 32px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.home-contact-info h3 {
+  font-family: "Crimson Text", Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 4px 0;
+}
+
+.home-contact-info p {
+  font-size: 0.92rem;
+  color: #cbd5e1;
+  margin: 0;
+}
+
+.home-contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.home-contact-email-btn {
+  background: #dc2626;
+  color: #ffffff !important;
+  font-weight: 600;
+  font-size: 0.86rem;
+  padding: 9px 18px;
+  border-radius: 8px;
+  text-decoration: none !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.15s ease;
+}
+
+.home-contact-email-btn:hover {
+  background: #b91c1c;
+}
+
+.home-copy-email-btn {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.86rem;
+  padding: 9px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.15s ease;
+}
+
+.home-copy-email-btn:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .home-hero-layout {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  .home-hero-actions {
+    justify-content: center;
+  }
+  .home-bio-snippet {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .home-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .home-expertise-grid {
+    grid-template-columns: 1fr;
+  }
+  .home-hub-grid {
+    grid-template-columns: 1fr;
+  }
+  .home-contact-box {
+    flex-direction: column;
+    text-align: center;
+  }
+  .home-contact-actions {
+    justify-content: center;
+  }
+}
+</style>
+
+<div class="home-profile-wrapper">
+
+  <!-- 1. HERO PROFILE CARD -->
+  <header class="home-hero-card">
+    <div class="home-hero-layout">
+      <div class="home-avatar-wrapper">
+        <img src="author.jpg" alt="Katla Satyanarayana" class="home-avatar-img" width="170" height="170">
+        <span class="home-avatar-badge">Ph.D.</span>
+      </div>
+
+      <div class="home-hero-content">
+        <span class="home-badge-pill">&#128768; Wireless Systems &bull; 5G-NTN &bull; SDR</span>
+        <h1 class="home-name">Katla Satyanarayana <span class="home-name-sub">("Satya")</span></h1>
+        <div class="home-headline">Lead SDR &amp; Signal Processing Architect &bull; MDA Space</div>
+        <p class="home-bio-snippet">
+          Leading on-board Open Radio Unit (O-RU) design for 5G Non-Terrestrial Networks (5G-NTN). Former Senior Staff Engineer at ALL.SPACE &amp; InterDigital. Co-author of 20+ peer-reviewed papers and co-inventor of ~20 patent applications across 5G NR, mmWave/THz, and satellite communications.
+        </p>
+
+        <div class="home-hero-actions">
+          <a href="mailto:satya.katla@gmail.com" class="home-action-btn home-btn-primary">
+            &#9993; Get in Touch
+          </a>
+          <a href="/research/" class="home-action-btn home-btn-secondary">
+            &#128300; Research
+          </a>
+          <a href="/publications/" class="home-action-btn home-btn-secondary">
+            &#128196; Publications (20+)
+          </a>
+          <a href="https://www.linkedin.com/in/satyakatla/" target="_blank" rel="noopener noreferrer" class="home-action-btn home-btn-social" title="LinkedIn">
+            <i class="fa fa-linkedin"></i>
+          </a>
+          <a href="https://twitter.com/satyakatla" target="_blank" rel="noopener noreferrer" class="home-action-btn home-btn-social" title="Twitter / X">
+            <i class="fa fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. HIGH-IMPACT STATS / METRICS -->
+  <div class="home-stats-grid">
+    <div class="home-stat-box">
+      <div class="home-stat-num">~20</div>
+      <div class="home-stat-label">Patents</div>
+      <div class="home-stat-sub">5G NR &bull; Rel-18 &bull; 802.11bf</div>
+    </div>
+    <div class="home-stat-box">
+      <div class="home-stat-num">20+</div>
+      <div class="home-stat-label">Publications</div>
+      <div class="home-stat-sub">IEEE Journals &amp; Conf.</div>
+    </div>
+    <div class="home-stat-box">
+      <div class="home-stat-num">Ku / Ka</div>
+      <div class="home-stat-label">Satellite DSP</div>
+      <div class="home-stat-sub">Multi-Orbit Ground &amp; NTN</div>
+    </div>
+    <div class="home-stat-box">
+      <div class="home-stat-num">Ph.D.</div>
+      <div class="home-stat-label">Southampton &amp; IITM</div>
+      <div class="home-stat-sub">IIT Madras &bull; IISc &bull; UoS</div>
+    </div>
+  </div>
+
+  <!-- 3. BIOGRAPHY NARRATIVE -->
+  <div class="home-section-header">
+    <h2 class="home-section-title">&#128100; About Me &amp; Background</h2>
+    <div class="home-section-line"></div>
+  </div>
+
+  <div class="home-bio-card">
+    <div class="home-bio-text">
+      <p>
+        <strong>Satyanarayana</strong>, who goes by the moniker <strong>Satya</strong>, was born on May 4, 1992 in Karimnagar district, Telangana, India. He spent most of his early years in Hyderabad, popularly known as the &lsquo;City of Pearls&rsquo;. After completing his schooling at Neo Royal High School, his intellectual journey took flight at the prestigious <strong>Indian Institute of Technology (IIT) Madras</strong>, Chennai, where he earned his <strong>Bachelor&rsquo;s degree in Electrical Engineering</strong> in 2014. While his high school years were steeped in computer science, his fascination steadily gravitated toward the rich mathematical beauty of wireless communication and statistical signal processing.
+      </p>
+      <p>
+        Following graduation, Satya worked as a Research Assistant at the <strong>Indian Institute of Science (IISc), Bangalore</strong> (July 2014 &ndash; August 2015), diving deep into advanced wireless transceiver design. He subsequently moved to the United Kingdom to pursue his <strong>Ph.D. in Wireless Communications</strong> at the <strong>University of Southampton</strong>, conducted in close research liaison with <strong>InterDigital Europe, London</strong> (conferred in 2019).
+      </p>
+      <p>
+        From November 2019 to July 2022, Satya was at <strong>InterDigital</strong>, where he led multiple fundamental inventions and standardisation contributions hinged on <strong>3GPP Release 18/18+</strong> and <strong>IEEE 802.11bf</strong> (WLAN Sensing). During this time, he co-authored over 20 peer-reviewed papers and contributed to approximately 20 patent applications focused on 5G New Radio (5G NR).
+      </p>
+      <p>
+        Between July 2022 and May 2025, Satya served as a <strong>Senior Staff Engineer at ALL.SPACE</strong>, spearheading channel modelling and real-time digital signal processing (DSP) algorithms implemented in software-defined radios and digital hardware for multi-beam satellite ground terminals operating across Ku and Ka frequency bands.
+      </p>
+      <p>
+        Currently, Satya is leading the Software-Defined Radio (SDR) design at <strong>MDA Space</strong>, specifically architecting the <strong>Open Radio Unit (O-RU)</strong> of the on-board processor for <strong>5G Non-Terrestrial Networks (5G-NTN)</strong>.
+      </p>
+    </div>
+  </div>
+
+  <!-- 4. CORE TECHNICAL EXPERTISE -->
+  <div class="home-section-header">
+    <h2 class="home-section-title">&#128295; Core Research &amp; Technical Focus</h2>
+    <div class="home-section-line"></div>
+  </div>
+
+  <div class="home-expertise-grid">
+    <div class="home-exp-card">
+      <div class="home-exp-icon">&#128768;</div>
+      <h3 class="home-exp-title">5G-NTN &amp; Satellite Communications</h3>
+      <p class="home-exp-desc">
+        On-board processors, O-RU architectures, non-terrestrial channel propagation modeling, and real-time DSP for multi-orbit Ku/Ka-band satellite terminals.
+      </p>
+    </div>
+
+    <div class="home-exp-card">
+      <div class="home-exp-icon">&#128225;</div>
+      <h3 class="home-exp-title">mmWave &amp; Terahertz (THz) Communications</h3>
+      <p class="home-exp-desc">
+        Ultra-high frequency transceiver algorithms, analog/digital hybrid beamforming architectures, low-resolution ADCs, and spatial multiplexing.
+      </p>
+    </div>
+
+    <div class="home-exp-card">
+      <div class="home-exp-icon">&#128246;</div>
+      <h3 class="home-exp-title">Massive MIMO &amp; Multi-Functional Systems</h3>
+      <p class="home-exp-desc">
+        Precoding, spatial modulation, multi-user detection, and Integrated Sensing and Communications (ISAC / IEEE 802.11bf Wi-Fi sensing).
+      </p>
+    </div>
+
+    <div class="home-exp-card">
+      <div class="home-exp-icon">&#129504;</div>
+      <h3 class="home-exp-title">Machine Learning for Physical Layer</h3>
+      <p class="home-exp-desc">
+        Deep learning and statistical learning for channel estimation, beam tracking, transceiver optimization, and real-time wireless signal classification.
+      </p>
+    </div>
+  </div>
+
+  <!-- 5. CAREER & ACADEMIC TIMELINE -->
+  <div class="home-section-header">
+    <h2 class="home-section-title">&#128337; Experience &amp; Education</h2>
+    <div class="home-section-line"></div>
+  </div>
+
+  <div class="home-timeline-card">
+    <ul class="home-timeline-list">
+      <li class="home-timeline-item active-now">
+        <div class="home-timeline-header">
+          <span class="home-timeline-role">Lead SDR Design Engineer (5G-NTN)</span>
+          <span class="home-timeline-period">Present</span>
+        </div>
+        <div class="home-timeline-org">MDA Space</div>
+        <p class="home-timeline-desc">Leading the SDR design, particularly the O-RU of the on-board processor for 5G Non-Terrestrial Networks.</p>
+      </li>
+
+      <li class="home-timeline-item">
+        <div class="home-timeline-header">
+          <span class="home-timeline-role">Senior Staff Engineer (DSP &amp; Channel Modelling)</span>
+          <span class="home-timeline-period">Jul 2022 &ndash; May 2025</span>
+        </div>
+        <div class="home-timeline-org">ALL.SPACE</div>
+        <p class="home-timeline-desc">Real-time DSP implementation and channel modeling for advanced satellite ground terminals operating in Ku and Ka bands.</p>
+      </li>
+
+      <li class="home-timeline-item">
+        <div class="home-timeline-header">
+          <span class="home-timeline-role">Wireless R&amp;D Lead &bull; 3GPP &amp; Standards</span>
+          <span class="home-timeline-period">Nov 2019 &ndash; Jul 2022</span>
+        </div>
+        <div class="home-timeline-org">InterDigital Europe &bull; London, UK</div>
+        <p class="home-timeline-desc">Inventions and standards contributions for 3GPP Rel-18/18+ and IEEE 802.11bf. Co-authored 20+ papers and ~20 patent filings on 5G NR.</p>
+      </li>
+
+      <li class="home-timeline-item">
+        <div class="home-timeline-header">
+          <span class="home-timeline-role">Ph.D. in Wireless Communications</span>
+          <span class="home-timeline-period">2015 &ndash; 2019</span>
+        </div>
+        <div class="home-timeline-org">University of Southampton &bull; in liaison with InterDigital London</div>
+        <p class="home-timeline-desc">Doctoral dissertation focused on millimeter-wave communications, hybrid beamforming, and multi-functional MIMO systems.</p>
+      </li>
+
+      <li class="home-timeline-item">
+        <div class="home-timeline-header">
+          <span class="home-timeline-role">Research Assistant</span>
+          <span class="home-timeline-period">Jul 2014 &ndash; Aug 2015</span>
+        </div>
+        <div class="home-timeline-org">Indian Institute of Science (IISc) &bull; Bangalore, India</div>
+        <p class="home-timeline-desc">Research in physical layer transceiver algorithms and wireless signal processing.</p>
+      </li>
+
+      <li class="home-timeline-item">
+        <div class="home-timeline-header">
+          <span class="home-timeline-role">B.Tech in Electrical Engineering</span>
+          <span class="home-timeline-period">2010 &ndash; 2014</span>
+        </div>
+        <div class="home-timeline-org">Indian Institute of Technology (IIT) Madras &bull; Chennai, India</div>
+        <p class="home-timeline-desc">Four-year undergraduate degree in electrical engineering with specialization in signal processing and communications.</p>
+      </li>
+    </ul>
+  </div>
+
+  <!-- 6. EXPLORE MY WEBSITE (HUB) -->
+  <div class="home-section-header">
+    <h2 class="home-section-title">&#128506;&#65039; Explore My World</h2>
+    <div class="home-section-line"></div>
+  </div>
+
+  <div class="home-hub-grid">
+    <a href="/mybooks/" class="home-hub-card">
+      <div class="home-hub-icon">&#128218;</div>
+      <div class="home-hub-content">
+        <div class="home-hub-title">Books &amp; Reading &rarr;</div>
+        <p class="home-hub-desc">Organized catalogue of 34+ books read post-2022 spanning complexity, health, Indian history, and philosophy.</p>
+      </div>
+    </a>
+
+    <a href="/publications/" class="home-hub-card">
+      <div class="home-hub-icon">&#128196;</div>
+      <div class="home-hub-content">
+        <div class="home-hub-title">Publications &amp; Patents &rarr;</div>
+        <p class="home-hub-desc">Over 20 peer-reviewed papers and ~20 patent filings on 5G NR, beamforming, and wireless signal processing.</p>
+      </div>
+    </a>
+
+    <a href="/blog/" class="home-hub-card">
+      <div class="home-hub-icon">&#9997;&#65039;</div>
+      <div class="home-hub-content">
+        <div class="home-hub-title">Blog &amp; Essays &rarr;</div>
+        <p class="home-hub-desc">Long-form writings on history, epistemology, science, Hyderabad heritage, and technology.</p>
+      </div>
+    </a>
+
+    <a href="/photography/" class="home-hub-card">
+      <div class="home-hub-icon">&#128248;</div>
+      <div class="home-hub-content">
+        <div class="home-hub-title">Photography &amp; Poems &rarr;</div>
+        <p class="home-hub-desc">Visual stories captured through the lens and personal poetic expressions across life&rsquo;s seasons.</p>
+      </div>
+    </a>
+  </div>
+
+  <!-- 7. CONTACT & GET IN TOUCH -->
+  <div class="home-contact-box">
+    <div class="home-contact-info">
+      <h3>Let&rsquo;s Connect</h3>
+      <p>Interested in collaborating on 5G-NTN, wireless SDRs, signal processing, or simply talking books and ideas? Reach out!</p>
+    </div>
+
+    <div class="home-contact-actions">
+      <a href="mailto:satya.katla@gmail.com" class="home-contact-email-btn">
+        &#9993; satya.katla@gmail.com
+      </a>
+      <button type="button" class="home-copy-email-btn" id="home-copy-btn" onclick="copyEmail()">
+        <span id="copy-text">&#128203; Copy</span>
+      </button>
+    </div>
+  </div>
+
+</div><!-- /.home-profile-wrapper -->
+
+<script>
+function copyEmail() {
+  var email = "satya.katla@gmail.com";
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(email).then(function() {
+      var btnText = document.getElementById("copy-text");
+      btnText.innerText = "✓ Copied!";
+      setTimeout(function() {
+        btnText.innerText = "📋 Copy";
+      }, 2000);
+    });
+  } else {
+    var ta = document.createElement("textarea");
+    ta.value = email;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand("copy");
+    document.body.removeChild(ta);
+    var btnText = document.getElementById("copy-text");
+    btnText.innerText = "✓ Copied!";
+    setTimeout(function() {
+      btnText.innerText = "📋 Copy";
+    }, 2000);
+  }
+}
+</script>
+
+	</div><!-- .entry-content -->
 </article><!-- #post-## -->
 
 				

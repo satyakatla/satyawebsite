@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research – Katla Satyanarayana</title>
+<meta name="robots" content="max-image-preview:large">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Crimson+Text%3A400%2C700%2C400italic%7COswald%3A400%2C700%2C300&subset=latin,latin-ext">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Google tag (gtag.js) -->
+<script id="google_gtagjs-js" src="https://www.googletagmanager.com/gtag/js?id=GT-K46PPZHS" async></script>
+<script>
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("set","linker",{"domains":["satyanarayana.xyz"]});
+gtag("js", new Date());
+gtag("config", "GT-K46PPZHS");
+</script>
+
+<style>
+/* ── Reset & Base ── */
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: 'Crimson Text', Georgia, serif; font-size: 18px; color: #333; background: #f5f5f5; }
+a { color: #cc8800; text-decoration: none; }
+a:hover { text-decoration: underline; }
+h1, h2, h3, h4 { font-family: 'Oswald', sans-serif; font-weight: 400; }
+
+/* ── Wide Container ── */
+.wide-container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+/* ── Search Area ── */
+.search-area { background: #222; padding: 8px 0; display: none; }
+.search-area .searchform input { width: 100%; padding: 6px 12px; border: none; font-size: 14px; }
+
+/* ── Navigation ── */
+.main-navigation { background: #1a1a1a; position: relative; z-index: 100; }
+.main-navigation .wide-container { display: flex; align-items: center; justify-content: space-between; }
+.menu-wrapper { display: flex; }
+.menu-primary-items { list-style: none; margin: 0; padding: 0; display: flex; }
+.menu-primary-items > li > a {
+  display: block; padding: 16px 18px; color: #ccc;
+  font-family: 'Oswald', sans-serif; font-size: 14px; letter-spacing: 1px; text-transform: uppercase;
+  transition: color 0.2s;
+}
+.menu-primary-items > li > a:hover,
+.menu-primary-items > li.current > a { color: #fff; text-decoration: none; }
+.menu-primary-items .sub-menu { display: none; position: absolute; background: #111; list-style: none; margin: 0; padding: 0; min-width: 160px; z-index: 200; }
+.menu-primary-items li:hover .sub-menu { display: block; }
+.menu-primary-items .sub-menu li a { display: block; padding: 10px 18px; color: #aaa; font-family: 'Oswald', sans-serif; font-size: 13px; text-transform: uppercase; }
+.menu-primary-items .sub-menu li a:hover { color: #fff; background: #222; }
+.search-toggle { color: #aaa; cursor: pointer; padding: 16px 0 16px 16px; }
+
+/* ── Site Header ── */
+.site-header {
+  background-image: url("/wp-content/uploads/2019/08/cropped-IMG_20190803_143338-1.jpg");
+  background-repeat: no-repeat; background-position: center; background-size: cover;
+  position: relative; min-height: 160px; display: flex; align-items: center;
+}
+.site-header::after {
+  content: ""; display: block; width: 100%; height: 100%;
+  background-color: rgba(204,137,0,0.3);
+  position: absolute; top: 0; left: 0; z-index: 0;
+}
+.site-branding { position: relative; z-index: 1; width: 100%; padding: 30px 0; }
+.site-title { margin: 0; }
+.site-title a { color: #fff; font-family: 'Oswald', sans-serif; font-size: 42px; font-weight: 700; text-shadow: 1px 1px 4px rgba(0,0,0,0.5); }
+
+/* ── Content Layout ── */
+.site-content { padding: 40px 0; }
+.site-content .wide-container { display: flex; gap: 40px; align-items: flex-start; }
+#primary { flex: 1 1 0; min-width: 0; }
+#secondary { width: 280px; flex-shrink: 0; }
+
+/* ── Entry ── */
+.entry-header { margin-bottom: 28px; border-bottom: 2px solid #eee; padding-bottom: 16px; }
+.page-title { font-family: 'Oswald', sans-serif; font-size: 32px; font-weight: 300; color: #222; margin: 0; letter-spacing: 1px; text-transform: uppercase; }
+.entry-content { background: #fff; padding: 32px; border-radius: 2px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+
+/* ── Section Headers ── */
+.section-title {
+  font-family: 'Oswald', sans-serif; font-size: 20px; font-weight: 400; text-transform: uppercase;
+  letter-spacing: 1px; color: #333; margin: 36px 0 16px;
+  padding-bottom: 8px; border-bottom: 2px solid #cc8800;
+  display: flex; align-items: center; gap: 10px;
+}
+.section-title:first-of-type { margin-top: 0; }
+.section-title .fa { color: #cc8800; }
+
+/* ── Interest Badges ── */
+.interests-grid { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 8px; }
+.interest-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 18px; border: 2px solid #cc8800; border-radius: 30px;
+  font-family: 'Oswald', sans-serif; font-size: 14px; color: #cc8800;
+  letter-spacing: 0.5px; transition: all 0.2s; cursor: default;
+}
+.interest-badge:hover { background: #cc8800; color: #fff; }
+.interest-badge .fa { font-size: 13px; }
+
+/* ── Project Cards ── */
+.projects-grid { display: flex; flex-direction: column; gap: 20px; }
+.project-card {
+  border-left: 5px solid #cc8800; background: #fafafa;
+  padding: 18px 20px; border-radius: 0 4px 4px 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+.project-card h4 { margin: 0 0 8px; font-family: 'Oswald', sans-serif; font-size: 17px; color: #222; }
+.project-card p { margin: 0 0 12px; font-size: 16px; line-height: 1.6; color: #555; }
+.project-meta { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.badge {
+  display: inline-block; padding: 3px 10px; border-radius: 3px;
+  font-family: 'Oswald', sans-serif; font-size: 12px; letter-spacing: 0.5px;
+}
+.badge-ongoing { background: #e8f5e9; color: #2e7d32; border: 1px solid #a5d6a7; }
+.badge-planned { background: #fff8e1; color: #f57f17; border: 1px solid #ffe082; }
+.badge-tag { background: #f0f0f0; color: #555; border: 1px solid #ddd; }
+
+/* ── Affiliation Cards ── */
+.affiliation-cards { display: flex; flex-direction: column; gap: 16px; }
+.affiliation-card {
+  border-left: 5px solid #cc8800; background: #fafafa;
+  padding: 16px 20px; border-radius: 0 4px 4px 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+.affiliation-card h4 { margin: 0 0 6px; font-family: 'Oswald', sans-serif; font-size: 16px; color: #222; }
+.affiliation-card p { margin: 0; font-size: 15px; color: #555; line-height: 1.6; }
+.affiliation-card a { color: #cc8800; }
+
+/* ── Sidebar ── */
+.widget-area .widget { background: #fff; padding: 20px; margin-bottom: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+.widget-title { font-family: 'Oswald', sans-serif; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #888; margin: 0 0 14px; border-bottom: 1px solid #eee; padding-bottom: 8px; }
+.widget .menu { list-style: none; margin: 0; padding: 0; }
+.widget .menu li { border-bottom: 1px solid #f0f0f0; }
+.widget .menu li:last-child { border-bottom: none; }
+.widget .menu li a { display: block; padding: 8px 0; color: #555; font-size: 15px; }
+.widget .menu li a:hover { color: #cc8800; text-decoration: none; }
+.widget .menu .sub-menu { list-style: none; margin: 0; padding: 0 0 0 14px; }
+.widget-quote { font-size: 14px; color: #666; line-height: 1.6; font-style: italic; }
+
+/* ── Footer ── */
+.site-footer { background: #1a1a1a; color: #888; padding: 20px 0; }
+.site-footer .wide-container { display: flex; align-items: center; justify-content: space-between; }
+.copyright { margin: 0; font-size: 13px; }
+.copyright a { color: #aaa; }
+.social-links a { color: #888; font-size: 18px; margin-left: 12px; transition: color 0.2s; }
+.social-links a:hover { color: #fff; }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .site-content .wide-container { flex-direction: column; }
+  #secondary { width: 100%; }
+  .menu-primary-items { flex-wrap: wrap; }
+  .menu-primary-items > li > a { padding: 12px 12px; font-size: 12px; }
+  .site-footer .wide-container { flex-direction: column; gap: 12px; text-align: center; }
+  .social-links a { margin: 0 6px; }
+  .entry-content { padding: 20px; }
+}
+</style>
+</head>
+
+<body class="page-template-default page wp-theme-bulan has-custom-header layout-2c-l">
+
+<div id="page" class="site">
+
+  <!-- Navigation -->
+  <nav id="site-navigation" class="main-navigation">
+    <div class="wide-container">
+      <div class="menu-wrapper">
+        <ul id="menu-primary-items" class="menu-primary-items">
+          <li><a href="/">Know me</a></li>
+          <li class="current"><a href="/research/">Research</a></li>
+          <li><a href="/publications/">Publications</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="#">Activities</a>
+            <ul class="sub-menu">
+              <li><a href="/photography/">Photography</a></li>
+              <li><a href="/mybooks/">Books</a></li>
+              <li><a href="/category/my-poetic-expressions/">My Poems</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <span class="search-toggle"><i class="fa fa-search"></i></span>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header id="masthead" class="site-header">
+    <div class="site-branding">
+      <div class="wide-container">
+        <div id="logo">
+          <h1 class="site-title"><a href="/" rel="home">I</a></h1>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <div id="content" class="site-content">
+    <div class="wide-container">
+
+      <div id="primary" class="content-area">
+        <main id="main" class="site-main">
+
+          <article class="page entry">
+            <header class="entry-header">
+              <h1 class="page-title">Research</h1>
+            </header>
+
+            <div class="entry-content">
+
+              <!-- Research Interests -->
+              <h2 class="section-title"><i class="fa fa-flask"></i> Research Interests</h2>
+              <div class="interests-grid">
+                <span class="interest-badge"><i class="fa fa-wifi"></i> Wireless Communications</span>
+                <span class="interest-badge"><i class="fa fa-signal"></i> OFDM</span>
+                <span class="interest-badge"><i class="fa fa-broadcast-tower"></i> Spread Spectrum</span>
+                <span class="interest-badge"><i class="fa fa-random"></i> Cognitive Radio</span>
+                <span class="interest-badge"><i class="fa fa-bar-chart"></i> Signal Processing</span>
+              </div>
+              <p style="margin-top:16px; color:#555; font-size:16px; line-height:1.7;">
+                My primary research interest lies in wireless communication systems, with a focus on spectral efficiency and adaptive techniques. I am particularly fascinated by the challenges of interference management, dynamic spectrum access, and the design of robust waveforms for next-generation networks.
+              </p>
+
+              <!-- Current Projects -->
+              <h2 class="section-title"><i class="fa fa-code-fork"></i> Current Projects</h2>
+              <div class="projects-grid">
+
+                <div class="project-card">
+                  <h4>Cognitive Radio with OFDM Waveforms</h4>
+                  <p>Investigating dynamic spectrum access strategies using OFDM-based cognitive radios. The goal is to design a secondary user system that can opportunistically utilize licensed spectrum without causing harmful interference to primary users.</p>
+                  <div class="project-meta">
+                    <span class="badge badge-ongoing">Ongoing</span>
+                    <span class="badge badge-tag">OFDM</span>
+                    <span class="badge badge-tag">Cognitive Radio</span>
+                    <span class="badge badge-tag">Spectrum Sensing</span>
+                  </div>
+                </div>
+
+                <div class="project-card">
+                  <h4>Spread Spectrum Interference Mitigation</h4>
+                  <p>Studying CDMA and DSSS techniques for robust communication in frequency-selective fading channels. Exploring adaptive spreading codes and RAKE receiver architectures to improve system performance.</p>
+                  <div class="project-meta">
+                    <span class="badge badge-ongoing">Ongoing</span>
+                    <span class="badge badge-tag">CDMA</span>
+                    <span class="badge badge-tag">DSSS</span>
+                    <span class="badge badge-tag">Fading Channels</span>
+                  </div>
+                </div>
+
+                <div class="project-card">
+                  <h4>Machine Learning for Spectrum Management</h4>
+                  <p>Planned investigation into applying reinforcement learning and deep learning techniques for intelligent spectrum management and channel prediction in heterogeneous wireless networks.</p>
+                  <div class="project-meta">
+                    <span class="badge badge-planned">Planned</span>
+                    <span class="badge badge-tag">Machine Learning</span>
+                    <span class="badge badge-tag">Spectrum</span>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Research Groups -->
+              <h2 class="section-title"><i class="fa fa-university"></i> Affiliation &amp; Groups</h2>
+              <div class="affiliation-cards">
+
+                <div class="affiliation-card">
+                  <h4>Department of Electrical Engineering, IIT Madras</h4>
+                  <p>Senior undergraduate student at <a href="http://www.iitm.ac.in/" target="_blank">Indian Institute of Technology Madras</a>, working within the communications and signal processing research community. Adyar, Chennai – 600036, Tamil Nadu, India.</p>
+                </div>
+
+                <div class="affiliation-card">
+                  <h4>Future Plans</h4>
+                  <p>Seeking to pursue a Master's programme in Wireless Communications or Signal Processing, with the goal of contributing to research in next-generation wireless standards and cognitive networking systems.</p>
+                </div>
+
+              </div>
+
+            </div><!-- .entry-content -->
+          </article>
+
+        </main>
+      </div><!-- #primary -->
+
+      <!-- Sidebar -->
+      <div id="secondary" class="widget-area">
+
+        <aside class="widget">
+          <ul class="menu">
+            <li><a href="/">Know me</a></li>
+            <li><a href="/research/" style="color:#cc8800;">Research</a></li>
+            <li><a href="/publications/">Publications</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/photography/">Photography</a></li>
+            <li><a href="/mybooks/">Books</a></li>
+            <li><a href="/category/my-poetic-expressions/">My Poems</a></li>
+          </ul>
+        </aside>
+
+        <aside class="widget">
+          <h3 class="widget-title">Quote</h3>
+          <p class="widget-quote">"Books are assailants that attack the virgin minds unassaulted by the thoughts heretofore" — Satya Katla</p>
+        </aside>
+
+      </div><!-- #secondary -->
+
+    </div><!-- .wide-container -->
+  </div><!-- #content -->
+
+  <!-- Footer -->
+  <footer id="colophon" class="site-footer">
+    <div class="wide-container">
+      <div class="site-info">
+        <p class="copyright">© Copyright 2026 <a href="/">I</a> · Designed by <a href="http://www.theme-junkie.com/">Theme Junkie</a></p>
+      </div>
+      <div class="social-links">
+        <a href="https://twitter.com/satyakatla"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/satyakatla/"><i class="fa fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- #page -->
+</body>
+</html>

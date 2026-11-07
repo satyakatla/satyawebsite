@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Publications – Katla Satyanarayana</title>
+<meta name="robots" content="max-image-preview:large">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Crimson+Text%3A400%2C700%2C400italic%7COswald%3A400%2C700%2C300&subset=latin,latin-ext">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Google tag (gtag.js) -->
+<script id="google_gtagjs-js" src="https://www.googletagmanager.com/gtag/js?id=GT-K46PPZHS" async></script>
+<script>
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("set","linker",{"domains":["satyanarayana.xyz"]});
+gtag("js", new Date());
+gtag("config", "GT-K46PPZHS");
+</script>
+
+<style>
+/* ── Reset & Base ── */
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: 'Crimson Text', Georgia, serif; font-size: 18px; color: #333; background: #f5f5f5; }
+a { color: #cc8800; text-decoration: none; }
+a:hover { text-decoration: underline; }
+h1, h2, h3, h4 { font-family: 'Oswald', sans-serif; font-weight: 400; }
+
+/* ── Wide Container ── */
+.wide-container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+/* ── Navigation ── */
+.main-navigation { background: #1a1a1a; position: relative; z-index: 100; }
+.main-navigation .wide-container { display: flex; align-items: center; justify-content: space-between; }
+.menu-wrapper { display: flex; }
+.menu-primary-items { list-style: none; margin: 0; padding: 0; display: flex; }
+.menu-primary-items > li > a {
+  display: block; padding: 16px 18px; color: #ccc;
+  font-family: 'Oswald', sans-serif; font-size: 14px; letter-spacing: 1px; text-transform: uppercase;
+  transition: color 0.2s;
+}
+.menu-primary-items > li > a:hover,
+.menu-primary-items > li.current > a { color: #fff; text-decoration: none; }
+.menu-primary-items .sub-menu { display: none; position: absolute; background: #111; list-style: none; margin: 0; padding: 0; min-width: 160px; z-index: 200; }
+.menu-primary-items li:hover .sub-menu { display: block; }
+.menu-primary-items .sub-menu li a { display: block; padding: 10px 18px; color: #aaa; font-family: 'Oswald', sans-serif; font-size: 13px; text-transform: uppercase; }
+.menu-primary-items .sub-menu li a:hover { color: #fff; background: #222; }
+.search-toggle { color: #aaa; cursor: pointer; padding: 16px 0 16px 16px; }
+
+/* ── Site Header ── */
+.site-header {
+  background-image: url("/wp-content/uploads/2019/08/cropped-IMG_20190803_143338-1.jpg");
+  background-repeat: no-repeat; background-position: center; background-size: cover;
+  position: relative; min-height: 160px; display: flex; align-items: center;
+}
+.site-header::after {
+  content: ""; display: block; width: 100%; height: 100%;
+  background-color: rgba(204,137,0,0.3);
+  position: absolute; top: 0; left: 0; z-index: 0;
+}
+.site-branding { position: relative; z-index: 1; width: 100%; padding: 30px 0; }
+.site-title { margin: 0; }
+.site-title a { color: #fff; font-family: 'Oswald', sans-serif; font-size: 42px; font-weight: 700; text-shadow: 1px 1px 4px rgba(0,0,0,0.5); }
+
+/* ── Content Layout ── */
+.site-content { padding: 40px 0; }
+.site-content .wide-container { display: flex; gap: 40px; align-items: flex-start; }
+#primary { flex: 1 1 0; min-width: 0; }
+#secondary { width: 280px; flex-shrink: 0; }
+
+/* ── Entry ── */
+.entry-header { margin-bottom: 28px; border-bottom: 2px solid #eee; padding-bottom: 16px; }
+.page-title { font-family: 'Oswald', sans-serif; font-size: 32px; font-weight: 300; color: #222; margin: 0; letter-spacing: 1px; text-transform: uppercase; }
+.entry-content { background: #fff; padding: 32px; border-radius: 2px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+
+/* ── Year Dividers ── */
+.year-group { margin-bottom: 36px; }
+.year-heading {
+  font-family: 'Oswald', sans-serif; font-size: 22px; font-weight: 300; color: #cc8800;
+  margin: 0 0 20px; padding-bottom: 8px;
+  border-bottom: 2px solid #cc8800; letter-spacing: 2px;
+  display: flex; align-items: center; gap: 10px;
+}
+.year-heading .fa { font-size: 16px; }
+
+/* ── Publication Entry ── */
+.pub-list { list-style: none; margin: 0; padding: 0; }
+.pub-entry {
+  padding: 18px 0; border-bottom: 1px solid #f0f0f0;
+  display: flex; gap: 16px; align-items: flex-start;
+}
+.pub-entry:last-child { border-bottom: none; }
+.pub-number {
+  font-family: 'Oswald', sans-serif; font-size: 13px; color: #aaa;
+  min-width: 28px; padding-top: 2px; text-align: right;
+}
+.pub-body { flex: 1; }
+.pub-citation { font-size: 16px; line-height: 1.7; color: #333; margin: 0 0 10px; }
+.pub-citation em { font-style: italic; }
+.pub-citation strong { font-weight: 700; color: #222; }
+.pub-links { display: flex; gap: 8px; flex-wrap: wrap; }
+.pub-btn {
+  display: inline-block; padding: 3px 10px; border-radius: 3px;
+  font-family: 'Oswald', sans-serif; font-size: 12px; letter-spacing: 0.5px;
+  border: 1px solid; transition: all 0.2s; cursor: pointer;
+}
+.btn-pdf { color: #c62828; border-color: #c62828; }
+.btn-pdf:hover { background: #c62828; color: #fff; text-decoration: none; }
+.btn-doi { color: #1565c0; border-color: #1565c0; }
+.btn-doi:hover { background: #1565c0; color: #fff; text-decoration: none; }
+.btn-preprint { color: #2e7d32; border-color: #2e7d32; }
+.btn-preprint:hover { background: #2e7d32; color: #fff; text-decoration: none; }
+
+/* ── Section Header ── */
+.section-title {
+  font-family: 'Oswald', sans-serif; font-size: 20px; font-weight: 400; text-transform: uppercase;
+  letter-spacing: 1px; color: #333; margin: 36px 0 16px;
+  padding-bottom: 8px; border-bottom: 2px solid #cc8800;
+  display: flex; align-items: center; gap: 10px;
+}
+.section-title .fa { color: #cc8800; }
+
+/* ── Intro ── */
+.pub-intro { color: #555; font-size: 16px; line-height: 1.7; margin: 0 0 28px; padding: 14px 18px; background: #fffdf5; border-left: 4px solid #cc8800; border-radius: 0 4px 4px 0; }
+
+/* ── Disclaimer ── */
+.pub-disclaimer { font-size: 14px; color: #999; font-style: italic; margin-top: 32px; padding-top: 16px; border-top: 1px solid #eee; }
+
+/* ── Sidebar ── */
+.widget-area .widget { background: #fff; padding: 20px; margin-bottom: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+.widget-title { font-family: 'Oswald', sans-serif; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #888; margin: 0 0 14px; border-bottom: 1px solid #eee; padding-bottom: 8px; }
+.widget .menu { list-style: none; margin: 0; padding: 0; }
+.widget .menu li { border-bottom: 1px solid #f0f0f0; }
+.widget .menu li:last-child { border-bottom: none; }
+.widget .menu li a { display: block; padding: 8px 0; color: #555; font-size: 15px; }
+.widget .menu li a:hover { color: #cc8800; text-decoration: none; }
+.widget-quote { font-size: 14px; color: #666; line-height: 1.6; font-style: italic; }
+
+/* ── Citation Stats Widget ── */
+.citation-stats { border-top: 3px solid #cc8800; }
+.stats-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; text-align: center; margin-top: 4px; }
+.stat-item { padding: 10px 4px; }
+.stat-number { font-family: 'Oswald', sans-serif; font-size: 28px; color: #cc8800; display: block; line-height: 1; }
+.stat-label { font-family: 'Oswald', sans-serif; font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px; color: #999; display: block; margin-top: 4px; }
+
+/* ── Footer ── */
+.site-footer { background: #1a1a1a; color: #888; padding: 20px 0; }
+.site-footer .wide-container { display: flex; align-items: center; justify-content: space-between; }
+.copyright { margin: 0; font-size: 13px; }
+.copyright a { color: #aaa; }
+.social-links a { color: #888; font-size: 18px; margin-left: 12px; transition: color 0.2s; }
+.social-links a:hover { color: #fff; }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .site-content .wide-container { flex-direction: column; }
+  #secondary { width: 100%; }
+  .menu-primary-items { flex-wrap: wrap; }
+  .menu-primary-items > li > a { padding: 12px 12px; font-size: 12px; }
+  .site-footer .wide-container { flex-direction: column; gap: 12px; text-align: center; }
+  .social-links a { margin: 0 6px; }
+  .entry-content { padding: 20px; }
+  .pub-entry { flex-direction: column; gap: 8px; }
+  .pub-number { min-width: auto; text-align: left; }
+  .stats-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+
+<body class="page-template-default page wp-theme-bulan has-custom-header layout-2c-l">
+
+<div id="page" class="site">
+
+  <!-- Navigation -->
+  <nav id="site-navigation" class="main-navigation">
+    <div class="wide-container">
+      <div class="menu-wrapper">
+        <ul id="menu-primary-items" class="menu-primary-items">
+          <li><a href="/">Know me</a></li>
+          <li><a href="/research/">Research</a></li>
+          <li class="current"><a href="/publications/">Publications</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="#">Activities</a>
+            <ul class="sub-menu">
+              <li><a href="/photography/">Photography</a></li>
+              <li><a href="/mybooks/">Books</a></li>
+              <li><a href="/category/my-poetic-expressions/">My Poems</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <span class="search-toggle"><i class="fa fa-search"></i></span>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header id="masthead" class="site-header">
+    <div class="site-branding">
+      <div class="wide-container">
+        <div id="logo">
+          <h1 class="site-title"><a href="/" rel="home">I</a></h1>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <div id="content" class="site-content">
+    <div class="wide-container">
+
+      <div id="primary" class="content-area">
+        <main id="main" class="site-main">
+
+          <article class="page entry">
+            <header class="entry-header">
+              <h1 class="page-title">Publications</h1>
+            </header>
+
+            <div class="entry-content">
+
+              <p class="pub-intro">
+                <i class="fa fa-info-circle" style="color:#cc8800; margin-right:6px;"></i>
+                Publications in wireless communications, OFDM, spread spectrum, and cognitive radio. For the most up-to-date list, see my <a href="https://scholar.google.com" target="_blank">Google Scholar</a> profile.
+              </p>
+
+              <!-- 2024 -->
+              <div class="year-group">
+                <h2 class="year-heading"><i class="fa fa-calendar"></i> 2024</h2>
+                <ul class="pub-list">
+
+                  <li class="pub-entry">
+                    <span class="pub-number">[1]</span>
+                    <div class="pub-body">
+                      <p class="pub-citation">
+                        K. Satyanarayana, <strong>"Adaptive Spectrum Sensing in OFDM-Based Cognitive Radio Networks Using Energy Detection,"</strong>
+                        <em>IEEE Transactions on Wireless Communications</em>, vol. 23, no. 4, pp. 2814–2827, Apr. 2024.
+                      </p>
+                      <div class="pub-links">
+                        <a class="pub-btn btn-pdf" href="#"><i class="fa fa-file-pdf-o"></i> PDF</a>
+                        <a class="pub-btn btn-doi" href="#"><i class="fa fa-external-link"></i> DOI</a>
+                        <a class="pub-btn btn-preprint" href="#"><i class="fa fa-archive"></i> Preprint</a>
+                      </div>
+                    </div>
+                  </li>
+
+                </ul>
+              </div>
+
+              <!-- 2023 -->
+              <div class="year-group">
+                <h2 class="year-heading"><i class="fa fa-calendar"></i> 2023</h2>
+                <ul class="pub-list">
+
+                  <li class="pub-entry">
+                    <span class="pub-number">[2]</span>
+                    <div class="pub-body">
+                      <p class="pub-citation">
+                        K. Satyanarayana, <strong>"Performance Analysis of DSSS Receivers in Frequency-Selective Fading Channels,"</strong>
+                        <em>Proc. IEEE International Conference on Communications (ICC)</em>, Rome, Italy, pp. 1–6, May 2023.
+                      </p>
+                      <div class="pub-links">
+                        <a class="pub-btn btn-pdf" href="#"><i class="fa fa-file-pdf-o"></i> PDF</a>
+                        <a class="pub-btn btn-doi" href="#"><i class="fa fa-external-link"></i> DOI</a>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="pub-entry">
+                    <span class="pub-number">[3]</span>
+                    <div class="pub-body">
+                      <p class="pub-citation">
+                        K. Satyanarayana, <strong>"Interference Mitigation Techniques for Cognitive Radio Using Spread Spectrum Waveforms,"</strong>
+                        <em>IEEE Signal Processing Letters</em>, vol. 30, pp. 982–986, 2023.
+                      </p>
+                      <div class="pub-links">
+                        <a class="pub-btn btn-pdf" href="#"><i class="fa fa-file-pdf-o"></i> PDF</a>
+                        <a class="pub-btn btn-doi" href="#"><i class="fa fa-external-link"></i> DOI</a>
+                        <a class="pub-btn btn-preprint" href="#"><i class="fa fa-archive"></i> Preprint</a>
+                      </div>
+                    </div>
+                  </li>
+
+                </ul>
+              </div>
+
+              <p class="pub-disclaimer">
+                <i class="fa fa-exclamation-circle"></i>
+                Note: Publication entries above are placeholders. Please update with actual publication details.
+              </p>
+
+            </div><!-- .entry-content -->
+          </article>
+
+        </main>
+      </div><!-- #primary -->
+
+      <!-- Sidebar -->
+      <div id="secondary" class="widget-area">
+
+        <!-- Citation Stats -->
+        <aside class="widget citation-stats">
+          <h3 class="widget-title"><i class="fa fa-bar-chart" style="margin-right:6px;"></i>Citation Stats</h3>
+          <div class="stats-grid">
+            <div class="stat-item">
+              <span class="stat-number">3</span>
+              <span class="stat-label">Papers</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">0</span>
+              <span class="stat-label">Citations</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">0</span>
+              <span class="stat-label">h-index</span>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Nav Menu -->
+        <aside class="widget">
+          <ul class="menu">
+            <li><a href="/">Know me</a></li>
+            <li><a href="/research/">Research</a></li>
+            <li><a href="/publications/" style="color:#cc8800;">Publications</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/photography/">Photography</a></li>
+            <li><a href="/mybooks/">Books</a></li>
+            <li><a href="/category/my-poetic-expressions/">My Poems</a></li>
+          </ul>
+        </aside>
+
+        <!-- Quote -->
+        <aside class="widget">
+          <h3 class="widget-title">Quote</h3>
+          <p class="widget-quote">"Books are assailants that attack the virgin minds unassaulted by the thoughts heretofore" — Satya Katla</p>
+        </aside>
+
+      </div><!-- #secondary -->
+
+    </div><!-- .wide-container -->
+  </div><!-- #content -->
+
+  <!-- Footer -->
+  <footer id="colophon" class="site-footer">
+    <div class="wide-container">
+      <div class="site-info">
+        <p class="copyright">© Copyright 2026 <a href="/">I</a> · Designed by <a href="http://www.theme-junkie.com/">Theme Junkie</a></p>
+      </div>
+      <div class="social-links">
+        <a href="https://twitter.com/satyakatla"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/satyakatla/"><i class="fa fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- #page -->
+</body>
+</html>

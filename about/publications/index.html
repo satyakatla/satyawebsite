@@ -1,185 +1,601 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<head><meta charset="UTF-8">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Publications – Katla Satyanarayana</title>
 <meta name="robots" content="max-image-preview:large">
+<link rel="dns-prefetch" href="//www.googletagmanager.com">
 <link rel="dns-prefetch" href="//fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Crimson+Text%3A400%2C700%2C400italic%7COswald%3A400%2C700%2C300&subset=latin,latin-ext">
+
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Crimson+Text%3A400%2C700%2C400italic%7COswald%3A400%2C700%2C300&subset=latin%2Clatin-ext">
+<!-- Font Awesome 4.7 -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<!-- Google tag (gtag.js) -->
+<!-- Google Analytics -->
 <script id="google_gtagjs-js" src="https://www.googletagmanager.com/gtag/js?id=GT-K46PPZHS" async></script>
 <script>
 window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
 gtag("set","linker",{"domains":["satyanarayana.xyz"]});
 gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
 gtag("config", "GT-K46PPZHS");
 </script>
 
 <style>
-/* ── Reset & Base ── */
+/* ============================================================
+   BASE RESET & TYPOGRAPHY
+   ============================================================ */
 *, *::before, *::after { box-sizing: border-box; }
-body { margin: 0; font-family: 'Crimson Text', Georgia, serif; font-size: 18px; color: #333; background: #f5f5f5; }
+html { font-size: 16px; }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Crimson Text', Georgia, serif;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333;
+  background: #f5f5f5;
+}
 a { color: #cc8800; text-decoration: none; }
-a:hover { text-decoration: underline; }
-h1, h2, h3, h4 { font-family: 'Oswald', sans-serif; font-weight: 400; }
+a:hover { color: #a06800; text-decoration: underline; }
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #222;
+}
+p { margin: 0 0 1.2em; }
+ul { margin: 0; padding: 0; list-style: none; }
 
-/* ── Wide Container ── */
-.wide-container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+/* ============================================================
+   LAYOUT CONTAINERS
+   ============================================================ */
+#page { background: #f5f5f5; }
 
-/* ── Navigation ── */
-.main-navigation { background: #1a1a1a; position: relative; z-index: 100; }
-.main-navigation .wide-container { display: flex; align-items: center; justify-content: space-between; }
-.menu-wrapper { display: flex; }
-.menu-primary-items { list-style: none; margin: 0; padding: 0; display: flex; }
+.wide-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ============================================================
+   SEARCH AREA
+   ============================================================ */
+.search-area {
+  background: #111;
+  padding: 10px 0;
+  display: none;
+}
+.search-area .searchform input {
+  width: 100%;
+  padding: 8px 12px;
+  border: none;
+  font-size: 16px;
+  background: #222;
+  color: #fff;
+}
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+.main-navigation {
+  background: #1a1a1a;
+  position: relative;
+  z-index: 100;
+}
+.main-navigation .wide-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 50px;
+}
+.menu-primary-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+}
 .menu-primary-items > li > a {
-  display: block; padding: 16px 18px; color: #ccc;
-  font-family: 'Oswald', sans-serif; font-size: 14px; letter-spacing: 1px; text-transform: uppercase;
-  transition: color 0.2s;
+  display: block;
+  padding: 14px 18px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ccc;
+  transition: color 0.2s, background 0.2s;
 }
 .menu-primary-items > li > a:hover,
-.menu-primary-items > li.current > a { color: #fff; text-decoration: none; }
-.menu-primary-items .sub-menu { display: none; position: absolute; background: #111; list-style: none; margin: 0; padding: 0; min-width: 160px; z-index: 200; }
-.menu-primary-items li:hover .sub-menu { display: block; }
-.menu-primary-items .sub-menu li a { display: block; padding: 10px 18px; color: #aaa; font-family: 'Oswald', sans-serif; font-size: 13px; text-transform: uppercase; }
-.menu-primary-items .sub-menu li a:hover { color: #fff; background: #222; }
-.search-toggle { color: #aaa; cursor: pointer; padding: 16px 0 16px 16px; }
+.menu-primary-items > li.current-menu-item > a {
+  color: #fff;
+  background: #cc8800;
+  text-decoration: none;
+}
+.menu-primary-items .menu-item-has-children { position: relative; }
+.menu-primary-items .sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 160px;
+  background: #222;
+  z-index: 200;
+}
+.menu-primary-items .sub-menu li a {
+  display: block;
+  padding: 10px 16px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 13px;
+  color: #bbb;
+  letter-spacing: 0.5px;
+}
+.menu-primary-items .sub-menu li a:hover { color: #fff; background: #cc8800; }
+.menu-primary-items .menu-item-has-children:hover .sub-menu { display: block; }
 
-/* ── Site Header ── */
+.search-toggle {
+  color: #aaa;
+  cursor: pointer;
+  padding: 14px;
+  font-size: 16px;
+}
+.search-toggle:hover { color: #fff; }
+
+/* ============================================================
+   SITE HEADER
+   ============================================================ */
 .site-header {
   background-image: url("/wp-content/uploads/2019/08/cropped-IMG_20190803_143338-1.jpg");
-  background-repeat: no-repeat; background-position: center; background-size: cover;
-  position: relative; min-height: 160px; display: flex; align-items: center;
+  background-color: #8a6500;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  min-height: 160px;
+  display: flex;
+  align-items: center;
 }
 .site-header::after {
-  content: ""; display: block; width: 100%; height: 100%;
-  background-color: rgba(204,137,0,0.3);
-  position: absolute; top: 0; left: 0; z-index: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(204, 137, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
 .site-branding { position: relative; z-index: 1; width: 100%; padding: 30px 0; }
-.site-title { margin: 0; }
-.site-title a { color: #fff; font-family: 'Oswald', sans-serif; font-size: 42px; font-weight: 700; text-shadow: 1px 1px 4px rgba(0,0,0,0.5); }
-
-/* ── Content Layout ── */
-.site-content { padding: 40px 0; }
-.site-content .wide-container { display: flex; gap: 40px; align-items: flex-start; }
-#primary { flex: 1 1 0; min-width: 0; }
-#secondary { width: 280px; flex-shrink: 0; }
-
-/* ── Entry ── */
-.entry-header { margin-bottom: 28px; border-bottom: 2px solid #eee; padding-bottom: 16px; }
-.page-title { font-family: 'Oswald', sans-serif; font-size: 32px; font-weight: 300; color: #222; margin: 0; letter-spacing: 1px; text-transform: uppercase; }
-.entry-content { background: #fff; padding: 32px; border-radius: 2px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
-
-/* ── Year Dividers ── */
-.year-group { margin-bottom: 36px; }
-.year-heading {
-  font-family: 'Oswald', sans-serif; font-size: 22px; font-weight: 300; color: #cc8800;
-  margin: 0 0 20px; padding-bottom: 8px;
-  border-bottom: 2px solid #cc8800; letter-spacing: 2px;
-  display: flex; align-items: center; gap: 10px;
+.site-title {
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
-.year-heading .fa { font-size: 16px; }
+.site-title a { color: #fff; text-shadow: 1px 1px 4px rgba(0,0,0,0.5); }
+.site-title a:hover { text-decoration: none; }
 
-/* ── Publication Entry ── */
-.pub-list { list-style: none; margin: 0; padding: 0; }
+/* ============================================================
+   CONTENT AREA
+   ============================================================ */
+.site-content { padding: 36px 0 50px; }
+.site-content .wide-container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+#primary {
+  flex: 1 1 0;
+  min-width: 0;
+}
+.site-main {
+  background: #fff;
+  padding: 32px 36px;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+}
+
+.entry-header {
+  border-bottom: 2px solid #cc8800;
+  margin-bottom: 28px;
+  padding-bottom: 12px;
+}
+.page-title {
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: #1a1a1a;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.page-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin: 0 0 24px;
+  line-height: 1.6;
+}
+
+/* ============================================================
+   STATS OVERVIEW GRID
+   ============================================================ */
+.pub-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 30px;
+}
+.pub-stat-card {
+  background: #fafafa;
+  border: 1px solid #e0e0e0;
+  border-top: 3px solid #cc8800;
+  padding: 16px 14px;
+  text-align: center;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.pub-stat-num {
+  font-family: 'Oswald', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #cc8800;
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+.pub-stat-label {
+  font-family: 'Oswald', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #444;
+  margin-bottom: 2px;
+}
+.pub-stat-sub {
+  font-size: 12px;
+  color: #888;
+  font-style: italic;
+}
+
+/* ============================================================
+   SECTION HEADINGS
+   ============================================================ */
+.section-heading {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  color: #333;
+  margin: 32px 0 18px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e8e8e8;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+.section-heading:first-of-type {
+  margin-top: 0;
+}
+
+/* ============================================================
+   PUBLICATION CARDS
+   ============================================================ */
+.pub-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 12px;
+}
 .pub-entry {
-  padding: 18px 0; border-bottom: 1px solid #f0f0f0;
-  display: flex; gap: 16px; align-items: flex-start;
+  border: 1px solid #e0e0e0;
+  border-left: 5px solid #cc8800;
+  background: #fff;
+  padding: 18px 22px;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
-.pub-entry:last-child { border-bottom: none; }
-.pub-number {
-  font-family: 'Oswald', sans-serif; font-size: 13px; color: #aaa;
-  min-width: 28px; padding-top: 2px; text-align: right;
+.pub-entry:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
-.pub-body { flex: 1; }
-.pub-citation { font-size: 16px; line-height: 1.7; color: #333; margin: 0 0 10px; }
-.pub-citation em { font-style: italic; }
-.pub-citation strong { font-weight: 700; color: #222; }
-.pub-links { display: flex; gap: 8px; flex-wrap: wrap; }
+.pub-citation {
+  font-family: 'Crimson Text', Georgia, serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #333;
+  margin: 0 0 10px;
+}
+.pub-citation em {
+  font-style: italic;
+  color: #444;
+}
+.pub-title {
+  font-weight: 700;
+  color: #1a1a1a;
+}
+.pub-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+.pub-cites {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  background: #fff8e8;
+  color: #8a6000;
+  border: 1px solid #cc8800;
+  border-radius: 12px;
+  padding: 2px 10px;
+}
+.pub-cites i {
+  color: #cc8800;
+  font-size: 11px;
+}
+.pub-links {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
 .pub-btn {
-  display: inline-block; padding: 3px 10px; border-radius: 3px;
-  font-family: 'Oswald', sans-serif; font-size: 12px; letter-spacing: 0.5px;
-  border: 1px solid; transition: all 0.2s; cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  padding: 4px 11px;
+  border-radius: 2px;
+  border: 1px solid;
+  transition: all 0.2s;
+  cursor: pointer;
+  text-decoration: none !important;
+  line-height: 1.2;
 }
-.btn-pdf { color: #c62828; border-color: #c62828; }
-.btn-pdf:hover { background: #c62828; color: #fff; text-decoration: none; }
-.btn-doi { color: #1565c0; border-color: #1565c0; }
-.btn-doi:hover { background: #1565c0; color: #fff; text-decoration: none; }
-.btn-preprint { color: #2e7d32; border-color: #2e7d32; }
-.btn-preprint:hover { background: #2e7d32; color: #fff; text-decoration: none; }
-
-/* ── Section Header ── */
-.section-title {
-  font-family: 'Oswald', sans-serif; font-size: 20px; font-weight: 400; text-transform: uppercase;
-  letter-spacing: 1px; color: #333; margin: 36px 0 16px;
-  padding-bottom: 8px; border-bottom: 2px solid #cc8800;
-  display: flex; align-items: center; gap: 10px;
+.pub-btn-doi {
+  color: #1565c0 !important;
+  border-color: #90caf9;
+  background: #e3f2fd;
 }
-.section-title .fa { color: #cc8800; }
+.pub-btn-doi:hover {
+  background: #1565c0;
+  color: #fff !important;
+  border-color: #1565c0;
+}
+.pub-btn-scholar {
+  color: #0f766e !important;
+  border-color: #99f6e4;
+  background: #f0fdfa;
+}
+.pub-btn-scholar:hover {
+  background: #0f766e;
+  color: #fff !important;
+  border-color: #0f766e;
+}
+.pub-btn-patent {
+  color: #6a1b9a !important;
+  border-color: #ce93d8;
+  background: #f3e5f5;
+}
+.pub-btn-patent:hover {
+  background: #6a1b9a;
+  color: #fff !important;
+  border-color: #6a1b9a;
+}
 
-/* ── Intro ── */
-.pub-intro { color: #555; font-size: 16px; line-height: 1.7; margin: 0 0 28px; padding: 14px 18px; background: #fffdf5; border-left: 4px solid #cc8800; border-radius: 0 4px 4px 0; }
+/* ============================================================
+   AFFILIATION & NOTES BOX
+   ============================================================ */
+.pub-note-box {
+  background: #fff8e8;
+  border: 1px solid #e0e0e0;
+  border-left: 5px solid #cc8800;
+  padding: 16px 20px;
+  margin-top: 28px;
+  border-radius: 2px;
+  font-size: 15px;
+  color: #555;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.6;
+}
+.pub-note-box i {
+  color: #cc8800;
+  font-size: 16px;
+  margin-top: 3px;
+}
+.pub-note-box a {
+  color: #cc8800;
+  font-weight: 700;
+}
 
-/* ── Disclaimer ── */
-.pub-disclaimer { font-size: 14px; color: #999; font-style: italic; margin-top: 32px; padding-top: 16px; border-top: 1px solid #eee; }
+/* ============================================================
+   SIDEBAR
+   ============================================================ */
+#secondary {
+  width: 260px;
+  flex-shrink: 0;
+}
+.widget { margin-bottom: 28px; }
+.widget-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #888;
+  margin: 0 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e0e0e0;
+}
 
-/* ── Sidebar ── */
-.widget-area .widget { background: #fff; padding: 20px; margin-bottom: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
-.widget-title { font-family: 'Oswald', sans-serif; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #888; margin: 0 0 14px; border-bottom: 1px solid #eee; padding-bottom: 8px; }
-.widget .menu { list-style: none; margin: 0; padding: 0; }
-.widget .menu li { border-bottom: 1px solid #f0f0f0; }
-.widget .menu li:last-child { border-bottom: none; }
-.widget .menu li a { display: block; padding: 8px 0; color: #555; font-size: 15px; }
-.widget .menu li a:hover { color: #cc8800; text-decoration: none; }
-.widget-quote { font-size: 14px; color: #666; line-height: 1.6; font-style: italic; }
+.widget_nav_menu .menu {
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+}
+.widget_nav_menu .menu li a {
+  display: block;
+  padding: 10px 16px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  color: #555;
+  border-bottom: 1px solid #f0f0f0;
+  transition: color 0.2s, background 0.2s, padding-left 0.2s;
+}
+.widget_nav_menu .menu li.current-menu-item > a,
+.widget_nav_menu .menu li a:hover {
+  color: #fff;
+  background: #cc8800;
+  padding-left: 22px;
+  text-decoration: none;
+}
+.widget_nav_menu .menu .sub-menu { background: #f9f9f9; }
+.widget_nav_menu .menu .sub-menu li a {
+  padding-left: 28px;
+  font-size: 13px;
+  color: #777;
+}
+.widget_nav_menu .menu .sub-menu li a:hover {
+  padding-left: 34px;
+  color: #fff;
+  background: #cc8800;
+}
 
-/* ── Citation Stats Widget ── */
-.citation-stats { border-top: 3px solid #cc8800; }
-.stats-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; text-align: center; margin-top: 4px; }
-.stat-item { padding: 10px 4px; }
-.stat-number { font-family: 'Oswald', sans-serif; font-size: 28px; color: #cc8800; display: block; line-height: 1; }
-.stat-label { font-family: 'Oswald', sans-serif; font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px; color: #999; display: block; margin-top: 4px; }
+.citation-stats-widget {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-top: 3px solid #cc8800;
+  border-radius: 2px;
+  padding: 18px 16px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+}
+.citation-stats-widget .widget-title {
+  margin-bottom: 14px;
+  color: #444;
+  border-bottom: 1px solid #eee;
+}
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #f5f5f5;
+  font-family: 'Oswald', sans-serif;
+}
+.stat-row:last-of-type { border-bottom: none; }
+.stat-label {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #666;
+}
+.stat-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #cc8800;
+}
 
-/* ── Footer ── */
-.site-footer { background: #1a1a1a; color: #888; padding: 20px 0; }
-.site-footer .wide-container { display: flex; align-items: center; justify-content: space-between; }
-.copyright { margin: 0; font-size: 13px; }
+.widget_custom_html {
+  background: #fff8e8;
+  border-left: 4px solid #cc8800;
+  padding: 16px 18px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+.widget_custom_html .widget-title {
+  font-family: 'Crimson Text', serif;
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 400;
+  color: #7a5000;
+  letter-spacing: 0;
+  text-transform: none;
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  line-height: 1.6;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer {
+  background: #1a1a1a;
+  padding: 20px 0;
+  color: #888;
+  font-family: 'Oswald', sans-serif;
+  font-size: 13px;
+}
+.site-footer .wide-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 .copyright a { color: #aaa; }
-.social-links a { color: #888; font-size: 18px; margin-left: 12px; transition: color 0.2s; }
-.social-links a:hover { color: #fff; }
+.copyright a:hover { color: #cc8800; }
+.social-links a {
+  display: inline-block;
+  color: #888;
+  margin-left: 10px;
+  font-size: 18px;
+  transition: color 0.2s;
+}
+.social-links a:hover { color: #cc8800; }
 
-/* ── Responsive ── */
+/* ============================================================
+   MOBILE RESPONSIVE
+   ============================================================ */
 @media (max-width: 768px) {
   .site-content .wide-container { flex-direction: column; }
   #secondary { width: 100%; }
-  .menu-primary-items { flex-wrap: wrap; }
-  .menu-primary-items > li > a { padding: 12px 12px; font-size: 12px; }
-  .site-footer .wide-container { flex-direction: column; gap: 12px; text-align: center; }
-  .social-links a { margin: 0 6px; }
-  .entry-content { padding: 20px; }
-  .pub-entry { flex-direction: column; gap: 8px; }
-  .pub-number { min-width: auto; text-align: left; }
-  .stats-grid { grid-template-columns: 1fr; }
+  .site-main { padding: 20px 18px; }
+  .menu-primary-items > li > a { padding: 10px 12px; font-size: 12px; }
+  .pub-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .site-footer .wide-container { flex-direction: column; align-items: flex-start; }
+  .social-links a:first-child { margin-left: 0; }
+  .pub-entry { padding: 16px 16px; }
 }
 </style>
 </head>
 
-<body class="page-template-default page wp-theme-bulan has-custom-header layout-2c-l">
+<body class="page page-id-publications wp-theme-bulan has-custom-header no-featured-image layout-2c-l">
 
 <div id="page" class="site">
 
+  <!-- Search area (hidden) -->
+  <div class="search-area">
+    <div class="wide-container">
+      <form role="search" method="get" class="searchform" action="/">
+        <div><input type="search" class="search-field field" placeholder="Press enter to search …" value="" name="s" title="Search for:"></div>
+      </form>
+    </div>
+  </div>
+
   <!-- Navigation -->
-  <nav id="site-navigation" class="main-navigation">
+  <nav id="site-navigation" class="main-navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
     <div class="wide-container">
       <div class="menu-wrapper">
         <ul id="menu-primary-items" class="menu-primary-items">
-          <li><a href="/">Know me</a></li>
-          <li><a href="/research/">Research</a></li>
-          <li class="current"><a href="/publications/">Publications</a></li>
-          <li><a href="/blog/">Blog</a></li>
-          <li><a href="#">Activities</a>
+          <li class="menu-item"><a href="/">Know me</a></li>
+          <li class="menu-item"><a href="/research/">Research</a></li>
+          <li class="menu-item current-menu-item"><a href="/publications/">Publications</a></li>
+          <li class="menu-item"><a href="/blog/">Blog</a></li>
+          <li class="menu-item menu-item-has-children">
+            <a href="#">Activities</a>
             <ul class="sub-menu">
               <li><a href="/photography/">Photography</a></li>
               <li><a href="/mybooks/">Books</a></li>
@@ -190,148 +606,381 @@ h1, h2, h3, h4 { font-family: 'Oswald', sans-serif; font-weight: 400; }
       </div>
       <span class="search-toggle"><i class="fa fa-search"></i></span>
     </div>
-  </nav>
+  </nav><!-- #site-navigation -->
 
   <!-- Header -->
-  <header id="masthead" class="site-header">
+  <header id="masthead" class="site-header" itemscope itemtype="http://schema.org/WPHeader">
     <div class="site-branding">
       <div class="wide-container">
         <div id="logo">
-          <h1 class="site-title"><a href="/" rel="home">I</a></h1>
+          <h1 class="site-title" itemprop="headline"><a href="/" itemprop="url" rel="home"><span itemprop="headline">I</span></a></h1>
         </div>
       </div>
     </div>
-  </header>
+  </header><!-- #masthead -->
 
   <!-- Content -->
   <div id="content" class="site-content">
     <div class="wide-container">
 
+      <!-- Primary -->
       <div id="primary" class="content-area">
-        <main id="main" class="site-main">
+        <main id="main" class="site-main" itemprop="mainContentOfPage">
 
-          <article class="page entry">
+          <article class="page hentry entry" itemscope itemtype="http://schema.org/CreativeWork">
+
             <header class="entry-header">
-              <h1 class="page-title">Publications</h1>
+              <h1 class="page-title" itemprop="headline">Publications &amp; Patents</h1>
             </header>
 
-            <div class="entry-content">
+            <div class="entry-content" itemprop="text">
 
-              <p class="pub-intro">
-                <i class="fa fa-info-circle" style="color:#cc8800; margin-right:6px;"></i>
-                Publications in wireless communications, OFDM, spread spectrum, and cognitive radio. For the most up-to-date list, see my <a href="https://scholar.google.com" target="_blank">Google Scholar</a> profile.
+              <p class="page-subtitle">
+                Peer-reviewed journal papers, conference contributions, and patents in millimetre-wave communications, hybrid beamforming, deep learning for physical-layer design, and 5G NR.
               </p>
 
-              <!-- 2024 -->
-              <div class="year-group">
-                <h2 class="year-heading"><i class="fa fa-calendar"></i> 2024</h2>
-                <ul class="pub-list">
-
-                  <li class="pub-entry">
-                    <span class="pub-number">[1]</span>
-                    <div class="pub-body">
-                      <p class="pub-citation">
-                        K. Satyanarayana, <strong>"Adaptive Spectrum Sensing in OFDM-Based Cognitive Radio Networks Using Energy Detection,"</strong>
-                        <em>IEEE Transactions on Wireless Communications</em>, vol. 23, no. 4, pp. 2814–2827, Apr. 2024.
-                      </p>
-                      <div class="pub-links">
-                        <a class="pub-btn btn-pdf" href="#"><i class="fa fa-file-pdf-o"></i> PDF</a>
-                        <a class="pub-btn btn-doi" href="#"><i class="fa fa-external-link"></i> DOI</a>
-                        <a class="pub-btn btn-preprint" href="#"><i class="fa fa-archive"></i> Preprint</a>
-                      </div>
-                    </div>
-                  </li>
-
-                </ul>
+              <!-- Stats Grid -->
+              <div class="pub-stats-grid">
+                <div class="pub-stat-card">
+                  <div class="pub-stat-num">20+</div>
+                  <div class="pub-stat-label">Papers</div>
+                  <div class="pub-stat-sub">Journals &amp; Conferences</div>
+                </div>
+                <div class="pub-stat-card">
+                  <div class="pub-stat-num">~1,500</div>
+                  <div class="pub-stat-label">Citations</div>
+                  <div class="pub-stat-sub">Google Scholar</div>
+                </div>
+                <div class="pub-stat-card">
+                  <div class="pub-stat-num">~12</div>
+                  <div class="pub-stat-label">h-index</div>
+                  <div class="pub-stat-sub">Approximate</div>
+                </div>
+                <div class="pub-stat-card">
+                  <div class="pub-stat-num">~20</div>
+                  <div class="pub-stat-label">Patents</div>
+                  <div class="pub-stat-sub">Granted &amp; Applications</div>
+                </div>
               </div>
 
-              <!-- 2023 -->
-              <div class="year-group">
-                <h2 class="year-heading"><i class="fa fa-calendar"></i> 2023</h2>
-                <ul class="pub-list">
+              <!-- ── 2022 ── -->
+              <h2 class="section-heading"><i class="fa fa-calendar" style="color:#cc8800;margin-right:8px;"></i>2022</h2>
+              <div class="pub-list">
 
-                  <li class="pub-entry">
-                    <span class="pub-number">[2]</span>
-                    <div class="pub-body">
-                      <p class="pub-citation">
-                        K. Satyanarayana, <strong>"Performance Analysis of DSSS Receivers in Frequency-Selective Fading Channels,"</strong>
-                        <em>Proc. IEEE International Conference on Communications (ICC)</em>, Rome, Italy, pp. 1–6, May 2023.
-                      </p>
-                      <div class="pub-links">
-                        <a class="pub-btn btn-pdf" href="#"><i class="fa fa-file-pdf-o"></i> PDF</a>
-                        <a class="pub-btn btn-doi" href="#"><i class="fa fa-external-link"></i> DOI</a>
-                      </div>
+                <div class="pub-entry">
+                  <p class="pub-citation">K. Satyanarayana, O. Sahin and M. N. Kurt, “<span class="pub-title">Data-Driven Precoder Codebook Design for SU-MIMO Systems</span>,” <em>2022 IEEE 95th Vehicular Technology Conference (VTC2022-Spring)</em>, pp. 1–5, 2022.</p>
+                  <div class="pub-meta-row">
+                    <span class="pub-cites"><i class="fa fa-quote-left"></i> 2 citations</span>
+                    <div class="pub-links">
+                      <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XO3JtGIAAAAJ&citation_for_view=XO3JtGIAAAAJ:hC7cP41nSMkC" target="_blank" rel="noopener" class="pub-btn pub-btn-scholar"><i class="fa fa-graduation-cap"></i> Scholar</a>
                     </div>
-                  </li>
+                  </div>
+                </div>
 
-                  <li class="pub-entry">
-                    <span class="pub-number">[3]</span>
-                    <div class="pub-body">
-                      <p class="pub-citation">
-                        K. Satyanarayana, <strong>"Interference Mitigation Techniques for Cognitive Radio Using Spread Spectrum Waveforms,"</strong>
-                        <em>IEEE Signal Processing Letters</em>, vol. 30, pp. 982–986, 2023.
-                      </p>
-                      <div class="pub-links">
-                        <a class="pub-btn btn-pdf" href="#"><i class="fa fa-file-pdf-o"></i> PDF</a>
-                        <a class="pub-btn btn-doi" href="#"><i class="fa fa-external-link"></i> DOI</a>
-                        <a class="pub-btn btn-preprint" href="#"><i class="fa fa-archive"></i> Preprint</a>
-                      </div>
-                    </div>
-                  </li>
-
-                </ul>
               </div>
 
-              <p class="pub-disclaimer">
-                <i class="fa fa-exclamation-circle"></i>
-                Note: Publication entries above are placeholders. Please update with actual publication details.
-              </p>
+              <!-- ── 2021 ── -->
+              <h2 class="section-heading"><i class="fa fa-calendar" style="color:#cc8800;margin-right:8px;"></i>2021</h2>
+              <div class="pub-list">
+
+                <div class="pub-entry">
+                  <p class="pub-citation">K. Satyanarayana, O. Sahin and M. N. Kurt, “<span class="pub-title">Deep Q-Network-Aided Adaptive mmWave Multi-User NOMA Selection and Detection</span>,” <em>ICC 2021 – IEEE International Conference on Communications</em>, pp. 1–6, 2021.</p>
+                  <div class="pub-meta-row">
+                    <span class="pub-cites"><i class="fa fa-quote-left"></i> 2 citations</span>
+                    <div class="pub-links">
+                      <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XO3JtGIAAAAJ&citation_for_view=XO3JtGIAAAAJ:ZeXyd9-uunAC" target="_blank" rel="noopener" class="pub-btn pub-btn-scholar"><i class="fa fa-graduation-cap"></i> Scholar</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pub-entry">
+                  <p class="pub-citation">P.-H. Kuo, A. Mourad, K. Satyanarayana and M. El-Hajjar, “<span class="pub-title">Adaptive Digital Precoder Codebook Configurations for mmWave Communication Based on Hybrid Beamforming</span>,” <em>U.S. Patent 11,152,980</em>, Oct. 19, 2021.</p>
+                  <div class="pub-meta-row">
+                    <span class="pub-cites"><i class="fa fa-quote-left"></i> 8 citations</span>
+                    <div class="pub-links">
+                      <a href="https://patents.google.com/patent/US11152980" target="_blank" rel="noopener" class="pub-btn pub-btn-patent"><i class="fa fa-certificate"></i> Patent</a>
+                      <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XO3JtGIAAAAJ&citation_for_view=XO3JtGIAAAAJ:qUcmZB5y_30C" target="_blank" rel="noopener" class="pub-btn pub-btn-scholar"><i class="fa fa-graduation-cap"></i> Scholar</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- ── 2020 ── -->
+              <h2 class="section-heading"><i class="fa fa-calendar" style="color:#cc8800;margin-right:8px;"></i>2020</h2>
+              <div class="pub-list">
+
+                <div class="pub-entry">
+                  <p class="pub-citation">S. Katla, L. Xiang, Y. Zhang, M. El-Hajjar, A. A. M. Mourad and L. Hanzo, “<span class="pub-title">Deep Learning Assisted Detection for Index Modulation Aided mmWave Systems</span>,” <em>IEEE Access</em>, vol. 8, pp. 202738–202754, 2020.</p>
+                  <div class="pub-meta-row">
+                    <span class="pub-cites"><i class="fa fa-quote-left"></i> 22 citations</span>
+                    <div class="pub-links">
+                      <a href="https://ieeexplore.ieee.org/document/9247470" target="_blank" rel="noopener" class="pub-btn pub-btn-doi"><i class="fa fa-external-link"></i> DOI</a>
+                      <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XO3JtGIAAAAJ&citation_for_view=XO3JtGIAAAAJ:dhFuZR0502QC" target="_blank" rel="noopener" class="pub-btn pub-btn-scholar"><i class="fa fa-graduation-cap"></i> Scholar</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pub-entry">
+                  <p class="pub-citation">K. Satyanarayana, M. El-Hajjar, A. A. M. Mourad, P. Pietraski and L. Hanzo, “<span class="pub-title">Soft-Decoding for Multi-Set Space-Time Shift-Keying mmWave Systems: A Deep Learning Approach</span>,” <em>IEEE Access</em>, vol. 8, pp. 49584–49595, 2020.</p>
+                  <div class="pub-meta-row">
+                    <span class="pub-cites"><i class="fa fa-quote-left"></i> 14 citations</span>
+                    <div class="pub-links">
+                      <a href="https://ieeexplore.ieee.org/document/9023383" target="_blank" rel="noopener" class="pub-btn pub-btn-doi"><i class="fa fa-external-link"></i> DOI</a>
+                      <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XO3JtGIAAAAJ&citation_for_view=XO3JtGIAAAAJ:4DMP91E08xMC" target="_blank" rel="noopener" class="pub-btn pub-btn-scholar"><i class="fa fa-graduation-cap"></i> Scholar</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- ── 2019 ── -->
+              <h2 class="section-heading"><i class="fa fa-calendar" style="color:#cc8800;margin-right:8px;"></i>2019</h2>
+              <div class="pub-list">
+
+                <div class="pub-entry">
+                  <p class="pub-citation">K. Satyanarayana, M. El-Hajjar, A. A. M. Mourad and L. Hanzo, “<span class="pub-title">Deep Learning Aided Fingerprint-Based Beam Alignment for mmWave Vehicular Communication</span>,” <em>IEEE Transactions on Vehicular Technology</em>, vol. 68, no. 11, pp. 10858–10871, Nov. 2019.</p>
+                  <div class="pub-meta-row">
+                    <span class="pub-cites"><i class="fa fa-quote-left"></i> 92 citations</span>
+                    <div class="pub-links">
+                      <a href="https://ieeexplore.ieee.org/document/8821300" target="_blank" rel="noopener" class="pub-btn pub-btn-doi"><i class="fa fa-external-link"></i> DOI</a>
+                      <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XO3JtGIAAAAJ&citation_for_view=XO3JtGIAAAAJ:M3ejUd6NZC8C" target="_blank" rel="noopener" class="pub-btn pub-btn-scholar"><i class="fa fa-graduation-cap"></i> Scholar</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pub-entry">
+                  <p class="pub-citation">K. Satyanarayana, M. El-Hajjar, A. A. M. Mourad and L. Hanzo, “<span class="pub-title">Multi-User Hybrid Beamforming Relying on Learning-Aided Link-Adaptation for mmWave Systems</span>,” <em>IEEE Access</em>, vol. 7, pp. 23197–23209, 2019.</p>
+                  <div class="pub-meta-row">
+                    <span class="pub-cites"><i class="fa fa-quote-left"></i> 36 citations</span>
+                    <div class="pub-links">
+                      <a href="https://ieeexplore.ieee.org/document/8643388" target="_blank" rel="noopener" class="pub-btn pub-btn-doi"><i class="fa fa-external-link"></i> DOI</a>
+                      <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XO3JtGIAAAAJ&citation_for_view=XO3JtGIAAAAJ:_kc_bZDykSQC" target="_blank" rel="noopener" class="pub-btn pub-btn-scholar"><i class="fa fa-graduation-cap"></i> Scholar</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pub-entry">
+                  <p class="pub-citation">Y. Li, S. Ghafoor, K. Satyanarayana, M. El-Hajjar and L. Hanzo, “<span class="pub-title">Analogue Wireless Beamforming Exploiting the Fiber-Nonlinearity of Radio Over Fiber-Based C-RANs</span>,” <em>IEEE Transactions on Vehicular Technology</em>, vol. 68, no. 3, pp. 2802–2813, Mar. 2019.</p>
+                  <div class="pub-meta-row">
+                    <span class="pub-cites"><i class="fa fa-quote-left"></i> 30 citations</span>
+                    <div class="pub-links">
+                      <a href="https://ieeexplore.ieee.org/document/8606155" target="_blank" rel="noopener" class="pub-btn pub-btn-doi"><i class="fa fa-external-link"></i> DOI</a>
+                      <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XO3JtGIAAAAJ&citation_for_view=XO3JtGIAAAAJ:ULOm3_A8WrAC" target="_blank" rel="noopener" class="pub-btn pub-btn-scholar"><i class="fa fa-graduation-cap"></i> Scholar</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pub-entry">
+                  <p class="pub-citation">K. Satyanarayana, M. El-Hajjar, A. A. M. Mourad and L. Hanzo, “<span class="pub-title">Multi-User Full Duplex Transceiver Design for mmWave Systems Using Learning-Aided Channel Prediction</span>,” <em>IEEE Access</em>, vol. 7, pp. 66068–66083, 2019.</p>
+                  <div class="pub-meta-row">
+                    <span class="pub-cites"><i class="fa fa-quote-left"></i> 28 citations</span>
+                    <div class="pub-links">
+                      <a href="https://ieeexplore.ieee.org/document/8718320" target="_blank" rel="noopener" class="pub-btn pub-btn-doi"><i class="fa fa-external-link"></i> DOI</a>
+                      <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XO3JtGIAAAAJ&citation_for_view=XO3JtGIAAAAJ:4TOpqqG69KYC" target="_blank" rel="noopener" class="pub-btn pub-btn-scholar"><i class="fa fa-graduation-cap"></i> Scholar</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pub-entry">
+                  <p class="pub-citation">Y. Li, K. Satyanarayana, M. El-Hajjar and L. Hanzo, “<span class="pub-title">Analogue Radio Over Fiber Aided MIMO Design for the Learning Assisted Adaptive C-RAN Downlink</span>,” <em>IEEE Access</em>, vol. 7, pp. 21359–21371, 2019.</p>
+                  <div class="pub-meta-row">
+                    <span class="pub-cites"><i class="fa fa-quote-left"></i> 19 citations</span>
+                    <div class="pub-links">
+                      <a href="https://ieeexplore.ieee.org/document/8638930" target="_blank" rel="noopener" class="pub-btn pub-btn-doi"><i class="fa fa-external-link"></i> DOI</a>
+                      <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XO3JtGIAAAAJ&citation_for_view=XO3JtGIAAAAJ:YOwf2qJgpHMC" target="_blank" rel="noopener" class="pub-btn pub-btn-scholar"><i class="fa fa-graduation-cap"></i> Scholar</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- ── 2018 ── -->
+              <h2 class="section-heading"><i class="fa fa-calendar" style="color:#cc8800;margin-right:8px;"></i>2018</h2>
+              <div class="pub-list">
+
+                <div class="pub-entry">
+                  <p class="pub-citation">K. Satyanarayana, M. El-Hajjar, P.-H. Kuo, A. Mourad and L. Hanzo, “<span class="pub-title">Hybrid Beamforming Design for Full-Duplex Millimeter Wave Communication</span>,” <em>IEEE Transactions on Vehicular Technology</em>, vol. 68, no. 2, pp. 1394–1404, Feb. 2019 (online 2018).</p>
+                  <div class="pub-meta-row">
+                    <span class="pub-cites"><i class="fa fa-quote-left"></i> 206 citations</span>
+                    <div class="pub-links">
+                      <a href="https://ieeexplore.ieee.org/document/8550689" target="_blank" rel="noopener" class="pub-btn pub-btn-doi"><i class="fa fa-external-link"></i> DOI</a>
+                      <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XO3JtGIAAAAJ&citation_for_view=XO3JtGIAAAAJ:KlAtU1dfN6UC" target="_blank" rel="noopener" class="pub-btn pub-btn-scholar"><i class="fa fa-graduation-cap"></i> Scholar</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pub-entry">
+                  <p class="pub-citation">K. Satyanarayana, T. Ivanescu, M. El-Hajjar, P.-H. Kuo, A. Mourad and L. Hanzo, “<span class="pub-title">Hybrid Beamforming Design for Dual-Polarised Millimetre Wave MIMO Systems</span>,” <em>Electronics Letters</em>, vol. 54, no. 22, pp. 1257–1258, 2018.</p>
+                  <div class="pub-meta-row">
+                    <span class="pub-cites"><i class="fa fa-quote-left"></i> 12 citations</span>
+                    <div class="pub-links">
+                      <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XO3JtGIAAAAJ&citation_for_view=XO3JtGIAAAAJ:3fE2CSJIrl8C" target="_blank" rel="noopener" class="pub-btn pub-btn-scholar"><i class="fa fa-graduation-cap"></i> Scholar</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pub-entry">
+                  <p class="pub-citation">D. Prisiceanu, K. Satyanarayana, M. El-Hajjar, P.-H. Kuo, A. Mourad and L. Hanzo, “<span class="pub-title">Effects of Mutual Coupling on Lattice Reduction-Aided Millimeter Wave Hybrid Beamforming</span>,” <em>2018 IEEE 29th Annual International Symposium on Personal, Indoor and Mobile Radio Communications (PIMRC)</em>, 2018.</p>
+                  <div class="pub-meta-row">
+                    <span class="pub-cites"><i class="fa fa-quote-left"></i> 3 citations</span>
+                    <div class="pub-links">
+                      <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XO3JtGIAAAAJ&citation_for_view=XO3JtGIAAAAJ:5nxA0vEk-isC" target="_blank" rel="noopener" class="pub-btn pub-btn-scholar"><i class="fa fa-graduation-cap"></i> Scholar</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- ── 2017 ── -->
+              <h2 class="section-heading"><i class="fa fa-calendar" style="color:#cc8800;margin-right:8px;"></i>2017</h2>
+              <div class="pub-list">
+
+                <div class="pub-entry">
+                  <p class="pub-citation">I. A. Hemadeh, K. Satyanarayana, M. El-Hajjar and L. Hanzo, “<span class="pub-title">Millimeter-Wave Communications: Physical Channel Models, Design Considerations, Antenna Constructions, and Link-Budget</span>,” <em>IEEE Communications Surveys &amp; Tutorials</em>, vol. 20, no. 2, pp. 870–913, 2018 (online 2017).</p>
+                  <div class="pub-meta-row">
+                    <span class="pub-cites"><i class="fa fa-quote-left"></i> 976 citations</span>
+                    <div class="pub-links">
+                      <a href="https://ieeexplore.ieee.org/document/8259455" target="_blank" rel="noopener" class="pub-btn pub-btn-doi"><i class="fa fa-external-link"></i> DOI</a>
+                      <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XO3JtGIAAAAJ&citation_for_view=XO3JtGIAAAAJ:Se3iqnhoufwC" target="_blank" rel="noopener" class="pub-btn pub-btn-scholar"><i class="fa fa-graduation-cap"></i> Scholar</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pub-entry">
+                  <p class="pub-citation">K. Satyanarayana, M. El-Hajjar, P.-H. Kuo, A. Mourad and L. Hanzo, “<span class="pub-title">Dual-Function Hybrid Beamforming and Transmit Diversity Aided Millimeter Wave Architecture</span>,” <em>IEEE Transactions on Vehicular Technology</em>, vol. 67, no. 3, pp. 2798–2803, Mar. 2018 (online 2017).</p>
+                  <div class="pub-meta-row">
+                    <span class="pub-cites"><i class="fa fa-quote-left"></i> 41 citations</span>
+                    <div class="pub-links">
+                      <a href="https://ieeexplore.ieee.org/document/8114254" target="_blank" rel="noopener" class="pub-btn pub-btn-doi"><i class="fa fa-external-link"></i> DOI</a>
+                      <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XO3JtGIAAAAJ&citation_for_view=XO3JtGIAAAAJ:Y0pCki6q_DkC" target="_blank" rel="noopener" class="pub-btn pub-btn-scholar"><i class="fa fa-graduation-cap"></i> Scholar</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pub-entry">
+                  <p class="pub-citation">K. Satyanarayana, M. El-Hajjar, P.-H. Kuo, A. Mourad and L. Hanzo, “<span class="pub-title">Millimeter Wave Hybrid Beamforming with DFT-MUB Aided Precoder Codebook Design</span>,” <em>2017 IEEE 86th Vehicular Technology Conference (VTC-Fall)</em>, pp. 1–5, 2017.</p>
+                  <div class="pub-meta-row">
+                    <span class="pub-cites"><i class="fa fa-quote-left"></i> 22 citations</span>
+                    <div class="pub-links">
+                      <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XO3JtGIAAAAJ&citation_for_view=XO3JtGIAAAAJ:zYLM7Y9cAGgC" target="_blank" rel="noopener" class="pub-btn pub-btn-scholar"><i class="fa fa-graduation-cap"></i> Scholar</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pub-entry">
+                  <p class="pub-citation">K. Satyanarayana, M. El-Hajjar, P.-H. Kuo, A. A. M. Mourad and L. Hanzo, “<span class="pub-title">Adaptive Transceiver Design for C-RAN in mmWave Communications</span>,” <em>IEEE Access</em>, vol. 6, pp. 16770–16782, 2017.</p>
+                  <div class="pub-meta-row">
+                    <span class="pub-cites"><i class="fa fa-quote-left"></i> 16 citations</span>
+                    <div class="pub-links">
+                      <a href="https://ieeexplore.ieee.org/document/8085429" target="_blank" rel="noopener" class="pub-btn pub-btn-doi"><i class="fa fa-external-link"></i> DOI</a>
+                      <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XO3JtGIAAAAJ&citation_for_view=XO3JtGIAAAAJ:_FxGoFyzp5QC" target="_blank" rel="noopener" class="pub-btn pub-btn-scholar"><i class="fa fa-graduation-cap"></i> Scholar</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- ── 2013 – 2014 ── -->
+              <h2 class="section-heading"><i class="fa fa-calendar" style="color:#cc8800;margin-right:8px;"></i>2013 – 2014</h2>
+              <div class="pub-list">
+
+                <div class="pub-entry">
+                  <p class="pub-citation">K. Satyanarayana and B. Abhinov, “<span class="pub-title">Recent Trends in Future Proof Fiber Access Passive Networks: GPON and WDM PON</span>,” <em>2014 International Conference on Recent Trends in Information Technology</em>, pp. 1–5, 2014.</p>
+                  <div class="pub-meta-row">
+                    <span class="pub-cites"><i class="fa fa-quote-left"></i> 13 citations</span>
+                    <div class="pub-links">
+                      <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XO3JtGIAAAAJ&citation_for_view=XO3JtGIAAAAJ:qjMakFHDy7sC" target="_blank" rel="noopener" class="pub-btn pub-btn-scholar"><i class="fa fa-graduation-cap"></i> Scholar</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- ── Selected Patents ── -->
+              <h2 class="section-heading"><i class="fa fa-certificate" style="color:#cc8800;margin-right:8px;"></i>Selected Patents</h2>
+              <div class="pub-list">
+
+                <div class="pub-entry">
+                  <p class="pub-citation">S. Katla, M. El-Hajjar and A. Mourad, “<span class="pub-title">Deep Learning Aided Fingerprint Based Beam Alignment</span>,” <em>U.S. Patent 12,166,557</em>, Dec. 10, 2024 (InterDigital Patent Holdings).</p>
+                  <div class="pub-meta-row">
+                    <div class="pub-links">
+                      <a href="https://patents.google.com/patent/US12166557" target="_blank" rel="noopener" class="pub-btn pub-btn-patent"><i class="fa fa-certificate"></i> Patent</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pub-entry">
+                  <p class="pub-citation">S. Katla and O. Sahin, “<span class="pub-title">Methods, Architectures, Apparatuses and Systems for Adaptive Learning Aided Precoder for Channel Aging in MIMO Systems</span>,” <em>U.S. Patent 12,647,165</em>, June 2, 2026 (InterDigital Patent Holdings).</p>
+                  <div class="pub-meta-row">
+                    <div class="pub-links">
+                      <a href="https://patents.google.com/patent/US12647165" target="_blank" rel="noopener" class="pub-btn pub-btn-patent"><i class="fa fa-certificate"></i> Patent</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pub-entry">
+                  <p class="pub-citation">P.-H. Kuo et al. (incl. K. Satyanarayana), “<span class="pub-title">Adaptive Digital Precoder Codebook Configurations for mmWave Communication Based on Hybrid Beamforming</span>,” <em>U.S. Patent 11,152,980</em>, Oct. 19, 2021 (IDAC Holdings / InterDigital).</p>
+                  <div class="pub-meta-row">
+                    <div class="pub-links">
+                      <a href="https://patents.google.com/patent/US11152980" target="_blank" rel="noopener" class="pub-btn pub-btn-patent"><i class="fa fa-certificate"></i> Patent</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pub-entry">
+                  <p class="pub-citation">Additional patent applications (InterDigital / IDAC) covering CSI compression, predictive beam refinement, non-orthogonal uplink multiplexing, data-driven wireless sensing, and 3GPP Rel-18 / IEEE 802.11bf related inventions. Full list available on <a href="https://patents.google.com/?inventor=Satyanarayana+Katla" target="_blank" rel="noopener">Google Patents</a>.</p>
+                </div>
+
+              </div>
+
+              <!-- Note -->
+              <div class="pub-note-box">
+                <i class="fa fa-info-circle"></i>
+                <div>Citation counts are approximate and taken from <a href="https://scholar.google.com/citations?user=XO3JtGIAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a> (profile of Satyanarayana Katla). Patent information is drawn from public USPTO / Google Patents records. Stats are updated periodically.</div>
+              </div>
 
             </div><!-- .entry-content -->
+
           </article>
 
-        </main>
+        </main><!-- #main -->
       </div><!-- #primary -->
 
       <!-- Sidebar -->
-      <div id="secondary" class="widget-area">
+      <div id="secondary" class="widget-area" role="complementary" aria-label="Primary Sidebar" itemscope itemtype="http://schema.org/WPSideBar">
 
-        <!-- Citation Stats -->
-        <aside class="widget citation-stats">
-          <h3 class="widget-title"><i class="fa fa-bar-chart" style="margin-right:6px;"></i>Citation Stats</h3>
-          <div class="stats-grid">
-            <div class="stat-item">
-              <span class="stat-number">3</span>
-              <span class="stat-label">Papers</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">0</span>
-              <span class="stat-label">Citations</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">0</span>
-              <span class="stat-label">h-index</span>
-            </div>
+        <aside class="widget widget_nav_menu">
+          <div class="menu-header-container">
+            <ul class="menu">
+              <li class="menu-item"><a href="/">Know me</a></li>
+              <li class="menu-item"><a href="/research/">Research</a></li>
+              <li class="menu-item current-menu-item"><a href="/publications/">Publications</a></li>
+              <li class="menu-item"><a href="/blog/">Blog</a></li>
+              <li class="menu-item menu-item-has-children">
+                <a href="#">Activities</a>
+                <ul class="sub-menu">
+                  <li><a href="/photography/">Photography</a></li>
+                  <li><a href="/mybooks/">Books</a></li>
+                  <li><a href="/category/my-poetic-expressions/">My Poems</a></li>
+                </ul>
+              </li>
+            </ul>
           </div>
         </aside>
 
-        <!-- Nav Menu -->
-        <aside class="widget">
-          <ul class="menu">
-            <li><a href="/">Know me</a></li>
-            <li><a href="/research/">Research</a></li>
-            <li><a href="/publications/" style="color:#cc8800;">Publications</a></li>
-            <li><a href="/blog/">Blog</a></li>
-            <li><a href="/photography/">Photography</a></li>
-            <li><a href="/mybooks/">Books</a></li>
-            <li><a href="/category/my-poetic-expressions/">My Poems</a></li>
-          </ul>
+        <!-- Citation Stats Widget -->
+        <aside class="widget citation-stats-widget">
+          <h3 class="widget-title"><i class="fa fa-bar-chart" style="margin-right:6px;"></i>Citation Stats</h3>
+          <div class="stat-row"><span class="stat-label">Papers</span><span class="stat-value">20+</span></div>
+          <div class="stat-row"><span class="stat-label">Citations</span><span class="stat-value">~1,500</span></div>
+          <div class="stat-row"><span class="stat-label">h-index</span><span class="stat-value">~12</span></div>
+          <div class="stat-row"><span class="stat-label">Patents</span><span class="stat-value">~20</span></div>
+          <p style="margin:12px 0 0;font-size:12px;color:#888;font-family:'Oswald',sans-serif;">Source: <a href="https://scholar.google.com/citations?user=XO3JtGIAAAAJ&hl=en" target="_blank" rel="noopener" style="color:#cc8800;">Google Scholar</a></p>
         </aside>
 
-        <!-- Quote -->
-        <aside class="widget">
-          <h3 class="widget-title">Quote</h3>
-          <p class="widget-quote">"Books are assailants that attack the virgin minds unassaulted by the thoughts heretofore" — Satya Katla</p>
+        <aside class="widget widget_custom_html">
+          <h3 class="widget-title">“Books are assailants that attack the virgin minds unassaulted by the thoughts heretofore” — Satya Katla</h3>
         </aside>
 
       </div><!-- #secondary -->
@@ -340,18 +989,19 @@ h1, h2, h3, h4 { font-family: 'Oswald', sans-serif; font-weight: 400; }
   </div><!-- #content -->
 
   <!-- Footer -->
-  <footer id="colophon" class="site-footer">
+  <footer id="colophon" class="site-footer" itemscope itemtype="http://schema.org/WPFooter">
     <div class="wide-container">
       <div class="site-info">
-        <p class="copyright">© Copyright 2026 <a href="/">I</a> · Designed by <a href="http://www.theme-junkie.com/">Theme Junkie</a></p>
+        <p class="copyright" style="margin:0;">© Copyright 2026 <a href="/">I</a> · Designed by <a href="http://www.theme-junkie.com/">Theme Junkie</a></p>
       </div>
       <div class="social-links">
         <a href="https://twitter.com/satyakatla"><i class="fa fa-twitter"></i></a>
         <a href="https://www.linkedin.com/in/satyakatla/"><i class="fa fa-linkedin"></i></a>
       </div>
     </div>
-  </footer>
+  </footer><!-- #colophon -->
 
 </div><!-- #page -->
+
 </body>
 </html>
